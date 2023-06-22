@@ -1,0 +1,420 @@
+{
+  "hero-suptitle": "Kom og bo på hyttehotel nær Mariager Fjord i Danmark",
+  "hero-title": "Find fred i skoven",
+  "navlinks": [
+    "hjem",
+    "hytten",
+    "området",
+    "bokking",
+    "om os",
+    "faq"
+  ],
+  "work-items": [
+    {
+      "title": "Aftaleberegning",
+      "id": "0001",
+      "desc": "Kunde udfylder ansøgning.",
+      "desc2": "Lederen beregner omkostningerne ved transport og relaterede tjenester."
+    },
+    {
+      "title": "Kontraktunderskrivelse",
+      "id": "0002",
+      "desc": "Vores leder udarbejder Aftalen på baggrund af Ansøgningen. Underskrivelse af Aftalen kan udføres ved hjælp af EDS"
+    }
+  ],
+  "navlinkss": [
+    {
+      "nav_item": "hjem"
+    },
+    {
+      "nav_item": "hytten"
+    },
+    {
+      "nav_item": "området"
+    },
+    {
+      "nav_item": "bokking"
+    },
+    {
+      "nav_item": "om os"
+    },
+    {
+      "nav_item": "faq"
+    }
+  ],
+  "book_now": "Book nu",
+  "from": "fra",
+  "per_night": "per nat",
+  "homepage_cabins": "Hytterne",
+  "homepage_cabins_desc": "Løvtags tre eksklusive og komfortable hytter, Et, Ro og Ly, er tegnet af arkitekt Sigurd Larsen. De har alle et åbent rum med dobbeltseng, dobbelt sovesofa, køkken, separat toilet og udendørs bruser. På taget, omkranset af trætoppe, er der en terrasse, som er cirka ni meter over terræn. Hytterne er bygget op omkring høje, gamle træer, der går gennem hele sommerhuset fra gulv til loft.",
+  "read_more": "Læs mere",
+  "homepage_forest": "Skoven",
+  "homepage_forest_desc": "Løvtags tre eksklusive og komfortable hytter, Et, Ro og Ly, er tegnet af arkitekt Sigurd Larsen. De har alle et åbent rum med dobbeltseng, dobbelt sovesofa, køkken, separat toilet og udendørs bruser. På taget, omkranset af trætoppe, er der en terrasse, som er cirka ni meter over terræn. Hytterne er bygget op omkring høje, gamle træer, der går gennem hele sommerhuset fra gulv til loft.",
+  "we_are_here": "Vi er her",
+  "facilities": "Faciliteter",
+  "fridge": "Minikøleskab",
+  "kitchen": "Køkken",
+  "coffee": "Kaffemaskine",
+  "kettle": "El-te-kedel",
+  "parking": "Parkering",
+  "views": "Betagende udsigt",
+  "heating": "Gulvvarme",
+  "light": "230V",
+  "wifi": "wifi",
+  "shower": "Bruser",
+  "toilet": "Skylning af toiletter",
+  "towels": "Sengetøj og håndklæder",
+  "aboutus": "Mere om os",
+  "section_contact-title": "Hold kontakten med os",
+  "section_contact-address": " Vesterborg, Danmark",
+  "button_book_hut": "Bestil en hytte",
+  "footer_title": "Nyhedsbrev",
+  "email": "E-mail-adresse",
+  "footer_desc": "Tilmeld dig vores nyhedsbrev for specielle ting og modtag 10 % rabat på din næste ordre.",
+  "footer_item_1": "VILKÅR OG BETINGELSER",
+  "footer_item_2": "AFFLYTNINGSPOLITIK",
+  "footer_item_3": "Privatlivspolitik",
+  "footer_copyright": "© 2021 The Glass Huts",
+  "hut": "Hytten",
+  "hut_page": [
+    {
+      "section-title": "Ydersiden",
+      "section-id": "outside",
+      "section-buttons": [
+        "Hot tube",
+        "Elbil opladning"
+      ],
+      "section-desc": [
+        "Løvtags tre eksklusive og komfortable hytter, Et, Ro og Ly, er tegnet af arkitekt Sigurd Larsen. De har alle et åbent rum med dobbeltseng, dobbelt sovesofa, køkken, separat toilet og udendørs bruser. På taget, omgivet af trætoppe er der en terrasse, som er omkring ni meter over jorden.",
+        "Niveau 1-opladere kan tage 40-50 timer at oplade et batterielektrisk køretøj (BEV) fra tomt og 5-6 timer at oplade et plug-in hybrid-elkøretøj (PHEV) fra tomt."
+      ]
+    },
+    {
+      "section-title": "Indersiden",
+      "section-id": "inside",
+      "section-buttons": [
+        "Plads",
+        "Køkken",
+        "Badeværelse"
+      ],
+      "section-desc": [
+        "Lorem Ipsum er simpelthen dummy-tekst fra trykkeri- og sætningsindustrien. Lorem Ipsum har været branchens standard dummy-tekst lige siden 1500-tallet, hvor en ukendt printer tog en kabys af type og forvandlede den for at lave en typeprøvebog.",
+        "Det har overlevet ikke kun fem århundreder, men også springet ind i elektronisk sætning, forbliver stort set uændret. Det blev populært i 1960'erne med udgivelsen af Letraset-ark indeholdende Lorem Ipsum-passager og for nylig med desktop publishing-software som Aldus PageMaker inklusive versioner af Lorem Ipsum.",
+        "Lorem Ipsum kommer fra afsnit 1.10.32 og 1.10.33 i 'de Finibus Bonorum et Malorum' (Ekstremerne af godt og ondt) af Cicero, skrevet i 45 f.Kr.. Denne bog er en afhandling om teorien om etik, meget populær under renæssancen. Den første linje i Lorem Ipsum, 'Lorem ipsum dolor sit amet..', kommer fra en linje i afsnit 1.10.32."
+      ]
+    },
+    {
+      "section-title": "Praktiske forhold",
+      "section-id": "practicalities",
+      "section-buttons": [
+        "Morgenmad",
+        "Klassisk middag"
+      ],
+      "section-desc": [
+        "Der er mange variationer af passager af Lorem Ipsum tilgængelige, men størstedelen har lidt ændringer i en eller anden form, af indsprøjtet humor eller randomiserede ord, som ikke ser engang en smule troværdige ud.",
+        "Hvis du skal bruge en passage af Lorem Ipsum, skal du være sikker på, at der ikke er noget pinligt gemt i midten af teksten. Alle Lorem Ipsum-generatorerne på internettet har en tendens til at gentage foruddefinerede bidder efter behov, hvilket gør dette til første rigtige generator på internettet."
+      ]
+    }
+  ],
+  "area": "Området",
+  "area-name": "Vesterborg, Danmark",
+  "area-nav": "få rutevejledning",
+  "area-map-desc": "Lorem ipsum dolor sit amet, consectetur adipiscing...",
+  "vesterborg": "Vesterborg",
+  "copenhagen": "København",
+  "activities": "Aktiviteter",
+  "area_page": [
+    {
+      "section-title": "Vesterborg",
+      "section-subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing...",
+      "section-id": "vesterborg",
+      "section-buttons": [],
+      "section-desc": [
+        "Løvtags tre eksklusive og komfortable hytter, Et, Ro og Ly, er tegnet af arkitekt Sigurd Larsen. De har alle et åbent rum med dobbeltseng, dobbelt sovesofa, køkken, separat toilet og udendørs bruser. På taget, omgivet af trætoppe er der en terrasse, som er omkring ni meter over jorden."
+      ]
+    },
+    {
+      "section-title": "Restauranter og shopping",
+      "section-id": "restaurants",
+      "section-buttons": [
+        "Restauranter",
+        "Butikker"
+      ],
+      "section-desc": [
+        "Lorem Ipsum er simpelthen dummy-tekst fra trykkeri- og sættebranchen. Lorem Ipsum har været branchens standard dummy-tekst lige siden 1500-tallet.",
+        "Det har overlevet ikke kun fem århundreder, men også springet ind i elektronisk sætning, forbliver stort set uændret. Det blev populært i 1960'erne med."
+      ]
+    },
+    {
+      "section-title": "Oplevelser i naturen",
+      "section-id": "experiences",
+      "section-buttons": [
+        "Lorem Impus",
+        "Lorem Impus"
+      ],
+      "section-desc": [
+        "Der er mange variationer af passager af Lorem Ipsum tilgængelige, men størstedelen har lidt ændringer i en eller anden form, af indsprøjtet humor eller randomiserede ord, som ikke ser engang en smule troværdige ud.",
+        "Hvis du skal bruge en passage af Lorem Ipsum, skal du være sikker på, at der ikke er noget pinligt gemt i midten af teksten. Alle Lorem Ipsum-generatorerne på internettet har en tendens til at gentage foruddefinerede bidder efter behov, hvilket gør dette til første rigtige generator på internettet."
+      ]
+    },
+    {
+      "section-title": "Kør en tur",
+      "section-id": "goforadrive",
+      "section-buttons": [
+        "Lorem Impus",
+        "Lorem Impus"
+      ],
+      "section-desc": [
+        "Der er mange variationer af passager af Lorem Ipsum tilgængelige, men størstedelen har lidt ændringer i en eller anden form, af indsprøjtet humor eller randomiserede ord, som ikke ser engang en smule troværdige ud.",
+        "Hvis du skal bruge en passage af Lorem Ipsum, skal du være sikker på, at der ikke er noget pinligt gemt i midten af teksten. Alle Lorem Ipsum-generatorerne på internettet har en tendens til at gentage foruddefinerede bidder efter behov, hvilket gør dette til første rigtige generator på internettet."
+      ]
+    },
+    {
+      "section-title": "Småby charme",
+      "section-id": "smalltowncharm",
+      "section-buttons": [
+        "Lorem Impus",
+        "Lorem Impus"
+      ],
+      "section-desc": [
+        "Der er mange variationer af passager af Lorem Ipsum tilgængelige, men størstedelen har lidt ændringer i en eller anden form, af indsprøjtet humor eller randomiserede ord, som ikke ser engang en smule troværdige ud.",
+        "Hvis du skal bruge en passage af Lorem Ipsum, skal du være sikker på, at der ikke er noget pinligt gemt i midten af teksten. Alle Lorem Ipsum-generatorerne på internettet har en tendens til at gentage foruddefinerede bidder efter behov, hvilket gør dette til første rigtige generator på internettet."
+      ]
+    }
+  ],
+  "about_us": "Om os",
+  "contact_us": "kontakt os",
+  "read_faq": "læs faq",
+  "about_us_section_title": "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”",
+  "about_us_section_desc": "Sed ut perspiciatis unde omnis iste natus fejl sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta dicta qui quiaut enimbosam situ au explica di periam. fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+  "about_us_section_galery": "Lorem ipsum dolor sit amet, consectetur adipiscing...",
+  "about_us_image_desc": "Lorem ipsum dolor sit amet, konsectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  "form_element": [
+    {
+      "first_name": "Fornavn",
+      "last_name": "Efternavn",
+      "email": "E-mail",
+      "subject": "Emne",
+      "message": "Besked",
+      "send": "Send"
+    },
+    {
+      "error_fname": "Indtast venligst dit navn.",
+      "error_lname": "Indtast venligst dit efternavn.",
+      "error_email": "Indtast venligst en gyldig e-mail.",
+      "error_subject": "Indtast venligst et emne.",
+      "error_textarea": "Din besked skal være længere end 100 tegn."
+    }
+  ],
+  "heart-text": "Fra Danmark, med kærlighed...",
+  "faq": [
+    {
+      "question": "PRISER",
+      "answer": [
+        "AFBESTILLINGSPOLITIK",
+        "Afbestilling fire uger før = 100 % refusion",
+        "Afbestilling to uger før = 50 % refusion",
+        "Afbestilling senere end to uger = fuld betaling"
+      ]
+    },
+    {
+      "question": "GÅNINGEN OP TIL GLASHYTTEN",
+      "answer": [
+        "Neque porro quisquam est qui",
+        "Der er mange variationer af passager af Lorem Ipsum tilgængelige.",
+        "I modsætning til hvad folk tror, er Lorem Ipsum ikke blot tilfældig tekst.",
+        "Standarddelen af Lorem Ipsum brugt siden 1500-tallet."
+      ]
+    },
+    {
+      "question": "KAPACITET",
+      "answer": [
+        "Hvor kommer det fra?",
+        "Richard McClintock, en latinprofessor ved Hampden-Sydney College i Virginia",
+        "Lorem Ipsum kommer fra afsnit 1.10.32.",
+        "Den første linje i Lorem Ipsum, 'Lorem ipsum dolor sit amet..'"
+      ]
+    },
+    {
+      "question": "kæledyr",
+      "answer": [
+        "Hvor kan jeg få nogle?",
+        "Alle Lorem Ipsum-generatorerne på internettet har en tendens til at gentage sig.",
+        "Den bruger en ordbog med over 200 latinske ord.",
+        "Lorem Ipsum som ser fornuftigt ud."
+      ]
+    },
+    {
+      "question": "INDKJEKNING/UDKLIK",
+      "answer": [
+        "Hvad er Lorem Ipsum?",
+        "Lorem Ipsum er simpelthen en dummy tekst fra trykkeri- og sættebranchen.",
+        "Den har overlevet ikke kun fem århundreder.",
+        "Lorem Ipsum passager, og for nylig med desktop publishing software."
+      ]
+    }
+  ],
+  "booking": "Booking",
+  "booking_additionals": "Vælg yderligere tjenester",
+  "booking_additional_services": [
+    {
+      "name": "Frisk morgenmad for én",
+      "id": "morgenmad01",
+      "price": 400,
+      "desc_title": "Frisk morgenmad",
+      "desc": [
+        {
+          "id": "morgenmad_01",
+          "price": 600,
+          "title": "Morgenmad 01",
+          "description": "Brød, kaffe, mælk, juice og et udvalg af smørepålæg + toppings."
+        },
+        {
+          "id": "morgenmad_02",
+          "price": 600,
+          "title": "Morgenmad 02",
+          "description": "Brød, kaffe, mælk, juice og et udvalg af smørepålæg + toppings."
+        },
+        {
+          "id": "morgenmad_03",
+          "price": 600,
+          "title": "Morgenmad 03",
+          "description": "Brød, kaffe, mælk, juice og et udvalg af smørepålæg + toppings."
+        }
+      ]
+    },
+    {
+      "name": "Frisk morgenmad for to",
+      "id": "morgenmad02",
+      "price": 600,
+      "desc_title": "Frisk morgenmad",
+      "desc": [
+        {
+          "id": "morgenmad for2_01",
+          "price": 600,
+          "title": "Morgenmad til 2 01",
+          "description": "Brød, kaffe, mælk, juice og et udvalg af smørepålæg + toppings."
+        },
+        {
+          "id": "morgenmad for2_02",
+          "price": 600,
+          "title": "Morgenmad til 2 02",
+          "description": "Brød, kaffe, mælk, juice og et udvalg af smørepålæg + toppings."
+        },
+        {
+          "id": "morgenmad for2_03",
+          "price": 600,
+          "title": "Morgenmad til 2 03",
+          "description": "Brød, kaffe, mælk, juice og et udvalg af smørepålæg + toppings."
+        }
+      ]
+    },
+    {
+      "name": "Klassisk middag for én",
+      "id": "middag01",
+      "price": 600,
+      "desc_title": "Klassisk middag",
+      "desc": [
+        {
+          "id": "middag_01",
+          "title": "Aftensmad_01 01",
+          "price": 600,
+          "description": "Brød, kaffe, mælk, juice og et udvalg af smørepålæg + toppings."
+        },
+        {
+          "id": "middag_02",
+          "title": "Aftensmad_01 02",
+          "price": 600,
+          "description": "Brød, kaffe, mælk, juice og et udvalg af smørepålæg + toppings."
+        },
+        {
+          "id": "middag_01_03",
+          "price": 600,
+          "title": "Middag 03",
+          "description": "Brød, kaffe, mælk, juice og et udvalg af smørepålæg + toppings."
+        }
+      ]
+    },
+    {
+      "name": "Klassisk middag for én",
+      "id": "middag02",
+      "price": 600,
+      "desc_title": "Klassisk middag",
+      "desc": [
+        {
+          "id": "middag til 2_01_01",
+          "price": 600,
+          "title": "Aftensmad til 2 01",
+          "description": "Brød, kaffe, mælk, juice og et udvalg af smørepålæg + toppings."
+        },
+        {
+          "id": "morgenmad_02",
+          "price": 600,
+          "title": "Aftensmad til 2 02",
+          "description": "Brød, kaffe, mælk, juice og et udvalg af smørepålæg + toppings."
+        },
+        {
+          "id": "morgenmad_03",
+          "price": 600,
+          "title": "Aftensmad til 2 03",
+          "description": "Brød, kaffe, mælk, juice og et udvalg af smørepålæg + toppings."
+        }
+      ]
+    },
+    {
+      "name": "Elbilafgift",
+      "id": "charge01",
+      "price": 600,
+      "desc_title": "Elbilopladning",
+      "desc": [
+        {
+          "id": "charge_01",
+          "title": "afgift 01",
+          "price": 600,
+          "description": "Brød, kaffe, mælk, juice og et udvalg af smørepålæg + toppings."
+        },
+        {
+          "id": "charge_02",
+          "price": 600,
+          "title": "afgift 02",
+          "description": "Brød, kaffe, mælk, juice og et udvalg af smørepålæg + toppings."
+        }
+      ]
+    }
+  ],
+  "booking_hot_rules": [
+    "Hut regler",
+    "Check-in: 14.00 - 23.00",
+    "Kasse: 11:00",
+    "Ikke egnet til børn og spædbørn",
+    "Rygning forbudt",
+    "Ingen kæledyr"
+  ],
+  "booking_cancellation_policy": [
+    "Afbestillingspolitik",
+    "Gratis afbestilling indtil kl. 13.00 den 27. marts",
+    "Derefter skal du annullere før kl. 14.00 den 1. april og få 50 % refusion, minus den første nat og servicegebyr."
+  ],
+  "booking_important_info": [
+    "Vigtig information",
+    "Du skal gå en stejl bakke for at nå frem til træhusene, det tager ca. 20-30 minutter på en sti med trapper og ujævnt terræn."
+  ],
+  "booking_words": [
+    {
+      "rabat": "rabat",
+      "total": "Total",
+      "night": "nat",
+      "nights": "nætter",
+      "check_in": "Tjek ind",
+      "check_out": "Tjek ud",
+      "guests": "Gæster",
+      "book": "bog",
+      "coupon": "Kuponkode",
+      "apply": "Anvend",
+      "clear": "Ryd datoer",
+      "close": "Luk",
+      "error_dates": "Hent venligst gyldige datoer",
+      "invalid_coupon": "Ugyldig kode. Prøv venligst igen."
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+.gallery_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.gallery_item {
+  margin: 20px 50px;
+}
+.gallery_item:hover img {
+  transition: all 0.3s;
+  box-shadow: 0 0 15px var(--white-color);
+}
+.gallery_item_title {
+  font-family: var(--rubik);
+  color: var(--white-color);
+  font-weight: 400;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.gallery_image {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  object-position: bottom;
+}

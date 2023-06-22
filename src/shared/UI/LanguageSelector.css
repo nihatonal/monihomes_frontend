@@ -1,0 +1,101 @@
+.select-lang {
+  width: 25px;
+  height: 25px;
+  position: relative;
+  cursor: pointer;
+  background: transparent;
+}
+
+.select-lang img {
+  width: 25px;
+  height: 25px;
+}
+
+.flag_button {
+  border: none;
+  outline: none;
+  background: transparent;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.flag_button:hover {
+  cursor: pointer;
+}
+
+ul.options {
+  width: 25px;
+  height: 52px;
+  display: none;
+  list-style: none;
+  position: absolute;
+  z-index: 99;
+  background: transparent;
+}
+
+ul.show {
+  display: block;
+}
+
+ul.options li {
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  display: flex;
+}
+
+ul.options li:active,
+ul.options li:focus,
+ul.options li:hover,
+ul.options li[aria-selected="true"] {
+  cursor: pointer;
+}
+
+/* @media screen and (max-width: 600px) {
+  .select-lang {
+    width: 10px;
+    margin-left: 0;
+    position: relative;
+    cursor: pointer;
+  }
+  .select-lang button span {
+    display: none;
+  }
+  .select-lang button {
+    width: 10px;
+  }
+  button::after {
+    content: none;
+  }
+
+  button.expanded::after {
+    content: none;
+  }
+  ul.options {
+    width: 50px;
+    height: 110px;
+    padding: 4px 0;
+    position: absolute;
+    top: 36px;
+    padding-top: 10px;
+  }
+  ul.options li {
+    height: 45px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+
+    font-family: "Raleway", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 44px;
+    font-feature-settings: "pnum" on, "lnum" on;
+    color: #3f3e3e;
+  }
+  ul.options li span {
+    display: none;
+  }
+} */

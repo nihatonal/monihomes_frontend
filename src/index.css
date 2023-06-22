@@ -1,0 +1,81 @@
+:root {
+  --primary-color: #000;
+  --secondary-color: #628a76;
+  --white-color: #fff;
+  --red-color: #bb133a;
+  --yellow-color: #eeb524;
+  --yellow-bg-color: #f8d171;
+  --dark-red-color: #930000;
+  --dark-blue-color: #02407b;
+  --border-color: #ddd;
+  --input-border-color: #ebebeb;
+  --input-color: #555;
+  --light-grey-color: #fafafa;
+  --Nunito_Sans: "Nunito Sans", sans-serif;
+  --Open_Sans: "Open Sans", sans-serif;
+  --rubik: "Rubik", sans-serif;
+  --cavaet: "Caveat", cursive;
+  --color_danger: rgb(230, 34, 93);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: auto;
+  width: 100%;
+  overflow-x: hidden;
+}
+a {
+  text-decoration: none;
+}
+button {
+  border: none;
+}
+
+ul {
+  list-style: none;
+}
+.p-15 {
+  padding: 150px 15px;
+}
+.p-30 {
+  padding: 120px 30px;
+}
+
+.slide-in-left-enter {
+  transform: translateX(-100%);
+}
+
+.slide-in-left-enter-active {
+  transform: translateX(0);
+  opacity: 1;
+  transition: all 500ms;
+}
+
+.slide-in-left-exit {
+  transform: translateX(0%);
+  opacity: 1;
+}
+
+.slide-in-left-exit-active {
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: all 500ms;
+}
+
+.section_wrapper {
+  margin: 0 auto;
+  padding: 100px 150px;
+  position: relative;
+}
+
+.section_title {
+  font-family: var(--Nunito_Sans);
+  font-weight: 600;
+  font-size: 32px;
+  margin-bottom: 20px;
+}

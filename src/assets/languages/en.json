@@ -1,0 +1,488 @@
+{
+  "hero-suptitle": "Come and stay in out hut hotel near Mariager Fjord in Denmark",
+  "hero-title": "Find peace in the Forest",
+  "navlinks": [
+    "home",
+    "the hut",
+    "the area",
+    "booking",
+    "about us",
+    "faq"
+  ],
+  "work-items": [
+    {
+      "title": "Deal calculation",
+      "id": "0001",
+      "desc": "Client fills out Application.",
+      "desc2": "The manager calculates the cost of transportation and related services."
+    },
+    {
+      "title": "Contract signing",
+      "id": "0002",
+      "desc": "Our Manager prepares the Agreement on the basis of the Application. Signing of the Agreement can be carried out using EDS"
+    }
+  ],
+  "navlinkss": [
+    {
+      "nav_item": "home"
+    },
+    {
+      "nav_item": "the hut"
+    },
+    {
+      "nav_item": "the area"
+    },
+    {
+      "nav_item": "bokking"
+    },
+    {
+      "nav_item": "about us"
+    },
+    {
+      "nav_item": "faq"
+    }
+  ],
+  "book_now": "Book Now",
+  "from": "from",
+  "per_night": "per night",
+  "homepage_cabins": "The Cabins",
+  "homepage_cabins_desc": "Løvtag’s three exclusive and comfortable cabins, Et, Ro and Ly, are designed by architect Sigurd Larsen. They all have an open space with a double bed, a double sofa bed, kitchen, separate toilet and an outdoor shower. On the roof, surrounded by treetops, there is a terrace, which is about nine meters above ground. The cottages are built around tall, old trees that go through the entire cottage from floor to ceiling.",
+  "read_more": "Read More",
+  "homepage_forest": "The Forest",
+  "homepage_forest_desc": "Løvtag’s three exclusive and comfortable cabins, Et, Ro and Ly, are designed by architect Sigurd Larsen. They all have an open space with a double bed, a double sofa bed, kitchen, separate toilet and an outdoor shower. On the roof, surrounded by treetops, there is a terrace, which is about nine meters above ground. The cottages are built around tall, old trees that go through the entire cottage from floor to ceiling.",
+  "we_are_here": "We Are Here",
+  "facilities": "Facilities",
+  "fridge": "Mini fridge",
+  "kitchen": "Kitchen",
+  "coffee": "Coffee machine",
+  "kettle": "Electric tea kettle",
+  "parking": "Parking",
+  "views": "Breathtaking views",
+  "heating": "Floor heating",
+  "light": "230V",
+  "wifi": "wifi",
+  "shower": "Shower",
+  "toilet": "Flushing toilets",
+  "towels": "Bedding & towels",
+  "aboutus": "More about us",
+  "section_contact-title": "Stay in touch with us",
+  "section_contact-address": " Vesterborg, Denmark",
+  "button_book_hut": "Book a hut",
+  "footer_title": "Newsletter",
+  "email": "Email Address",
+  "footer_desc": "Sign up to our newsletter for special things and receive 10% off your next order.",
+  "footer_item_1": "TERMS AND CONDITIONS",
+  "footer_item_2": "CENCELLATION POLICY",
+  "footer_item_3": "PRIVACY POLICY",
+  "footer_copyright": "© 2021 The Glass Huts",
+  "hut": "The Hut",
+  "hut_page": [
+    {
+      "section-title": "The Outside",
+      "section-id": "outside",
+      "section-buttons": [
+        "Hot tube",
+        "Electric car charge"
+      ],
+      "section-desc": [
+        "Løvtag’s three exclusive and comfortable cabins, Et, Ro and Ly, are designed by architect Sigurd Larsen. They all have an open space with a double bed, a double sofa bed, kitchen, separate toilet and an outdoor shower. On the roof, surrounded by treetops, there is a terrace, which is about nine meters above ground. ",
+        "Level 1 chargers can take 40-50 hours to charge a battery electric vehicle (BEV) from empty and 5-6 hours to charge a plug-in hybrid electric vehicle (PHEV) from empty."
+      ]
+    },
+    {
+      "section-title": "The Inside",
+      "section-id": "inside",
+      "section-buttons": [
+        "Space",
+        "Kitchen",
+        "Bathroom"
+      ],
+      "section-desc": [
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of 'de Finibus Bonorum et Malorum' (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, 'Lorem ipsum dolor sit amet..', comes from a line in section 1.10.32."
+      ]
+    },
+    {
+      "section-title": "Practicalities",
+      "section-id": "practicalities",
+      "section-buttons": [
+        "Breakfast",
+        "Classic Dinner"
+      ],
+      "section-desc": [
+        "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+        "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. "
+      ]
+    }
+  ],
+  "area": "The Area",
+  "area-name": "Vesterborg, Denmark",
+  "area-nav": "get directions",
+  "area-map-desc": "Lorem ipsum dolor sit amet, consectetur adipiscing...",
+  "vesterborg": "Vesterborg",
+  "copenhagen": "Copenhagen",
+  "activities": "Activities",
+  "area_page": [
+    {
+      "section-title": "Vesterborg",
+      "section-subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing...",
+      "section-id": "vesterborg",
+      "section-buttons": [],
+      "section-desc": [
+        "Løvtag’s three exclusive and comfortable cabins, Et, Ro and Ly, are designed by architect Sigurd Larsen. They all have an open space with a double bed, a double sofa bed, kitchen, separate toilet and an outdoor shower. On the roof, surrounded by treetops, there is a terrace, which is about nine meters above ground."
+      ]
+    },
+    {
+      "section-title": "Restaurants & shopping",
+      "section-id": "restaurants",
+      "section-buttons": [
+        "Restaurants",
+        "Stores"
+      ],
+      "section-desc": [
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s. ",
+        "It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with."
+      ]
+    },
+    {
+      "section-title": "Experiences in nature",
+      "section-id": "experiences",
+      "section-buttons": [
+        "Lorem Impus",
+        "Lorem Impus"
+      ],
+      "section-desc": [
+        "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+        "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. "
+      ]
+    },
+    {
+      "section-title": "Go for a drive",
+      "section-id": "goforadrive",
+      "section-buttons": [
+        "Lorem Impus",
+        "Lorem Impus"
+      ],
+      "section-desc": [
+        "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+        "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. "
+      ]
+    },
+    {
+      "section-title": "Small-town charm",
+      "section-id": "smalltowncharm",
+      "section-buttons": [
+        "Lorem Impus",
+        "Lorem Impus"
+      ],
+      "section-desc": [
+        "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.",
+        "If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. "
+      ]
+    }
+  ],
+  "about_us": "About Us",
+  "contact_us": "contact us",
+  "read_faq": "read faq",
+  "about_us_section_title": "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”",
+  "about_us_section_desc": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+  "about_us_section_galery": "Lorem ipsum dolor sit amet, consectetur adipiscing...",
+  "about_us_image_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  "heart-text": "From Denmark, With love...",
+  "faq": [
+    {
+      "question": "PRICES",
+      "answer": [
+        "CANCELLATION POLICY",
+        "Cancellation four weeks prior = 100% refund",
+        "Cancellation two weeks prior = 50% refund",
+        "Cancellation later than two weeks = full payment"
+      ]
+    },
+    {
+      "question": "THE WALK UP TO GLASS HUT",
+      "answer": [
+        "Neque porro quisquam est qui ",
+        "There are many variations of passages of Lorem Ipsum available.",
+        "Contrary to popular belief, Lorem Ipsum is not simply random text.",
+        "The standard chunk of Lorem Ipsum used since the 1500s."
+      ]
+    },
+    {
+      "question": "CAPACITY",
+      "answer": [
+        "Where does it come from?",
+        "Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia",
+        "Lorem Ipsum comes from sections 1.10.32.",
+        "The first line of Lorem Ipsum, 'Lorem ipsum dolor sit amet..'"
+      ]
+    },
+    {
+      "question": "PETS",
+      "answer": [
+        "Where can I get some?",
+        "All the Lorem Ipsum generators on the Internet tend to repeat.",
+        "It uses a dictionary of over 200 Latin words.",
+        "Lorem Ipsum which looks reasonable."
+      ]
+    },
+    {
+      "question": "CHECK-IN / CHECK-OUT",
+      "answer": [
+        "What is Lorem Ipsum?",
+        "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+        "It has survived not only five centuries.",
+        "Lorem Ipsum passages, and more recently with desktop publishing software."
+      ]
+    }
+  ],
+  "booking": "Booking",
+  "booking_additionals": "Choose Additional Services",
+  "booking_additional_services": [
+    {
+      "name": "Fresh Breakfast for one",
+      "id": "breakfast01",
+      "price": 400,
+      "desc_title": "Fresh Breakfast",
+      "desc": [
+        {
+          "id": "breakfast_01",
+          "price": 600,
+          "title": "Breakfast 01",
+          "description": "Bread, Coffee, milk, juice, and a selection of spreads + toppings."
+        },
+        {
+          "id": "breakfast_02",
+          "price": 600,
+          "title": "Breakfast 02",
+          "description": "Bread, Coffee, milk, juice, and a selection of spreads + toppings."
+        },
+        {
+          "id": "breakfast_03",
+          "price": 600,
+          "title": "Breakfast 03",
+          "description": "Bread, Coffee, milk, juice, and a selection of spreads + toppings."
+        }
+      ]
+    },
+    {
+      "name": "Fresh Breakfast for two",
+      "id": "breakfast02",
+      "price": 600,
+      "desc_title": "Fresh Breakfast",
+      "desc": [
+        {
+          "id": "breakfastfor2_01",
+          "price": 600,
+          "title": "Breakfastfor2 01",
+          "description": "Bread, Coffee, milk, juice, and a selection of spreads + toppings."
+        },
+        {
+          "id": "breakfastfor2_02",
+          "price": 600,
+          "title": "Breakfastfor2 02",
+          "description": "Bread, Coffee, milk, juice, and a selection of spreads + toppings."
+        },
+        {
+          "id": "breakfastfor2_03",
+          "price": 600,
+          "title": "Breakfastfor2 03",
+          "description": "Bread, Coffee, milk, juice, and a selection of spreads + toppings."
+        }
+      ]
+    },
+    {
+      "name": "Classic Dinner for one",
+      "id": "dinner01",
+      "price": 600,
+      "desc_title": "Classic Dinner",
+      "desc": [
+        {
+          "id": "dinner_01",
+          "title": "Dinner_01 01",
+          "price": 600,
+          "description": "Bread, Coffee, milk, juice, and a selection of spreads + toppings."
+        },
+        {
+          "id": "dinner_02",
+          "title": "Dinner_01 02",
+          "price": 600,
+          "description": "Bread, Coffee, milk, juice, and a selection of spreads + toppings."
+        },
+        {
+          "id": "dinner_01_03",
+          "price": 600,
+          "title": "Dinner 03",
+          "description": "Bread, Coffee, milk, juice, and a selection of spreads + toppings."
+        }
+      ]
+    },
+    {
+      "name": "Classic Dinner for one",
+      "id": "dinner02",
+      "price": 600,
+      "desc_title": "Classic Dinner",
+      "desc": [
+        {
+          "id": "dinnerfor2_01_01",
+          "price": 600,
+          "title": "Dinnerfor2 01",
+          "description": "Bread, Coffee, milk, juice, and a selection of spreads + toppings."
+        },
+        {
+          "id": "breakfast_02",
+          "price": 600,
+          "title": "Dinnerfor2 02",
+          "description": "Bread, Coffee, milk, juice, and a selection of spreads + toppings."
+        },
+        {
+          "id": "breakfast_03",
+          "price": 600,
+          "title": "Dinnerfor2 03",
+          "description": "Bread, Coffee, milk, juice, and a selection of spreads + toppings."
+        }
+      ]
+    },
+    {
+      "name": "Electric Car Charge",
+      "id": "charge01",
+      "price": 600,
+      "desc_title": "Electric Car Charge",
+      "desc": [
+        {
+          "id": "charge_01",
+          "title": "charge 01",
+          "price": 600,
+          "description": "Bread, Coffee, milk, juice, and a selection of spreads + toppings."
+        },
+        {
+          "id": "charge_02",
+          "price": 600,
+          "title": "charge 02",
+          "description": "Bread, Coffee, milk, juice, and a selection of spreads + toppings."
+        }
+      ]
+    }
+  ],
+  "booking_hot_rules": [
+    "Hut rules",
+    "Check-in: 2:00 PM - 11:00 PM ",
+    "Checkout: 11:00 AM",
+    "Not suitable for children and infants",
+    "No smoking",
+    "No pets"
+  ],
+  "booking_cancellation_policy": [
+    "Cancellation policy",
+    "Free cancellation until 1:00 PM on Mar 27",
+    "After that, cancel before 2: 00 PM on Apr 1 and get a 50% refund, minus the first night and service fee."
+  ],
+  "booking_important_info": [
+    "Important Information",
+    "You need to hike a steep hill to arrive at the treehouses, it takes approx 20-30 minutes on a trail with stairs and uneven ground."
+  ],
+  "booking_words": [
+    {
+      "discount": "discount",
+      "total": "Total",
+      "night": "night",
+      "nights": "nights",
+      "check_in": "Check in",
+      "check_out": "Check out",
+      "guests": "Guests",
+      "book": "book",
+      "coupon": "Coupon Code",
+      "apply": "Apply",
+      "clear": "Clear dates",
+      "close": "Close",
+      "error_dates": "Please pick up valid dates",
+      "invalid_coupon": "Invalid code. Please try again."
+    }
+  ],
+  "form_element": [
+    {
+      "first_name": "First Name",
+      "last_name": "Last Name",
+      "email": "Email",
+      "phone": "Phone number",
+      "subject": "Subject",
+      "message": "Message",
+      "send": "Send",
+      "address": "Address",
+      "postal_code": "Postal code",
+      "city": "City",
+      "country": "Country",
+      "card_type": "Credit or debit card",
+      "card_number": "Card number",
+      "expiration": "Expiration",
+      "ccv": "CCV",
+      "zip_code": "Zip code",
+      "leave_message": "Leave a message",
+      "terms_conditions": "I have read and accept ",
+      "terms_conditions_span": "Terms & Conditions",
+      "confirm": "Confirm and pay"
+    },
+    {
+      "error_fname": "Please enter your name.",
+      "error_str": "Please enter your ",
+      "error_lname": "Please enter your last name.",
+      "error_email": "Please enter a valid email.",
+      "error_subject": "Please enter a subject.",
+      "error_card_expiration": "Please enter a valid date.",
+      "error_textarea": "Your message has to be longer than 100 characters."
+    }
+  ],
+  "payment": [
+    "Personal Information",
+    "Pay with",
+    "Additional Information"
+  ],
+  "card_type": [
+    {
+      "label": "Credit Card"
+    },
+    {
+      "label": "Debit Card"
+    }
+  ],
+  "theglasshut": "The Glass Hut",
+  "months": [
+    {
+      "month": "January"
+    },
+    {
+      "month": "February"
+    },
+    {
+      "month": "March"
+    },
+    {
+      "month": "April"
+    },
+    {
+      "month": "May"
+    },
+    {
+      "month": "June"
+    },
+    {
+      "month": "July"
+    },
+    {
+      "month": "August"
+    },
+    {
+      "month": "September"
+    },
+    {
+      "month": "October"
+    },
+    {
+      "month": "November"
+    },
+    {
+      "month": "December"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+.navbar {
+  /* width: 940px;
+  height: 40px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  transition: all 750ms;
+}
+@media only screen and (max-width: 767px) {
+  .navbar {
+    display: none;
+  }
+}
+
+.nav-item {
+  font-family: var(--Nunito_Sans);
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 600;
+  color: var(--black-color);
+  padding: 40px 34px 35px;
+  /* position: relative; */
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .nav-item {
+    padding: 40px 5px 35px;
+    font-size: 10px;
+  }
+}
+.nav-item:hover {
+  color: var(--secondary-color);
+}
+
+.active-nav-item {
+  border-color: rgba(255, 255, 255, 0.3);
+}

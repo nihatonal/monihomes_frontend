@@ -1,0 +1,73 @@
+.form-control {
+  /* margin: 1rem 0; */
+  position: relative;
+  /* box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6); */
+}
+.form-control label {
+  display: none;
+}
+.form-control label,
+.form-control input,
+.form-control textarea {
+  border: 1px solid #ebebeb;
+  height: 50px;
+  display: block;
+  font-family: var(--secondary-font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--input-color);
+  line-height: 1.42857143;
+  padding-left: 25px;
+  background: transparent;
+  width: 100%;
+}
+.form-control label {
+  display: none;
+}
+.form-control textarea {
+  width: 100%;
+  min-height: 180px;
+  padding-top: 15px;
+  resize: vertical;
+}
+/* .form-control label {
+  font-weight: bold;
+} */
+
+.form-control input:focus,
+.form-control textarea:focus {
+  outline: none;
+}
+
+/* .form-control--invalid label,
+.form-control--invalid input {
+  color: rgb(230, 34, 93);
+  border: 1px solid 0 0 10px rgb(230, 34, 93);
+} */
+
+.form-control--invalid input,
+.form-control--invalid textarea {
+  border: 1px solid 0 0 10px rgb(230, 34, 93);
+}
+
+.placeholder {
+  font-family: var(--primary-font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  align-items: center;
+  color: #828282;
+  padding: 0 16px;
+  position: absolute;
+  top: 16px;
+  transition: all 0.3s;
+  height: 18px;
+}
+@media only screen and (max-width: 767px) {
+  .form-control input {
+    height: 40px;
+  }
+  
+}

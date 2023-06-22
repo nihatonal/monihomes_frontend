@@ -1,0 +1,141 @@
+.gallery_container {
+  background-color: var(--white-color);
+  border-radius: 350px 0 350px 0;
+}
+.gallery_content {
+  display: flex;
+  height: 550px;
+  position: relative;
+  margin-top: 30px;
+}
+.gallery_content_item {
+  position: absolute;
+  border-radius: 10px;
+  border: 3px solid transparent;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.gallery_content_item:hover {
+  border: 3px solid var(--secondary-color);
+  transform: scale(1.2);
+  z-index: 99;
+}
+.gallery_content_item img {
+  width: 100%;
+  height: 100%;
+}
+
+.gallery_content_item:nth-last-child(9) {
+  width: 33%;
+  height: 50%;
+  top: 0;
+  left: 0;
+  background-image: url("../../assets/images/room1/room1_1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+}
+.gallery_content_item:nth-last-child(8) {
+  width: 33%;
+  height: 100%;
+  left: 33.5%;
+  background-image: url("../../assets/images/monihomes_night.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery_content_item:nth-last-child(7) {
+  width: 16%;
+  height: 24.5%;
+  right: 17%;
+  background-image: url("../../assets/images/room3/room3_7.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery_content_item:nth-last-child(6) {
+  width: 16%;
+  height: 24.5%;
+  right: 17%;
+  top: 25%;
+  background-image: url("../../assets/images/room3/room3_6.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+}
+.gallery_content_item:nth-last-child(5) {
+  width: 16.5%;
+  height: 49.5%;
+  right: 0;
+  background-image: url("../../assets/images/room1/room1_9.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.gallery_content_item:nth-last-child(4) {
+  width: 16%;
+  height: 24.5%;
+  bottom: 0;
+  left: 17%;
+  background-image: url("../../assets/images/room2/room2_2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery_content_item:nth-last-child(3) {
+  width: 16%;
+  height: 24.5%;
+  left: 17%;
+  bottom: 25%;
+  background-image: url("../../assets/images/room2/room2_4.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.gallery_content_item:nth-last-child(2) {
+  width: 16.5%;
+  height: 49.5%;
+  bottom: 0;
+  background-image: url("../../assets/images/room3/room3_3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.gallery_content_item:nth-last-child(1) {
+  width: 33%;
+  height: 50%;
+  bottom: 0;
+  right: 0;
+  background-image: url("../../assets/images/room2/room2_5.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/*Modal*/
+.modal_wrapper {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.close_modal {
+  font-size: 32px;
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  color: #c4c3c3;
+  cursor: pointer;
+  border-radius: 100%;
+  transition: all ease-in-out 0.1s;
+}
+.close_modal:hover {
+  background-color:  var(--color_danger);
+}

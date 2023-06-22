@@ -1,0 +1,34 @@
+.scroll-btn {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 5px;
+  right: 10px;
+  bottom: 40px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  font-size: 2rem;
+  z-index: 1;
+  cursor: pointer;
+  background: #5a635f80;
+  box-shadow: 0 0 15px #000;
+}
+.scroll-btn:hover {
+  background: rgba(90, 99, 95, 1);
+}
+.scroll-btn-icon {
+  color: var(--color-secondary);
+}
+@media screen and (max-width: 767px) {
+  .scroll-btn {
+    position: fixed;
+    padding-top: 5px;
+    right: 20px;
+    bottom: 40px;
+    height: 50px;
+    width: 50px;
+
+  }
+}

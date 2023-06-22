@@ -1,0 +1,9 @@
+.reviews-title {
+    text-align: center;
+    font-family: var(--cavaet);
+    font-size: 46px;
+}
+
+.reviews_content {
+    height: 450px;
+}

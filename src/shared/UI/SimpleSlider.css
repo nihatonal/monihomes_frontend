@@ -1,0 +1,33 @@
+.slick-slider {
+  width: 100%;
+  z-index: 95;
+}
+.slick-dots {
+  bottom: -35px;
+}
+
+.slick-dots li {
+  border: none;
+  width: 8px;
+  height: 8px;
+  font-size: 0px;
+  padding: 0;
+  border-radius: 50%;
+  opacity: 0.2;
+  border: 1px solid #000;
+}
+.slick-dots li button:before {
+  content: "";
+}
+.slick-dots li.slick-active {
+  background-color: #fff;
+  opacity: 1;
+}
+.slick-dots li:hover {
+  background-color: #fff;
+  opacity: 1;
+}
+.slick-prev:before,
+.slick-next:before {
+  display: none;
+}

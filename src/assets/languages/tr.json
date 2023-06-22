@@ -1,0 +1,420 @@
+{
+  "hero-suptitle": "Kommen Sie und übernachten Sie in unserem Hüttenhotel in der Nähe des Mariager Fjords in Dänemark",
+  "hero-title": "Finde Frieden im Wald",
+  "navlinks": [
+    "Heimat",
+    "die Hütte",
+    "das Gebiet",
+    "Buchen",
+    "über uns",
+    "FAQ"
+  ],
+  "work-items": [
+    {
+      "title": "Deal-Kalkulation",
+      "id": "0001",
+      "desc": "Kunde füllt Antrag aus.",
+      "desc2": "Der Manager berechnet die Transportkosten und die damit verbundenen Dienstleistungen."
+    },
+    {
+      "title": "Vertragsunterzeichnung",
+      "id": "0002",
+      "desc": "Unser Manager bereitet die Vereinbarung auf der Grundlage des Antrags vor. Die Unterzeichnung der Vereinbarung kann mit EDS durchgeführt werden"
+    }
+  ],
+  "navlinksss": [
+    {
+      "nav_item": "Zuhause"
+    },
+    {
+      "nav_item": "die Hütte"
+    },
+    {
+      "nav_item": "das Gebiet"
+    },
+    {
+      "nav_item": "buchen"
+    },
+    {
+      "nav_item": "über uns"
+    },
+    {
+      "nav_item": "FAQ"
+    }
+  ],
+  "book_now": "Jetzt buchen",
+  "from": "von",
+  "per_night": "pro Nacht",
+  "homepage_cabins": "Die Hütten",
+  "homepage_cabins_desc": "Die drei exklusiven und komfortablen Hütten von Løvtag, Et, Ro und Ly, wurden vom Architekten Sigurd Larsen entworfen. Sie alle haben einen offenen Raum mit einem Doppelbett, einem Doppelschlafsofa, einer Küche, einer separaten Toilette und einer Außendusche. Auf dem Dach, umgeben von Baumwipfeln, befindet sich eine Terrasse, die etwa neun Meter über dem Boden liegt. Die Cottages sind um hohe, alte Bäume herum gebaut, die das gesamte Cottage vom Boden bis zur Decke durchziehen.",
+  "read_more": "Weiterlesen",
+  "homepage_forest": "Der Wald",
+  "we_are_here": "Wir sind hier",
+  "homepage_forest_desc": "Die drei exklusiven und komfortablen Hütten von Løvtag, Et, Ro und Ly, wurden vom Architekten Sigurd Larsen entworfen. Sie haben alle einen offenen Raum mit einem Doppelbett, einem Doppelschlafsofa, einer Küche, einer separaten Toilette und einer Außendusche. Auf dem Dach, umgeben von Baumwipfeln, befindet sich eine Terrasse, die etwa neun Meter über dem Boden liegt. Die Cottages sind um hohe, alte Bäume herum gebaut, die das gesamte Cottage vom Boden bis zur Decke durchziehen.",
+  "facilities": "Einrichtungen",
+  "fridge": "Mini-Kühlschrank",
+  "kitchen": "Küche",
+  "coffee": "Kaffeemaschine",
+  "kettle": "Elektrischer Teekessel",
+  "parking": "Parken",
+  "views": "Atemberaubende Ausblicke",
+  "heating": "Fußbodenheizung",
+  "light": "230V",
+  "wifi": "WLAN",
+  "shower": "Dusche",
+  "toilet": "Toilettenspülung",
+  "towels": "Bettwäsche & Handtücher",
+  "aboutus": "Mehr über uns",
+  "section_contact-title": "Bleib mit uns in Kontakt",
+  "section_contact-address": " Vesterborg, Dänemark",
+  "button_book_hut": "Hütte buchen",
+  "footer_title": "Newsletter",
+  "email": "E-Mail-Adresse",
+  "footer_desc": "Melden Sie sich zu unserem Newsletter für besondere Dinge an und erhalten Sie 10 % Rabatt auf Ihre nächste Bestellung.",
+  "footer_item_1": "ALLGEMEINE GESCHÄFTSBEDINGUNGEN",
+  "footer_item_2": "Widerrufsbelehrung",
+  "footer_item_3": "DATENSCHUTZERKLÄRUNG",
+  "footer_copyright": "© 2021 The Glass Huts",
+  "hut": "Die Hütte",
+  "hut_page": [
+    {
+      "section-title": "Das Draußen",
+      "section-id": "outside",
+      "section-buttons": [
+        "Heiße Röhre",
+        "Elektroauto laden"
+      ],
+      "section-desc": [
+        "Die drei exklusiven und komfortablen Hütten von Løvtag, Et, Ro und Ly, wurden vom Architekten Sigurd Larsen entworfen. Sie verfügen alle über einen offenen Raum mit einem Doppelbett, einem Doppelschlafsofa, einer Küche, einer separaten Toilette und einer Außendusche. Auf dem Dach Umgeben von Baumwipfeln gibt es eine Terrasse, die etwa neun Meter über dem Boden liegt.",
+        "Ladegeräte der Stufe 1 können 40 bis 50 Stunden benötigen, um ein batteriebetriebenes Elektrofahrzeug (BEV) von leer aufzuladen, und 5 bis 6 Stunden, um ein Plug-in-Hybrid-Elektrofahrzeug (PHEV) von leer aufzuladen."
+      ]
+    },
+    {
+      "section-title": "Das Innere",
+      "section-id": "inside",
+      "section-buttons": [
+        "Platz",
+        "Küche",
+        "Badezimmer"
+      ],
+      "section-desc": [
+        "Lorem Ipsum ist einfach ein Blindtext der Druck- und Satzindustrie. Lorem Ipsum ist seit dem 15. Jahrhundert der Standard-Blindtext der Branche, als ein unbekannter Drucker eine Galeere von Typen nahm und sie durcheinanderbrachte, um ein Typenmusterbuch herzustellen.",
+        "Es hat nicht nur fünf Jahrhunderte überlebt, sondern auch den Sprung in den elektronischen Satz und ist im Wesentlichen unverändert geblieben. Es wurde in den 1960er Jahren mit der Veröffentlichung von Letraset-Blättern mit Passagen von Lorem Ipsum populär und in jüngerer Zeit mit Desktop-Publishing-Software wie Aldus PageMaker einschließlich Versionen von Lorem Ipsum.",
+        "Lorem Ipsum stammt aus den Abschnitten 1.10.32 und 1.10.33 von 'de Finibus Bonorum et Malorum' (Die Extreme von Gut und Böse) von Cicero, geschrieben 45 v. Chr. Dieses Buch ist eine Abhandlung über die Theorie der Ethik, sehr beliebt während der Renaissance. Die erste Zeile von Lorem Ipsum, 'Lorem ipsum dolor sit amet..', stammt aus einer Zeile in Abschnitt 1.10.32."
+      ]
+    },
+    {
+      "section-title": "Praktiken",
+      "section-id": "practicalities",
+      "section-buttons": [
+        "Frühstück",
+        "Klassisches Abendessen"
+      ],
+      "section-desc": [
+        "Es gibt viele Variationen von Passagen von Lorem Ipsum, aber die meisten wurden in irgendeiner Form verändert, durch eingespritzten Humor oder zufällige Wörter, die nicht einmal annähernd glaubwürdig aussehen.",
+        "Wenn Sie eine Passage von Lorem Ipsum verwenden, müssen Sie sicher sein, dass sich mitten im Text nichts Peinliches versteckt erster echter Generator im Internet."
+      ]
+    }
+  ],
+  "area": "Der Bereich",
+  "area-name": "Vesterborg, Dänemark",
+  "area-nav": "Route berechnen",
+  "area-map-desc": "Lorem ipsum dolor sit amet, consectetur adipiscing...",
+  "vesterborg": "Vesterborg",
+  "copenhagen": "Kopenhagen",
+  "activities": "Aktivitäten",
+  "area_page": [
+    {
+      "section-title": "Vesterborg",
+      "section-subtitle": "Lorem ipsum dolor sit amet, consectetur adipiscing...",
+      "section-id": "vesterborg",
+      "section-buttons": [],
+      "section-desc": [
+        "Die drei exklusiven und komfortablen Hütten von Løvtag, Et, Ro und Ly, wurden vom Architekten Sigurd Larsen entworfen. Sie verfügen alle über einen offenen Raum mit einem Doppelbett, einem Doppelschlafsofa, einer Küche, einer separaten Toilette und einer Außendusche. Auf dem Dach Umgeben von Baumwipfeln gibt es eine Terrasse, die sich etwa neun Meter über dem Boden befindet."
+      ]
+    },
+    {
+      "section-title": "Restaurants & Shopping",
+      "section-id": "restaurants",
+      "section-buttons": [
+        "Restaurants",
+        "Shops"
+      ],
+      "section-desc": [
+        "Lorem Ipsum ist einfach Blindtext der Druck- und Satzindustrie. Lorem Ipsum ist seit dem 15. Jahrhundert der Standard-Blindtext der Branche.",
+        "Es hat nicht nur fünf Jahrhunderte überlebt, sondern auch den Sprung in den elektronischen Satz und ist im Wesentlichen unverändert geblieben. Es wurde in den 1960er Jahren populär mit."
+      ]
+    },
+    {
+      "section-title": "Naturerlebnisse",
+      "section-id": "experiences",
+      "section-buttons": [
+        "Lorem Impus",
+        "Lorem Impus"
+      ],
+      "section-desc": [
+        "Es gibt viele Variationen von Passagen von Lorem Ipsum, aber die meisten wurden in irgendeiner Form verändert, durch eingespritzten Humor oder zufällige Wörter, die nicht einmal annähernd glaubwürdig aussehen.",
+        "Wenn Sie eine Passage von Lorem Ipsum verwenden, müssen Sie sicher sein, dass sich mitten im Text nichts Peinliches versteckt erster echter Generator im Internet."
+      ]
+    },
+    {
+      "section-title": "Fahren gehen",
+      "section-id": "goforadrive",
+      "section-buttons": [
+        "Lorem Impus",
+        "Lorem Impus"
+      ],
+      "section-desc": [
+        "Es gibt viele Variationen von Passagen von Lorem Ipsum, aber die meisten wurden in irgendeiner Form verändert, durch eingespritzten Humor oder zufällige Wörter, die nicht einmal annähernd glaubwürdig aussehen.",
+        "Wenn Sie eine Passage von Lorem Ipsum verwenden, müssen Sie sicher sein, dass sich mitten im Text nichts Peinliches versteckt erster echter Generator im Internet."
+      ]
+    },
+    {
+      "section-title": "Kleinstadtcharme",
+      "section-id": "smalltowncharm",
+      "section-buttons": [
+        "Lorem Impus",
+        "Lorem Impus"
+      ],
+      "section-desc": [
+        "Es gibt viele Variationen von Passagen von Lorem Ipsum, aber die meisten wurden in irgendeiner Form verändert, durch eingespritzten Humor oder zufällige Wörter, die nicht einmal annähernd glaubwürdig aussehen.",
+        "Wenn Sie eine Passage von Lorem Ipsum verwenden, müssen Sie sicher sein, dass sich mitten im Text nichts Peinliches versteckt erster echter Generator im Internet."
+      ]
+    }
+  ],
+  "about_us": "Über uns",
+  "contact_us": "kontaktiere uns",
+  "read_faq": "FAQ lesen",
+  "about_us_section_title": "“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”",
+  "about_us_section_desc": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo Inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia volupta aut sit aut as diperiam fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+  "about_us_section_galery": "Lorem ipsum dolor sit amet, consectetur adipiscing...",
+  "about_us_image_desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  "form_element": [
+    {
+      "first_name": "Vorname",
+      "last_name": "Nachname",
+      "email": "Email",
+      "subject": "Betreff",
+      "message": "Nachricht",
+      "send": "Senden"
+    },
+    {
+      "error_fname": "Bitte geben Sie Ihren Namen ein.",
+      "error_lname": "Bitte geben Sie Ihren Nachnamen ein.",
+      "error_email": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "error_subject": "Bitte geben Sie einen Betreff ein.",
+      "error_textarea": "Ihre Nachricht muss länger als 100 Zeichen sein."
+    }
+  ],
+  "heart-text": "Aus Dänemark, mit Liebe...",
+  "faq": [
+    {
+      "question": "PREISE",
+      "answer": [
+        "STORNIERUNGSBEDINGUNGEN",
+        "Stornierung vier Wochen vorher = 100 % Rückerstattung",
+        "Stornierung zwei Wochen vorher = 50 % Rückerstattung",
+        "Stornierung später als zwei Wochen = volle Zahlung"
+      ]
+    },
+    {
+      "question": "DER HINAUF ZUR GLASHÜTTE",
+      "answer": [
+        "Neque porro quisquam est qui",
+        "Es sind viele Variationen von Passagen von Lorem Ipsum verfügbar.",
+        "Entgegen der landläufigen Meinung ist Lorem Ipsum nicht einfach zufälliger Text.",
+        "Der seit dem 15. Jahrhundert verwendete Standardklumpen von Lorem Ipsum."
+      ]
+    },
+    {
+      "question": "KAPAZITÄT",
+      "answer": [
+        "Woher kommt das?",
+        "Richard McClintock, ein Lateinprofessor am Hampden-Sydney College in Virginia",
+        "Lorem Ipsum stammt aus den Abschnitten 1.10.32.",
+        "Die erste Zeile von Lorem Ipsum, 'Lorem ipsum dolor sit amet..'"
+      ]
+    },
+    {
+      "question": "HAUSTIERE",
+      "answer": [
+        "Wo kann ich etwas bekommen?",
+        "Alle Lorem-Ipsum-Generatoren im Internet neigen dazu, sich zu wiederholen.",
+        "Es verwendet ein Wörterbuch mit über 200 lateinischen Wörtern.",
+        "Lorem Ipsum, was vernünftig aussieht."
+      ]
+    },
+    {
+      "question": "CHECK-IN / CHECK-OUT",
+      "answer": [
+        "Was ist Lorem Ipsum?",
+        "Lorem Ipsum ist einfach Blindtext der Druck- und Satzindustrie.",
+        "Es hat nicht nur fünf Jahrhunderte überlebt.",
+        "Lorem Ipsum Passagen und neuerdings auch mit Desktop-Publishing-Software."
+      ]
+    }
+  ],
+  "booking": "Buchung",
+  "booking_additionals": "Zusatzleistungen wählen",
+  "booking_additional_services": [
+    {
+      "name": "Frisches Frühstück für eine Person",
+      "id": "frühstück01",
+      "price": 400,
+      "desc_title": "Frisches Frühstück",
+      "desc": [
+        {
+          "id": "frühstück_01",
+          "price": 600,
+          "title": "Frühstück 01",
+          "description": "Brot, Kaffee, Milch, Saft und eine Auswahl an Aufstrichen + Toppings."
+        },
+        {
+          "id": "frühstück_02",
+          "price": 600,
+          "title": "Frühstück 02",
+          "description": "Brot, Kaffee, Milch, Saft und eine Auswahl an Aufstrichen + Toppings."
+        },
+        {
+          "id": "frühstück_03",
+          "price": 600,
+          "title": "Frühstück 03",
+          "description": "Brot, Kaffee, Milch, Saft und eine Auswahl an Aufstrichen + Toppings."
+        }
+      ]
+    },
+    {
+      "name": "Frisches Frühstück für zwei",
+      "id": "frühstück02",
+      "price": 600,
+      "desc_title": "Frisches Frühstück",
+      "desc": [
+        {
+          "id": "frühstückfür2_01",
+          "price": 600,
+          "title": "Frühstück für 2 01",
+          "description": "Brot, Kaffee, Milch, Saft und eine Auswahl an Aufstrichen + Toppings."
+        },
+        {
+          "id": "frühstückfür2_02",
+          "price": 600,
+          "title": "Frühstück für 2 02",
+          "description": "Brot, Kaffee, Milch, Saft und eine Auswahl an Aufstrichen + Toppings."
+        },
+        {
+          "id": "frühstückfür2_03",
+          "price": 600,
+          "title": "Frühstück für 2 03",
+          "description": "Brot, Kaffee, Milch, Saft und eine Auswahl an Aufstrichen + Toppings."
+        }
+      ]
+    },
+    {
+      "name": "Klassisches Abendessen für eine Person",
+      "id": "abendessen01",
+      "price": 600,
+      "desc_title": "Klassisches Abendessen",
+      "desc": [
+        {
+          "id": "abendessen_01",
+          "title": "Abendessen_01 01",
+          "price": 600,
+          "description": "Brot, Kaffee, Milch, Saft und eine Auswahl an Aufstrichen + Toppings."
+        },
+        {
+          "id": "abendessen_02",
+          "title": "Abendessen_01 02",
+          "price": 600,
+          "description": "Brot, Kaffee, Milch, Saft und eine Auswahl an Aufstrichen + Toppings."
+        },
+        {
+          "id": "abendessen_01_03",
+          "price": 600,
+          "title": "Abendessen 03",
+          "description": "Brot, Kaffee, Milch, Saft und eine Auswahl an Aufstrichen + Toppings."
+        }
+      ]
+    },
+    {
+      "name": "Klassisches Abendessen für eine Person",
+      "id": "abendessen02",
+      "price": 600,
+      "desc_title": "Klassisches Abendessen",
+      "desc": [
+        {
+          "id": "dinnerfor2_01_01",
+          "price": 600,
+          "title": "Dinnerfor2 01",
+          "description": "Brot, Kaffee, Milch, Saft und eine Auswahl an Aufstrichen + Toppings."
+        },
+        {
+          "id": "frühstück_02",
+          "price": 600,
+          "title": "Dinnerfor2 02",
+          "description": "Brot, Kaffee, Milch, Saft und eine Auswahl an Aufstrichen + Toppings."
+        },
+        {
+          "id": "frühstück_03",
+          "price": 600,
+          "title": "Dinnerfor2 03",
+          "description": "Brot, Kaffee, Milch, Saft und eine Auswahl an Aufstrichen + Toppings."
+        }
+      ]
+    },
+    {
+      "name": "Laden von Elektroautos",
+      "id": "charge01",
+      "price": 600,
+      "desc_title": "Laden von Elektroautos",
+      "desc": [
+        {
+          "id": "charge_01",
+          "title": "Ladung 01",
+          "price": 600,
+          "description": "Brot, Kaffee, Milch, Saft und eine Auswahl an Aufstrichen + Toppings."
+        },
+        {
+          "id": "charge_02",
+          "price": 600,
+          "title": "Ladung 02",
+          "description": "Brot, Kaffee, Milch, Saft und eine Auswahl an Aufstrichen + Toppings."
+        }
+      ]
+    }
+  ],
+  "booking_hot_rules": [
+    "Hüttenordnung",
+    "Check-in: 14:00 - 23:00 Uhr ",
+    "Kasse: 11:00 Uhr",
+    "Nicht für Kinder und Kleinkinder geeignet",
+    "Rauchen verboten",
+    "Keine Haustiere"
+  ],
+  "booking_cancellation_policy": [
+    "Stornierungsbedingungen",
+    "Kostenlose Stornierung bis 13:00 Uhr am 27. März",
+    "Stornieren Sie danach vor 14:00 Uhr am 1. April und erhalten Sie eine Rückerstattung in Höhe von 50 % abzüglich der Kosten für die erste Übernachtung und der Servicegebühr."
+  ],
+  "booking_important_info": [
+    "Wichtige Informationen",
+    "Sie müssen einen steilen Hügel erklimmen, um zu den Baumhäusern zu gelangen. Es dauert ungefähr 20 bis 30 Minuten auf einem Pfad mit Treppen und unebenem Boden."
+  ],
+  "booking_words": [
+    {
+      "discount": "Rabatt",
+      "total": "Gesamt",
+      "night": "Nacht",
+      "nights": "Nächte",
+      "check_in": "Einchecken",
+      "check_out": "Auschecken",
+      "guests": "Gäste",
+      "book": "Buch",
+      "coupon": "Gutscheincode",
+      "apply": "Bewerben",
+      "clear": "Daten löschen",
+      "close": "Schließen",
+      "error_dates": "Bitte gültige Daten auswählen",
+      "invalid_coupon": "Ungültiger Code. Bitte versuchen Sie es erneut."
+    }
+  ]
+}
