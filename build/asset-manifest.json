@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.c3ae7e2a.css",
-    "main.js": "/static/js/main.88eb7516.js",
+    "main.css": "/static/css/main.be58ef73.css",
+    "main.js": "/static/js/main.19ce2bf0.js",
     "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
     "static/media/room2_2.jpg": "/static/media/room2_2.736e7c0d781f75fe555b.jpg",
     "static/media/room3_7.jpg": "/static/media/room3_7.09b2cb39ec902815e0ec.jpg",
@@ -37,20 +37,20 @@
     "static/media/oda_1.jpeg": "/static/media/oda_1.b3b28ca4660db3fc9996.jpeg",
     "static/media/washing_machine - Copy.jpeg": "/static/media/washing_machine - Copy.eae29f9b13146a339439.jpeg",
     "static/media/room_aboutus.jpeg": "/static/media/room_aboutus.29586fe452d3c7106317.jpeg",
-    "static/media/logo.png": "/static/media/logo.cb8789ccaf18a85cf2ed.png",
     "static/media/monihomes_night.jpg": "/static/media/monihomes_night.dfc60c0fb312a73d9a51.jpg",
+    "static/media/logo.png": "/static/media/logo.4f2de4e058fc49cb64d7.png",
     "static/media/room2_8.jpeg": "/static/media/room2_8.4f2899f386a06ac56892.jpeg",
     "static/media/airconditioner.jpeg": "/static/media/airconditioner.30a39d7cd47103b66e77.jpeg",
     "static/media/wifi.jpg": "/static/media/wifi.684728915a193793b7fe.jpg",
     "static/media/logo.jpg": "/static/media/logo.6a627aed0726c0aabd8d.jpg",
     "static/media/host.jpg": "/static/media/host.702f404151d654e36110.jpg",
     "index.html": "/index.html",
-    "main.c3ae7e2a.css.map": "/static/css/main.c3ae7e2a.css.map",
-    "main.88eb7516.js.map": "/static/js/main.88eb7516.js.map",
+    "main.be58ef73.css.map": "/static/css/main.be58ef73.css.map",
+    "main.19ce2bf0.js.map": "/static/js/main.19ce2bf0.js.map",
     "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c3ae7e2a.css",
-    "static/js/main.88eb7516.js"
+    "static/css/main.be58ef73.css",
+    "static/js/main.19ce2bf0.js"
   ]
 }
