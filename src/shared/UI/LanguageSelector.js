@@ -51,7 +51,7 @@ export default function LanguageSelector(props) {
   };
 
   return (
-    <div className="select-lang">
+    <div className="select-lang mobile-lang">
       <button
         type="button"
         aria-haspopup="listbox"

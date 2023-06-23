@@ -41,3 +41,15 @@
   color: rgba(0, 0, 0, 0.637);
   text-align: center;
 }
+
+@media only screen and (max-width: 767px) {
+  .hero_content {
+    width: 100%;
+    height: auto;
+    padding-right: 0;
+  }
+  .hero_title {
+    font-size: 34px;
+    padding: 20px 50px;
+  }
+}

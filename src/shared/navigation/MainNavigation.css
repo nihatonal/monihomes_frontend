@@ -28,14 +28,32 @@
   .main_header {
     padding: 10px 0 0;
   }
-}
-.hide-navlinks {
-  right: -100%;
-}
-.sidedrawer-navlinks {
-  display: none;
-}
-@media only screen and (max-width: 767px) {
+
+  .hide-navlinks {
+    right: -100%;
+  }
+  .sidedrawer-navlinks {
+    display: none;
+  }
+  @media only screen and (max-width: 767px) {
+    .header {
+      height: 80px;
+    }
+    .main_header {
+      justify-content: space-between;
+      padding: 10px 30px 0;
+    }
+    .main_header .socialbar-container {
+      display: none;
+    }
+    .logo {
+      height: 60px;
+    }
+  }
+  .select-lang {
+    display: none;
+  }
+
   .sidedrawer-navlinks {
     display: block;
   }
