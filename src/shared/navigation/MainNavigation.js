@@ -65,7 +65,7 @@ function MainNavigation(props) {
                     onClick={openDrawerHandler}
                 />
                 <LanguageSelector />
-                <SocialBar />
+                <SocialBar className={scrolled ? "social_out" : "social_in"} />
             </div>
 
         </div >

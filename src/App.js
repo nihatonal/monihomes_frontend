@@ -4,7 +4,7 @@ import './App.css';
 import MainNavigation from './shared/navigation/MainNavigation'
 import { LanguageProvider } from "./shared/context/Language";
 import ScrollButton from "./shared/UI/ScrollButton";
-
+import Footer from './shared/footer/Footer'
 import Main from './main/Main'
 
 import './App.css'
@@ -20,7 +20,7 @@ function App() {
             <Route exact path="/" element={<Main />} />
             <Route exact path="*" element={<Main />} />
           </Routes>
-          {/* <Footer /> */}
+          <Footer />
           <ScrollButton />
         </BrowserRouter>
       </LanguageProvider>

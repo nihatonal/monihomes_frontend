@@ -7,7 +7,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import './SocialBar.css';
 function SocialBar(props) {
     return (
-        <div className='socialbar-container'>
+        <div className={`socialbar-container ${props.className}`}>
             <div className="socialbar_wrapper">
                 <span></span>
                 <a href="https://www.youtube.com" rel="noreferrer" target='_blank' className="social-item">
