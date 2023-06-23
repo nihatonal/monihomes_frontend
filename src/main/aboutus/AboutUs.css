@@ -100,16 +100,16 @@
   .olive_container {
     height: 50px;
     width: 100px;
-    position: absolute;
-    top: 10px;
+    transform: rotateX(180deg) rotate(25deg);
+    top: 70px;
     left: 20px;
     opacity: 0.5;
   }
   .olive_container_2 {
-    height: 50px;
-    width: 100px;
-    top: 20px;
-    right: 10px;
+    height: 100px;
+    width: 120px;
+    top: 60px;
+    right: 70px;
     opacity: 0.5;
   }
   .aboutus_container {

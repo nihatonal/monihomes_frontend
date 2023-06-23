@@ -4,10 +4,8 @@ import { useHttpClient } from "../../shared/hooks/http-hook";
 
 function GetReviews(props) {
 	const { isLoading, error, sendRequest } = useHttpClient();
-	const placeId = 'ChIJh_WzFH1BwBQRKxywcvDfSMs';
-	const apiKey = 'AIzaSyDLvSBaiQXgIr8tGfI1qIS23GP3ymL5cZk';
-	const url = `https://maps.googleapis.com/maps/api/place/details/json?placeid=${placeId}&key=${apiKey}`;
-
+	const url = `https://maps.googleapis.com/maps/api/place/details/json?placeid=${process.env.REACT_PLACE_ID}&key=${process.env.REACT_API_KEY}`;
+	// console.log(url)
 	// useEffect(() => {
 	// 	const fetchUsers = async () => {
 	// 		try {
