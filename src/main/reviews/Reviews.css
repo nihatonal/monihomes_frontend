@@ -29,9 +29,15 @@
   }
 }
 @media only screen and (max-width: 767px) {
+  .reviews_wrapper {
+    padding: 90px 0 80px;
+  }
   .reviews_content {
     width: 60%;
     margin-top: 0;
+  }
+  .slick-dots {
+    bottom: -25px;
   }
 }
 @media only screen and (max-width: 650px) {

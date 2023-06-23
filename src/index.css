@@ -83,12 +83,12 @@ ul {
 @media only screen and (max-width: 767px) {
   .section_wrapper {
     margin: 0 auto;
-    padding: 100px 30px 70px;
+    padding: 80px 30px 70px;
     position: relative;
   }
 
   .section_title {
     font-size: 26px;
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
 }
