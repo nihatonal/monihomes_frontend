@@ -3,7 +3,7 @@
   z-index: 95;
 }
 .slick-dots {
-  bottom: -35px;
+  bottom: -55px;
 }
 
 .slick-dots li {
@@ -31,3 +31,4 @@
 .slick-next:before {
   display: none;
 }
+

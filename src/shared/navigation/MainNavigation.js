@@ -35,7 +35,7 @@ function MainNavigation(props) {
     return (
         <div className={'header'}
             style={scrolled ? {
-                background: 'linear-gradient( 180deg,rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.8),rgba(255, 255, 255, 0.5))'
+                background: 'linear-gradient( 180deg,rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 1),rgba(255, 255, 255, 0.8))'
             } : null}
         >
 

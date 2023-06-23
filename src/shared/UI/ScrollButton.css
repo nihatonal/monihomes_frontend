@@ -10,7 +10,7 @@
   width: 50px;
   border-radius: 50%;
   font-size: 2rem;
-  z-index: 1;
+  z-index: 99;
   cursor: pointer;
   background: #5a635f80;
   box-shadow: 0 0 15px #000;
