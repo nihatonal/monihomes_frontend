@@ -1,9 +1,18 @@
+.partners_wrapper {
+  padding-bottom: 50px;
+  /* background-color: #fff;
+  border-radius: 0 350px 350px 0; */
+}
+.partners_wrapper .section_title {
+  color: #327e4b;
+  font-weight: 700;
+}
 .partners_content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  row-gap: 50px;
-  padding-top: 50px;
+  row-gap: 40px;
+  padding-top: 0;
 }
 .partner_name {
   font-family: var(--Nunito_Sans);
@@ -11,6 +20,9 @@
   font-weight: 600;
   margin-bottom: 20px;
   color: #327e4b;
+}
+.partner_link {
+  display: block;
 }
 .partners_images {
   display: flex;

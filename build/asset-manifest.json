@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.a369279c.css",
-    "main.js": "/static/js/main.e1286fa8.js",
+    "main.css": "/static/css/main.287aca80.css",
+    "main.js": "/static/js/main.a2b21f6f.js",
     "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
     "static/media/room2_2.jpg": "/static/media/room2_2.736e7c0d781f75fe555b.jpg",
     "static/media/room3_7.jpg": "/static/media/room3_7.09b2cb39ec902815e0ec.jpg",
@@ -33,28 +33,35 @@
     "static/media/room2_13.jpg": "/static/media/room2_13.066dd23ed66e7b202a43.jpg",
     "static/media/monihomes_1.jpg": "/static/media/monihomes_1.b11569c2fcabe56d47b8.jpg",
     "static/media/location.png": "/static/media/location.b92aa970969e85062b12.png",
+    "static/media/yoyo_tinyhouse_2.jpeg": "/static/media/yoyo_tinyhouse_2.17e9d3cc96ead4b4a45e.jpeg",
+    "static/media/villamasal.jpeg": "/static/media/villamasal.eb53a92cceff90d55ec5.jpeg",
+    "static/media/yoyo_tinyhouse.jpeg": "/static/media/yoyo_tinyhouse.6efe3c782ade59168234.jpeg",
     "static/media/olive.png": "/static/media/olive.7c16a82b1f77a06c3b0a.png",
+    "static/media/villamasal4.jpeg": "/static/media/villamasal4.fa0a4e3447ccd869a2c5.jpeg",
+    "static/media/villamasal3.jpeg": "/static/media/villamasal3.cabb31a047f709e82842.jpeg",
     "static/media/oda_1.jpeg": "/static/media/oda_1.b3b28ca4660db3fc9996.jpeg",
     "static/media/washing_machine - Copy.jpeg": "/static/media/washing_machine - Copy.eae29f9b13146a339439.jpeg",
     "static/media/room_aboutus.jpeg": "/static/media/room_aboutus.29586fe452d3c7106317.jpeg",
     "static/media/monihomes_night.jpg": "/static/media/monihomes_night.dfc60c0fb312a73d9a51.jpg",
     "static/media/logo.png": "/static/media/logo.4f2de4e058fc49cb64d7.png",
     "static/media/room2_8.jpeg": "/static/media/room2_8.4f2899f386a06ac56892.jpeg",
+    "static/media/villamasal2.jpeg": "/static/media/villamasal2.4f43990497655892bbf6.jpeg",
     "static/media/airconditioner.jpeg": "/static/media/airconditioner.30a39d7cd47103b66e77.jpeg",
     "static/media/wifi.jpg": "/static/media/wifi.684728915a193793b7fe.jpg",
     "static/media/logo.jpg": "/static/media/logo.6a627aed0726c0aabd8d.jpg",
+    "static/media/logo_footer.png": "/static/media/logo_footer.bf0abed2da9f4324ed8f.png",
     "static/media/host.jpg": "/static/media/host.702f404151d654e36110.jpg",
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "index.html": "/index.html",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
-    "main.a369279c.css.map": "/static/css/main.a369279c.css.map",
-    "main.e1286fa8.js.map": "/static/js/main.e1286fa8.js.map",
+    "main.287aca80.css.map": "/static/css/main.287aca80.css.map",
+    "main.a2b21f6f.js.map": "/static/js/main.a2b21f6f.js.map",
     "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a369279c.css",
-    "static/js/main.e1286fa8.js"
+    "static/css/main.287aca80.css",
+    "static/js/main.a2b21f6f.js"
   ]
 }
