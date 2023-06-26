@@ -96,7 +96,7 @@
   opacity: 0.5;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1000px) {
   .olive_container {
     height: 50px;
     width: 100px;

@@ -12,6 +12,8 @@ import gallery_7 from '../../assets/images/room2/room2_4.jpg';
 import gallery_8 from '../../assets/images/room3/room3_3.jpg';
 import gallery_9 from '../../assets/images/room2/room2_5.jpg';
 
+
+import { TfiGallery } from "react-icons/tfi";
 import './Gallery.css';
 function Gallery(props) {
     const [bg, setBg] = useState();
@@ -26,15 +28,33 @@ function Gallery(props) {
             <div className="section_wrapper">
                 <h3 className="section_title gallery-title">Gallery</h3>
                 <div className="gallery_content">
-                    <div id="gallery_1" className="gallery_content_item" onClick={handler}></div>
-                    <div id="gallery_2" className="gallery_content_item" onClick={handler}></div>
-                    <div id="gallery_3" className="gallery_content_item" onClick={handler}></div>
-                    <div id="gallery_4" className="gallery_content_item" onClick={handler}></div>
-                    <div id="gallery_5" className="gallery_content_item" onClick={handler}></div>
-                    <div id="gallery_6" className="gallery_content_item" onClick={handler}></div>
-                    <div id="gallery_7" className="gallery_content_item" onClick={handler}></div>
-                    <div id="gallery_8" className="gallery_content_item" onClick={handler}></div>
-                    <div id="gallery_9" className="gallery_content_item" onClick={handler}></div>
+                    <div id="gallery_1" className="gallery_content_item" onClick={handler}>
+                        <TfiGallery />
+                    </div>
+                    <div id="gallery_2" className="gallery_content_item" onClick={handler}>
+                        <TfiGallery />
+                    </div>
+                    <div id="gallery_3" className="gallery_content_item" onClick={handler}>
+                        <TfiGallery />
+                    </div>
+                    <div id="gallery_4" className="gallery_content_item" onClick={handler}>
+                        <TfiGallery />
+                    </div>
+                    <div id="gallery_5" className="gallery_content_item" onClick={handler}>
+                        <TfiGallery />
+                    </div>
+                    <div id="gallery_6" className="gallery_content_item" onClick={handler}>
+                        <TfiGallery />
+                    </div>
+                    <div id="gallery_7" className="gallery_content_item" onClick={handler}>
+                        <TfiGallery />
+                    </div>
+                    <div id="gallery_8" className="gallery_content_item" onClick={handler}>
+                        <TfiGallery />
+                    </div>
+                    <div id="gallery_9" className="gallery_content_item" onClick={handler}>
+                        <TfiGallery />
+                    </div>
                 </div>
             </div>
             <Modal show={show}

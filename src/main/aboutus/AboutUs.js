@@ -7,6 +7,7 @@ import kitchen from '../../assets/images/room2_8.jpeg';
 import location from '../../assets/images/location.png';
 import airconditioner from '../../assets/images/airconditioner.jpeg';
 import wifi from '../../assets/images/wifi.jpg';
+import parking from '../../assets/images/parking.jpeg';
 import './AboutUs.css'
 function AboutUs(props) {
     return (
@@ -43,7 +44,7 @@ function AboutUs(props) {
                         <p className="aboutus_content_item_desc">great location</p>
                     </div>
                     <div className="aboutus_content_item">
-                        <img src={host} alt="host" className="aboutus_content_image" />
+                        <img src={parking} alt="parking" className="aboutus_content_image" />
                         <p className="aboutus_content_item_desc">parking</p>
                     </div>
                 </div>

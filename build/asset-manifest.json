@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.287aca80.css",
-    "main.js": "/static/js/main.a2b21f6f.js",
+    "main.css": "/static/css/main.90264a1e.css",
+    "main.js": "/static/js/main.9e9927c1.js",
     "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
     "static/media/room2_2.jpg": "/static/media/room2_2.736e7c0d781f75fe555b.jpg",
     "static/media/room3_7.jpg": "/static/media/room3_7.09b2cb39ec902815e0ec.jpg",
@@ -32,9 +32,19 @@
     "static/media/room1_2.jpg": "/static/media/room1_2.51522765d867dabe8504.jpg",
     "static/media/room2_13.jpg": "/static/media/room2_13.066dd23ed66e7b202a43.jpg",
     "static/media/monihomes_1.jpg": "/static/media/monihomes_1.b11569c2fcabe56d47b8.jpg",
+    "static/media/yoyo_8.jpeg": "/static/media/yoyo_8.fa606c8496768ce485c0.jpeg",
+    "static/media/yoyo_1.jpeg": "/static/media/yoyo_1.61f5bc7281e576c5abf8.jpeg",
+    "static/media/yoyo_7.jpeg": "/static/media/yoyo_7.6b57310902742e8adf6e.jpeg",
+    "static/media/yoyo_5.jpeg": "/static/media/yoyo_5.a83bc5cb64e95c9ec32f.jpeg",
+    "static/media/yoyo_2.jpeg": "/static/media/yoyo_2.55890dbb6b5175476a35.jpeg",
+    "static/media/yoyo_3.jpeg": "/static/media/yoyo_3.bd53a30557282685e3bf.jpeg",
+    "static/media/yoyo_4.jpeg": "/static/media/yoyo_4.52fface6f3d19e75f834.jpeg",
+    "static/media/yoyo_6.jpeg": "/static/media/yoyo_6.d76e09370fb6425b7107.jpeg",
     "static/media/location.png": "/static/media/location.b92aa970969e85062b12.png",
+    "static/media/parking.jpeg": "/static/media/parking.b71b1fc28f6fc2de1e13.jpeg",
     "static/media/yoyo_tinyhouse_2.jpeg": "/static/media/yoyo_tinyhouse_2.17e9d3cc96ead4b4a45e.jpeg",
     "static/media/villamasal.jpeg": "/static/media/villamasal.eb53a92cceff90d55ec5.jpeg",
+    "static/media/yoyo_9.jpeg": "/static/media/yoyo_9.6efe3c782ade59168234.jpeg",
     "static/media/yoyo_tinyhouse.jpeg": "/static/media/yoyo_tinyhouse.6efe3c782ade59168234.jpeg",
     "static/media/olive.png": "/static/media/olive.7c16a82b1f77a06c3b0a.png",
     "static/media/villamasal4.jpeg": "/static/media/villamasal4.fa0a4e3447ccd869a2c5.jpeg",
@@ -56,12 +66,12 @@
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "index.html": "/index.html",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
-    "main.287aca80.css.map": "/static/css/main.287aca80.css.map",
-    "main.a2b21f6f.js.map": "/static/js/main.a2b21f6f.js.map",
+    "main.90264a1e.css.map": "/static/css/main.90264a1e.css.map",
+    "main.9e9927c1.js.map": "/static/js/main.9e9927c1.js.map",
     "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.287aca80.css",
-    "static/js/main.a2b21f6f.js"
+    "static/css/main.90264a1e.css",
+    "static/js/main.9e9927c1.js"
   ]
 }

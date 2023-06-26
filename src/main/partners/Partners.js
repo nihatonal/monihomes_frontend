@@ -36,13 +36,20 @@ function Partners(props) {
                     <div className="partners_content-item">
                         <h4 className="partner_name">Yoyo Tinyhouse</h4>
                         <a href="https://instagram.com/yoyo_tinyhouse_fethiye?igshid=NGExMmI2YTkyZg==" target="_blank" rel="noopener noreferrer" className="partner_link">
-                            <div className="partners_images">
-                                <div className="partner_image">
-                                    <img src={yoyo} alt={'villa masal'} />
+                            <div className="yoyo_villa">
+                                <div className="partner_image yoyo_villa_item">
+                                    {/* <img src={yoyo} alt={'villa masal'} /> */}
                                 </div>
-                                <div className="partner_image">
-                                    <img src={yoyo2} alt={'villa masal'} />
+                                <div className="partner_image yoyo_villa_item">
+                                    {/* <img src={yoyo2} alt={'villa masal'} /> */}
                                 </div>
+                                <div className="partner_image yoyo_villa_item"></div>
+                                <div className="partner_image yoyo_villa_item"></div>
+                                <div className="partner_image yoyo_villa_item"></div>
+                                <div className="partner_image yoyo_villa_item"></div>
+                                <div className="partner_image yoyo_villa_item"></div>
+                                <div className="partner_image yoyo_villa_item"></div>
+                                <div className="partner_image yoyo_villa_item"></div>
                             </div>
                         </a>
                     </div>
