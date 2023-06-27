@@ -1,22 +1,23 @@
 import React from 'react';
 
-import host from '../../assets/images/host.jpg';
+
 import washing from '../../assets/images/washing_machine - Copy.jpeg';
 import bedroom from '../../assets/images/room_aboutus.jpeg';
-import kitchen from '../../assets/images/room2_8.jpeg';
+import kitchen from '../../assets/images/room2/room2_5.jpg';
 import location from '../../assets/images/location.png';
 import airconditioner from '../../assets/images/airconditioner.jpeg';
 import wifi from '../../assets/images/wifi.jpg';
 import parking from '../../assets/images/parking.jpeg';
+import profil from '../../assets/images/profil.jpeg';
 import './AboutUs.css'
 function AboutUs(props) {
     return (
-        <section className='section_container aboutus_container' id='aboutus'>
+        <section className='section_container aboutus_container' id='about-us'>
             <div className="section_wrapper aboutus_wrapper" >
                 <h3 className="section_title">About us</h3>
                 <div className="aboutus_content">
                     <div className="aboutus_content_item">
-                        <img src={host} alt="host" className="aboutus_content_image" />
+                        <img src={profil} alt="profil" className="aboutus_content_image" />
                         <p className="aboutus_content_item_desc">caring host Ugur</p>
                     </div>
                     <div className="aboutus_content_item">

@@ -3,18 +3,20 @@ import { useHttpClient } from "../../shared/hooks/http-hook";
 
 import ReviewCard from '../../shared/UI/ReviewCard';
 import SimpleSlider from '../../shared/UI/SimpleSlider';
-
+import moment from 'moment';
 import './Reviews.css'
 function Reviews(props) {
-    // const https = require('https')
     const { sendRequest } = useHttpClient();
     const [reviews, setReviews] = useState([]);
-    const url = `https://maps.googleapis.com/maps/api/place/details/json?placeid=${process.env.REACT_APP_PLACE_ID}&key=${process.env.REACT_APP_API_KEY}`;
+    const getDate = (date) => {
+        return moment(date).format("MMMM") + ' ' + moment(date).format("DD") + ', ' + moment(date).format("YYYY")
+    }
     useEffect(() => {
         const fetchUsers = async () => {
             try {
                 const responseData = await sendRequest(`${process.env.REACT_APP_BACKEND_URL}/reviews`);
                 setReviews(responseData.data.result.reviews)
+                console.log(responseData.data.result.reviews)
             } catch (err) {
             }
         };
@@ -39,6 +41,7 @@ function Reviews(props) {
                                     text={review.text}
                                     rate={review.rating}
                                     key={review.author_name}
+                                    date={getDate(review.time * 1000)}
                                 />
                             )}
                         </SimpleSlider>}

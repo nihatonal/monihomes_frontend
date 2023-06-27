@@ -35,6 +35,13 @@
   text-align: center;
   margin-top: 20px;
 }
+.review_date {
+  font-weight: 400;
+  font-size: 14px;
+  text-align: right;
+  padding-right: 15px;
+  margin-top: 20px;
+}
 @media only screen and (max-width: 767px) {
   .review_card_wrapper {
     padding: 30px 10px;

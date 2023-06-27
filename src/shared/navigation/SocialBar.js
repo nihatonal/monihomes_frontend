@@ -1,8 +1,6 @@
 import React from 'react';
-
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
-import { FaWhatsapp } from "react-icons/fa";
 import { SlSocialVkontakte } from "react-icons/sl";
 import './SocialBar.css';
 function SocialBar(props) {
@@ -22,11 +20,9 @@ function SocialBar(props) {
                     <SlSocialVkontakte />
                 </a>
                 <span></span>
-                <a href="https://www.youtube.com" rel="noreferrer" target='_blank' className="social-item">
-                    <FaWhatsapp />
-                </a>
-                <span></span>
+
             </div>
+
         </div>
     );
 }

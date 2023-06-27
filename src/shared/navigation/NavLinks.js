@@ -1,17 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { NavLink } from "react-router-dom";
 
 
 import './NavLinks.css';
 function NavLinks(props) {
+    const [active, setActive] = useState()
     function scrollSmoothTo(elementId) {
         var element = document.getElementById(elementId);
         element.scrollIntoView({
             block: "start",
             behavior: 'smooth',
-            inline: "nearest",
 
         });
+        setActive(elementId)
+
     }
 
     return (
@@ -19,11 +21,9 @@ function NavLinks(props) {
             {props.children}
             <div className={props.sidebar_nav_item_wrapper} onClick={props.closeDrawer}>
                 <NavLink
-                    className={({ isActive }) =>
-                        isActive ? "nav-item active-nav-item" : "nav-item"
-                    }
+                    className={active === 'about-us' ? "nav-item active-nav-item" : "nav-item"}
                     to=""
-                    onClick={() => scrollSmoothTo('aboutus')}
+                    onClick={() => scrollSmoothTo('about-us')}
                 >
                     About Us
                 </NavLink>
@@ -32,9 +32,7 @@ function NavLinks(props) {
             <div className={props.sidebar_nav_item_wrapper} onClick={props.closeDrawer}>
 
                 <NavLink
-                    className={({ isActive }) =>
-                        isActive ? "nav-item active-nav-item" : "nav-item"
-                    }
+                    className={active === 'gallery' ? "nav-item active-nav-item" : "nav-item"}
                     to=""
                     onClick={() => scrollSmoothTo('gallery')}
                 >
@@ -43,9 +41,7 @@ function NavLinks(props) {
             </div>
             <div className={props.sidebar_nav_item_wrapper} onClick={props.closeDrawer}>
                 <NavLink
-                    className={({ isActive }) =>
-                        isActive ? "nav-item active-nav-item" : "nav-item"
-                    }
+                    className={active === 'reviews' ? "nav-item active-nav-item" : "nav-item"}
                     to=""
                     onClick={() => scrollSmoothTo('reviews')}
                 >
@@ -54,9 +50,7 @@ function NavLinks(props) {
             </div>
             <div className={props.sidebar_nav_item_wrapper} onClick={props.closeDrawer}>
                 <NavLink
-                    className={({ isActive }) =>
-                        isActive ? "nav-item active-nav-item" : "nav-item"
-                    }
+                    className={active === 'contact' ? "nav-item active-nav-item" : "nav-item"}
                     to=""
                     onClick={() => scrollSmoothTo('contact')}
                 >

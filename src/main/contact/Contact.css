@@ -45,8 +45,7 @@
   display: none;
 }
 .contact_info .socialbar_wrapper span:nth-child(3),
-.contact_info .socialbar_wrapper span:nth-child(5),
-.contact_info .socialbar_wrapper span:nth-child(7) {
+.contact_info .socialbar_wrapper span:nth-child(5) {
   display: block;
   width: 25px;
   height: 2px;

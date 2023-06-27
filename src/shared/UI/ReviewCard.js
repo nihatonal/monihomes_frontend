@@ -10,6 +10,7 @@ function ReviewCard(props) {
             <h4 className="review_author">{props.author_name}</h4>
             <div className='review_rate_wrapper'><RateReview star={props.rate} /></div>
             <p className="review_text">{props.text}</p>
+            <p className="review_date">{props.date}</p>
         </div>
     );
 }

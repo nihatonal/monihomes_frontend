@@ -1,3 +1,4 @@
+import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 
@@ -10,7 +11,9 @@ import PrivacyPolicy from "./shared/footer/components/PrivacyPolicy";
 import './App.css'
 function App() {
 
-
+  useEffect(() => {
+    window.history.scrollRestoration = 'manual'
+  }, []);
   return (
     <div className="root-wrapper">
       <LanguageProvider>
@@ -23,7 +26,7 @@ function App() {
 
           </Routes>
           <Footer />
-          <ScrollButton />
+          {/* <ScrollButton /> */}
         </BrowserRouter>
       </LanguageProvider>
     </div>
@@ -31,3 +34,4 @@ function App() {
 }
 
 export default App;
+//google-site-verification=iOxlZix4qCkm523VjnzIlooLA6RcI-v1PLuXlpofc-o
