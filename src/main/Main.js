@@ -11,7 +11,7 @@ import profil from '../assets/images/profil.jpeg'
 
 import { FloatingWhatsApp } from 'react-floating-whatsapp';
 import './Main.css';
-function Main(props) {
+function Main() {
     const [scrolled, setScrolled] = useState(false);
     useEffect((_) => {
         const handleScroll = (_) => {
@@ -40,7 +40,7 @@ function Main(props) {
                 avatar={profil}
                 statusMessage='Typically replies within 30 mins'
 
-                buttonClassName={!scrolled ? "social_out" : "social_in"}
+                buttonClassName={!scrolled ? "social_out whatsup_btn" : "social_in whatsup_btn"}
             />
         </div>
     );

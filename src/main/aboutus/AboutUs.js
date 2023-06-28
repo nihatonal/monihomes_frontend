@@ -2,7 +2,7 @@ import React from 'react';
 
 
 import washing from '../../assets/images/washing_machine - Copy.jpeg';
-import bedroom from '../../assets/images/room_aboutus.jpeg';
+import bedroom from '../../assets/images/room1/room1_1.jpg';
 import kitchen from '../../assets/images/room2/room2_5.jpg';
 import location from '../../assets/images/location.png';
 import airconditioner from '../../assets/images/airconditioner.jpeg';

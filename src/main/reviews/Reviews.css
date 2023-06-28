@@ -5,6 +5,7 @@
 .reviews-title {
   text-align: center;
   font-family: var(--cavaet);
+  font-weight: 400;
   font-size: 46px;
 }
 

@@ -4,9 +4,9 @@
   border-radius: 0 350px 350px 0; */
 }
 .partners_wrapper .section_title {
-  color: #327e4b;
-  font-weight: 700;
-  font-size: 34px;
+  color: #5e5d5d;
+  font-weight: 600;
+  font-size: 24px;
   margin-bottom: 30px;
 }
 .partners_content {
@@ -18,10 +18,10 @@
 }
 .partner_name {
   font-family: var(--Nunito_Sans);
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 600;
   margin-bottom: 20px;
-  color: #327e4b;
+  color: #5e5d5d;
 }
 .partner_link {
   display: block;
@@ -34,14 +34,16 @@
   column-gap: 20px;
   row-gap: 20px;
 }
-.partner_image {
-  height: 200px;
-  overflow: hidden;
-  display: block;
-  width: fit-content;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+.partner_image::after {
+  content: " ";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.15);
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
 }
-
 .partner_image img {
   height: 200px;
   transition: all 0.4s;
@@ -67,82 +69,50 @@
   width: 100%;
   height: 100%;
   box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
-  border: 4px solid skyblue;
+  border: 4px solid #313131;
   border-image: linear-gradient(
     to right top,
-    #313131,
-    rgb(208, 240, 240),
-    #547960
+    #7c7c7c,
+    rgb(240, 241, 241),
+    #7c7c7c
   );
   border-image-slice: 1;
+  position: relative;
 }
 
+.yoyo_villa_item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .yoyo_villa_item:nth-last-child(9) {
   grid-area: gallery9;
-  background-image: url("../../assets/images/yoyo/yoyo_9.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top right;
 }
 .yoyo_villa_item:nth-last-child(8) {
-  grid-area: gallery2;
-  background-image: url("../../assets/images/yoyo/yoyo_1.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
+  grid-area: gallery8;
 }
-
 .yoyo_villa_item:nth-last-child(7) {
-  grid-area: gallery3;
-  background-image: url("../../assets/images/yoyo/yoyo_2.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  grid-area: gallery7;
 }
-
 .yoyo_villa_item:nth-last-child(6) {
-  grid-area: gallery4;
-  background-image: url("../../assets/images/yoyo/yoyo_3.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom center;
+  grid-area: gallery6;
 }
 .yoyo_villa_item:nth-last-child(5) {
   grid-area: gallery5;
-  background-image: url("../../assets/images/yoyo/yoyo_4.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
 }
 .yoyo_villa_item:nth-last-child(4) {
-  grid-area: gallery7;
-  background-image: url("../../assets/images/yoyo/yoyo_5.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  grid-area: gallery4;
 }
-
 .yoyo_villa_item:nth-last-child(3) {
-  grid-area: gallery8;
-  background-image: url("../../assets/images/yoyo/yoyo_6.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: -60px center;
+  grid-area: gallery3;
 }
 .yoyo_villa_item:nth-last-child(2) {
-  grid-area: gallery6;
-  background-image: url("../../assets/images/yoyo/yoyo_7.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  grid-area: gallery2;
 }
 .yoyo_villa_item:nth-last-child(1) {
   grid-area: gallery1;
-  background-image: url("../../assets/images/yoyo/yoyo_8.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
+
 @media only screen and (max-width: 767px) {
   .yoyo_villa {
     height: 600px;
@@ -156,12 +126,6 @@
       "gallery8 gallery9 gallery9"
       "gallery8 gallery9 gallery9";
     gap: 10px;
-  }
-  .yoyo_villa_item:nth-last-child(3) {
-    background-position: -150px center;
-  }
-  .yoyo_villa_item:nth-last-child(5) {
-    background-position: center;
   }
 }
 /*villa masal*/
@@ -183,102 +147,60 @@
   width: 100%;
   height: 100%;
   box-shadow: 5px 5px 15px rgba(179, 172, 172, 0.3);
-  border: 4px solid skyblue;
+  border: 4px solid #313131;
   border-image: linear-gradient(
     to right top,
-    #313131,
-    rgb(208, 240, 240),
-    #547960
+    #7c7c7c,
+    rgb(240, 241, 241),
+    #7c7c7c
   );
   border-image-slice: 1;
+  position: relative;
+}
+
+.villa_masal_item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .villa_masal_item:nth-last-child(12) {
   grid-area: gallery12;
-  background-image: url("../../assets/images/villamasal/villamasal_12.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top right;
 }
+
 .villa_masal_item:nth-last-child(11) {
   grid-area: gallery11;
-  background-image: url("../../assets/images/villamasal/villamasal_11.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top right;
 }
 .villa_masal_item:nth-last-child(10) {
   grid-area: gallery10;
-  background-image: url("../../assets/images/villamasal/villamasal_10.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top right;
 }
 .villa_masal_item:nth-last-child(9) {
   grid-area: gallery9;
-  background-image: url("../../assets/images/villamasal/villamasal_1.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top right;
 }
 .villa_masal_item:nth-last-child(8) {
   grid-area: gallery8;
-  background-image: url("../../assets/images/villamasal/villamasal_2.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
 }
-
 .villa_masal_item:nth-last-child(7) {
   grid-area: gallery7;
-  background-image: url("../../assets/images/villamasal/villamasal_3.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
-
 .villa_masal_item:nth-last-child(6) {
   grid-area: gallery6;
-  background-image: url("../../assets/images/villamasal/villamasal_4.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom center;
 }
 .villa_masal_item:nth-last-child(5) {
   grid-area: gallery5;
-  background-image: url("../../assets/images/villamasal/villamasal_5.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top center;
 }
 .villa_masal_item:nth-last-child(4) {
   grid-area: gallery4;
-  background-image: url("../../assets/images/villamasal/villamasal_6.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
-
 .villa_masal_item:nth-last-child(3) {
   grid-area: gallery3;
-  background-image: url("../../assets/images/villamasal/villamasal_7.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 .villa_masal_item:nth-last-child(2) {
   grid-area: gallery2;
-  background-image: url("../../assets/images/villamasal/villamasal_8.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 .villa_masal_item:nth-last-child(1) {
   grid-area: gallery1;
-  background-image: url("../../assets/images/villamasal/villamasal_9.jpeg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
+
 @media only screen and (max-width: 767px) {
   .villa_masal {
     height: 600px;
@@ -293,10 +215,4 @@
       "gallery10 gallery11 gallery7";
     gap: 10px;
   }
-  /* .villa_masal_item:nth-last-child(3) {
-    background-position: -150px center;
-  }
-  .villa_masal_item:nth-last-child(5) {
-    background-position: center;
-  } */
 }

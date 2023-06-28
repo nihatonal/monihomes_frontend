@@ -11,7 +11,8 @@
       rgba(255, 255, 255, 0),
       rgba(255, 255, 255, 0.8)
     ),
-    url("../../assets/images/oda_1.jpeg");
+    url("../../assets/images/room1/room1_1.jpg");
+  background-position: bottom center;
   border-radius: 0 0 350px 0;
   display: flex;
   justify-content: center;
