@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState,useContext } from 'react';
 import { NavLink } from "react-router-dom";
 
-
+import { LanguageContext } from "../context/Language";
 import './NavLinks.css';
 function NavLinks(props) {
+    const lang = useContext(LanguageContext);
+
     const [active, setActive] = useState()
     function scrollSmoothTo(elementId) {
         var element = document.getElementById(elementId);
@@ -25,7 +27,7 @@ function NavLinks(props) {
                     to=""
                     onClick={() => scrollSmoothTo('about-us')}
                 >
-                    About Us
+                    {lang.dictionary["navlinks"][0]}
                 </NavLink>
 
             </div>
@@ -36,7 +38,7 @@ function NavLinks(props) {
                     to=""
                     onClick={() => scrollSmoothTo('gallery')}
                 >
-                    Gallery
+                   {lang.dictionary["navlinks"][1]}
                 </NavLink>
             </div>
             <div className={props.sidebar_nav_item_wrapper} onClick={props.closeDrawer}>
@@ -45,7 +47,7 @@ function NavLinks(props) {
                     to=""
                     onClick={() => scrollSmoothTo('reviews')}
                 >
-                    Reviews
+                   {lang.dictionary["navlinks"][2]}
                 </NavLink>
             </div>
             <div className={props.sidebar_nav_item_wrapper} onClick={props.closeDrawer}>
@@ -54,7 +56,7 @@ function NavLinks(props) {
                     to=""
                     onClick={() => scrollSmoothTo('contact')}
                 >
-                    Contacts
+                   {lang.dictionary["navlinks"][3]}
                 </NavLink>
             </div>
 

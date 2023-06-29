@@ -17,11 +17,29 @@
   margin-top: 50px;
 }
 .is_loading {
+  height: 40px;
   font-family: var(--Nunito_Sans);
   font-weight: 600;
   font-size: 18px;
   text-align: center;
   padding: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.is_loading .lds-dual-ring {
+  margin-right: 10px;
+}
+.is_loading .lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 6px solid var(--secondary-color);
+  border-color: var(--secondary-color) transparent var(--secondary-color)
+    transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
 }
 @media only screen and (max-width: 1224px) {
   .reviews_content {

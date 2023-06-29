@@ -28,10 +28,10 @@ function Partners(props) {
     return (
         <section className='section_container'>
             <div className="section_wrapper partners_wrapper">
-                <h3 className="section_title">Maybe you might be interested in these...</h3>
+                <h3 className="section_title">{props.title}</h3>
                 <div className="partners_content">
                     <div className="partners_content-item">
-                        <h4 className="partner_name">Villa Masal</h4>
+                        <h4 className="partner_name">{props.villa_1}</h4>
                         <a href="https://instagram.com/villamasalfethiye?igshid=MzNlNGNkZWQ4Mg==" target="_blank" rel="noopener noreferrer" className="partner_link">
                             <div className="villa_masal">
                                 <div className="partner_image villa_masal_item">
@@ -87,7 +87,7 @@ function Partners(props) {
                         </a>
                     </div>
                     <div className="partners_content-item">
-                        <h4 className="partner_name">Yoyo Tinyhouse</h4>
+                        <h4 className="partner_name">{props.villa_2}</h4>
                         <a href="https://instagram.com/yoyo_tinyhouse_fethiye?igshid=NGExMmI2YTkyZg==" target="_blank" rel="noopener noreferrer" className="partner_link">
                             <div className="yoyo_villa">
                                 <div className="partner_image yoyo_villa_item">

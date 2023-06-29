@@ -56,14 +56,14 @@ function MainNavigation(props) {
             }
 
             <div className={'main_header'}>
-
-                <img src={logo} alt='logo' className='logo' />
-
-                <NavLinks />
                 <Hamburger
                     show={drawerIsOpen}
                     onClick={openDrawerHandler}
                 />
+                <img src={logo} alt='logo' className='logo' />
+
+                <NavLinks />
+
                 <LanguageSelector />
                 <SocialBar className={scrolled ? "social_out" : "social_in"} />
             </div>

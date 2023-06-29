@@ -19,7 +19,7 @@ function Accordion(props) {
     //open animation with react spring
     const openAnimation = useSpring({
         from: { opacity: "0", maxHeight: "46px" },
-        to: { opacity: "1", maxHeight: open ? `${height + 46}px` : "32px" },
+        to: { opacity: "1", maxHeight: open ? `${height + 46}px` : "38px" },
         config: { duration: "300" }
     });
 

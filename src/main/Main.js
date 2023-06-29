@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-
+import React, { useState, useEffect, useContext } from 'react';
+import { LanguageContext } from "../shared/context/Language";
 import Hero from './hero/Hero';
 import AboutUs from './aboutus/AboutUs';
 import Reviews from './reviews/Reviews';
@@ -12,6 +12,7 @@ import profil from '../assets/images/profil.jpeg'
 import { FloatingWhatsApp } from 'react-floating-whatsapp';
 import './Main.css';
 function Main() {
+    const lang = useContext(LanguageContext);
     const [scrolled, setScrolled] = useState(false);
     useEffect((_) => {
         const handleScroll = (_) => {
@@ -29,11 +30,24 @@ function Main() {
     return (
         <div className="main_container">
             <Hero />
-            <AboutUs />
-            <Reviews />
-            <Gallery />
-            <Partners />
-            <Contact />
+            <AboutUs
+                title={lang.dictionary["navlinks"][0]}
+            />
+            <Reviews
+                loading={lang.dictionary["is_loading"]}
+                title={lang.dictionary["navlinks"][2]}
+            />
+            <Gallery
+                title={lang.dictionary["navlinks"][1]}
+            />
+            <Partners
+                title={lang.dictionary["partner_title"]}
+                villa_1={lang.dictionary["villa_masal"]}
+                villa_2={lang.dictionary["villa_yoyo"]}
+            />
+            <Contact
+                title={lang.dictionary["navlinks"][3]}
+            />
             <FloatingWhatsApp
                 phoneNumber='+90 530 899 77 09'
                 accountName='Moni Homes'

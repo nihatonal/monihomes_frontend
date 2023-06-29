@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
-
+import LoadingSpinner from './shared/UI/LoadingSpinner';
 import MainNavigation from './shared/navigation/MainNavigation'
 import { LanguageProvider } from "./shared/context/Language";
 import Footer from './shared/footer/Footer'
@@ -18,13 +18,22 @@ function App() {
     <div className="root-wrapper">
       <LanguageProvider>
         <BrowserRouter>
-          <MainNavigation />
-          <Routes>
-            <Route exact path="/" element={<Main />} />
-            <Route exact path="/privacypolicy" element={<PrivacyPolicy />} />
-            <Route exact path="*" element={<Main />} />
-          </Routes>
-          <Footer />
+          <Suspense
+            fallback={
+              <div className='suspense_container'>
+                <LoadingSpinner />
+              </div>
+            }
+          >
+            <MainNavigation />
+            <Routes>
+              <Route exact path="/" element={<Main />} />
+              <Route exact path="/privacypolicy" element={<PrivacyPolicy />} />
+              <Route exact path="*" element={<Main />} />
+            </Routes>
+
+            <Footer />
+          </Suspense>
         </BrowserRouter>
       </LanguageProvider>
     </div>

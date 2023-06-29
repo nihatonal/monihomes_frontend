@@ -26,7 +26,7 @@ function Gallery(props) {
     return (
         <section className='section_container gallery_container' id='gallery'>
             <div className="section_wrapper">
-                <h3 className="section_title gallery-title">Gallery</h3>
+                <h3 className="section_title gallery-title">{props.title}</h3>
                 <div className="gallery_content">
                     <div id="gallery_1" className="gallery_content_item" onClick={handler}>
                         <TfiGallery />

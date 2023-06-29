@@ -5,7 +5,7 @@ import tr from './tr.json';
 export const dictionaryList = { en, ru, tr };
 
 export const languageOptions = {
-  en: { country: 'En', flag: require('../icons/united-kingdom.png'), name: 'English' },
-  ru: { country: 'Ru', flag: require('../icons/russian.png'), name: 'Русский' },
-  tr: { country: 'Tr', flag: require('../icons/turkey.png'), name: 'Türkçe' },
+  en: { country: 'En', flag: require('../icons/united-kingdom.png'), name: 'Eng' },
+  ru: { country: 'Ru', flag: require('../icons/russian.png'), name: 'Рус' },
+  tr: { country: 'Tr', flag: require('../icons/turkey.png'), name: 'Tr' },
 };

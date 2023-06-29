@@ -3,6 +3,7 @@ import { useHttpClient } from "../../shared/hooks/http-hook";
 
 import ReviewCard from '../../shared/UI/ReviewCard';
 import SimpleSlider from '../../shared/UI/SimpleSlider';
+import LoadingSpinner from '../../shared/UI/LoadingSpinner';
 import moment from 'moment';
 import './Reviews.css'
 function Reviews(props) {
@@ -27,11 +28,11 @@ function Reviews(props) {
     return (
         <section className='section_container ' id='reviews'>
             <div className="reviews_wrapper">
-                <h3 className="section_title reviews-title">Reviews</h3>
+                <h3 className="section_title reviews-title">{props.title}</h3>
                 <div className="reviews_content">
 
                     {reviews.length < 1 ?
-                        <p className='is_loading'>Is Loading...</p>
+                        <p className='is_loading'><LoadingSpinner />{props.loading}</p>
                         :
                         <SimpleSlider>
                             {reviews.map((review) =>

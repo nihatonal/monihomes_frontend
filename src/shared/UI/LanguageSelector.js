@@ -13,19 +13,23 @@ export default function LanguageSelector(props) {
   const { userLanguage, userLanguageChange } = useContext(LanguageContext);
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState("en");
-  const [selectedFlag, setSelectedFlag] = useState();
+  const [selectedFlag, setSelectedFlag] = useState('');
 
   useEffect(() => {
     const defaultLanguage = localStorage.getItem("rcml-lang");
     setSelectedOption(defaultLanguage);
+    if (!defaultLanguage) {
+      setSelectedFlag("Eng");
+    }
     if (defaultLanguage === "en") {
       setSelectedFlag("Eng");
     } else if (defaultLanguage === "ru") {
       setSelectedFlag("Рус");
     } else if (defaultLanguage === "tr") {
-      setSelectedFlag('Türkçe');
+      setSelectedFlag('Tr');
     }
   }, [userLanguage]);
+
   const langListFiltered = React.useMemo(() => {
     return Object.fromEntries(
       Object.entries(languageOptions).filter(
@@ -48,9 +52,9 @@ export default function LanguageSelector(props) {
     } else if (index === "en") {
       setSelectedFlag("Eng");
     } else if (index === "tr") {
-      setSelectedFlag('Türkçe');
+      setSelectedFlag('Tr');
     }
-    
+
   };
 
   return (
