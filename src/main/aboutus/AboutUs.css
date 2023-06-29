@@ -7,37 +7,47 @@
 /*  */
 .aboutus_content {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   width: 800px;
   margin: 0 auto;
+  row-gap: 20px;
 }
 .aboutus_content_item {
   position: relative;
   width: 170px;
   margin: 0;
-  justify-self: center;
 }
-.aboutus_content_item:nth-last-child(7),
-.aboutus_content_item:nth-last-child(2) {
-  grid-column: 2 / span 2;
-  justify-self: center;
+.aboutus_content_item:nth-last-child(9),
+.aboutus_content_item:nth-last-child(8),
+.aboutus_content_item:nth-last-child(7) {
+  justify-self: flex-start;
 }
-.aboutus_content_item:nth-last-child(5) {
-  margin-left: 80px;
-  grid-row: 2;
-  grid-column: 1 / span 2;
-}
+.aboutus_content_item:nth-last-child(6),
+.aboutus_content_item:nth-last-child(5),
 .aboutus_content_item:nth-last-child(4) {
-  grid-column: 3 / span 2;
-  grid-row: 2;
-  margin-right: 100px;
+  justify-self: center;
 }
-
 .aboutus_content_item:nth-last-child(3),
 .aboutus_content_item:nth-last-child(2),
 .aboutus_content_item:nth-last-child(1) {
-  grid-row: 3;
+  justify-self: flex-end;
 }
+/* .aboutus_content_item:nth-last-child(5) {
+  margin-left: 80px;
+  grid-row: 2;
+  grid-column: 1 / span 2;
+} */
+/* .aboutus_content_item:nth-last-child(4) {
+  grid-column: 3 / span 2;
+  grid-row: 2;
+  margin-right: 100px;
+} */
+
+/* .aboutus_content_item:nth-last-child(3),
+.aboutus_content_item:nth-last-child(2),
+.aboutus_content_item:nth-last-child(1) {
+  grid-row: 3;
+} */
 
 .aboutus_content_item img {
   width: 150px;
@@ -96,6 +106,35 @@
   opacity: 0.5;
 }
 
+.payment_options {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.payment_options_wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+  column-gap: 10px;
+}
+.payment_item .payment_icon {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+.payment_item {
+  width: 45px;
+}
+.payment_options_wrapper .payment_item:nth-last-child(1) {
+  grid-column: span 2;
+}
 @media only screen and (max-width: 1000px) {
   .olive_container {
     height: 50px;
@@ -158,5 +197,13 @@
     padding: 0;
     text-align: center;
     margin-top: 50px;
+  }
+
+  .payment_options {
+    width: 100px;
+    height: 100px;
+  }
+  .payment_item {
+    width: 30px;
   }
 }

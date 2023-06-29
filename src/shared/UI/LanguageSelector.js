@@ -4,24 +4,26 @@ import React, { useContext, useState, useEffect } from "react";
 import { languageOptions } from "../../assets/languages/index";
 import { LanguageContext } from "../context/Language";
 
-
+import turkey from "../../assets/icons/turkey.png";
+import england from "../../assets/icons/united-kingdom.png";
+import russian from "../../assets/icons/russian.png";
 import "./LanguageSelector.css";
 
 export default function LanguageSelector(props) {
   const { userLanguage, userLanguageChange } = useContext(LanguageContext);
   const [isOptionsOpen, setIsOptionsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState("en");
-  const [selectedFlag, setSelectedFlag] = useState('Eng');
+  const [selectedFlag, setSelectedFlag] = useState();
 
   useEffect(() => {
     const defaultLanguage = localStorage.getItem("rcml-lang");
     setSelectedOption(defaultLanguage);
     if (defaultLanguage === "en") {
-      setSelectedFlag('Eng');
-    } else if (defaultLanguage === "tr") {
-      setSelectedFlag('Tr');
+      setSelectedFlag("Eng");
     } else if (defaultLanguage === "ru") {
-      setSelectedFlag('Rus');
+      setSelectedFlag("Рус");
+    } else if (defaultLanguage === "tr") {
+      setSelectedFlag('Türkçe');
     }
   }, [userLanguage]);
   const langListFiltered = React.useMemo(() => {
@@ -41,17 +43,18 @@ export default function LanguageSelector(props) {
     setIsOptionsOpen(false);
     userLanguageChange(index);
 
-    if (index === "tr") {
-      setSelectedFlag('Tr');
+    if (index === "ru") {
+      setSelectedFlag("Рус");
     } else if (index === "en") {
-      setSelectedFlag('Eng');
-    } else if (index === "ru") {
-      setSelectedFlag('Rus');
+      setSelectedFlag("Eng");
+    } else if (index === "tr") {
+      setSelectedFlag('Türkçe');
     }
+    
   };
 
   return (
-    <div className="select-lang mobile-lang">
+    <div className="select-lang">
       <button
         type="button"
         aria-haspopup="listbox"
@@ -80,7 +83,7 @@ export default function LanguageSelector(props) {
               setSelectedThenCloseDropdown(id);
             }}
           >
-            {name.flag}
+            {name.name}
             {/* <img src={name.flag} alt="flag" /> */}
           </li>
         ))}

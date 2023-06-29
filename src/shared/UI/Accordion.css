@@ -1,0 +1,69 @@
+.accordion {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.accordion__item {
+  width: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.accordion__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 15px;
+}
+
+.accordion__header h4 {
+  transition: 0.2s ease-in-out;
+  width: 100%;
+  color: #34473d;
+  font-family: var(--primary-font-family);
+  font-weight: 700;
+  font-size: 18px;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+@media only screen and (max-width: 767px) {
+  .accordion__header h4 {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+}
+.accordion__header svg {
+  margin-right: 4px;
+  font-size: 16px;
+}
+
+.accordion__header:hover h4 {
+  color: #5d6e65;
+}
+
+.accordion__content p,
+.accordion__content a {
+  color: var(--primary-color);
+  font-family: var(--Nunito_Sans);
+  font-weight: 400;
+  font-size: 12px;
+  text-align: left;
+  padding: 5px 10px;
+  display: block;
+}
+
+.accordion_title::before {
+  content: "\f077";
+  font-family: "FontAwesome";
+  color: var(--red-color);
+  font-size: 20px;
+  font-weight: 700;
+  margin-right: 8px;
+}
+.open_drop:before {
+  content: "\f078";
+}

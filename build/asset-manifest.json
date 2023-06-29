@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.css": "/static/css/main.75193ba7.css",
-    "main.js": "/static/js/main.2ebf887c.js",
-    "static/css/118.e17f602c.chunk.css": "/static/css/118.e17f602c.chunk.css",
-    "static/js/118.e792e40d.chunk.js": "/static/js/118.e792e40d.chunk.js",
+    "main.css": "/static/css/main.57fd30eb.css",
+    "main.js": "/static/js/main.acabfc3a.js",
+    "static/css/750.4ef1955d.chunk.css": "/static/css/750.4ef1955d.chunk.css",
+    "static/js/750.fdcee814.chunk.js": "/static/js/750.fdcee814.chunk.js",
     "static/js/787.cda612ba.chunk.js": "/static/js/787.cda612ba.chunk.js",
-    "static/css/631.075abd70.chunk.css": "/static/css/631.075abd70.chunk.css",
-    "static/js/631.74e41cdb.chunk.js": "/static/js/631.74e41cdb.chunk.js",
+    "static/css/447.5f9ee6cc.chunk.css": "/static/css/447.5f9ee6cc.chunk.css",
+    "static/js/447.761ffe30.chunk.js": "/static/js/447.761ffe30.chunk.js",
     "static/media/monihomes.jpg": "/static/media/monihomes.2219f442e4019a7ebdbc.jpg",
     "static/media/monihomes2.jpg": "/static/media/monihomes2.2219f442e4019a7ebdbc.jpg",
     "static/media/monihomes_1.jpg": "/static/media/monihomes_1.b11569c2fcabe56d47b8.jpg",
@@ -65,22 +65,25 @@
     "static/media/airconditioner.jpeg": "/static/media/airconditioner.30a39d7cd47103b66e77.jpeg",
     "static/media/wifi.jpg": "/static/media/wifi.684728915a193793b7fe.jpg",
     "static/media/logo.jpg": "/static/media/logo.6a627aed0726c0aabd8d.jpg",
+    "static/media/money.png": "/static/media/money.392fb135d8279f2808ae.png",
+    "static/media/mastercard.png": "/static/media/mastercard.7255b8f772d0857561fb.png",
     "static/media/logo_footer.png": "/static/media/logo_footer.bf0abed2da9f4324ed8f.png",
+    "static/media/visa.png": "/static/media/visa.257843bf06c27a77fd0f.png",
     "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/index.html",
-    "main.75193ba7.css.map": "/static/css/main.75193ba7.css.map",
-    "main.2ebf887c.js.map": "/static/js/main.2ebf887c.js.map",
-    "118.e17f602c.chunk.css.map": "/static/css/118.e17f602c.chunk.css.map",
-    "118.e792e40d.chunk.js.map": "/static/js/118.e792e40d.chunk.js.map",
+    "main.57fd30eb.css.map": "/static/css/main.57fd30eb.css.map",
+    "main.acabfc3a.js.map": "/static/js/main.acabfc3a.js.map",
+    "750.4ef1955d.chunk.css.map": "/static/css/750.4ef1955d.chunk.css.map",
+    "750.fdcee814.chunk.js.map": "/static/js/750.fdcee814.chunk.js.map",
     "787.cda612ba.chunk.js.map": "/static/js/787.cda612ba.chunk.js.map",
-    "631.075abd70.chunk.css.map": "/static/css/631.075abd70.chunk.css.map",
-    "631.74e41cdb.chunk.js.map": "/static/js/631.74e41cdb.chunk.js.map"
+    "447.5f9ee6cc.chunk.css.map": "/static/css/447.5f9ee6cc.chunk.css.map",
+    "447.761ffe30.chunk.js.map": "/static/js/447.761ffe30.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.75193ba7.css",
-    "static/js/main.2ebf887c.js"
+    "static/css/main.57fd30eb.css",
+    "static/js/main.acabfc3a.js"
   ]
 }

@@ -7,11 +7,12 @@
 }
 
 .contact_info {
-  height: 240px;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+  row-gap: 20px;
 }
 .contact_info_item {
   font-family: var(--Nunito_Sans);
@@ -68,7 +69,8 @@
     margin-top: 30px;
   }
   .contact_info {
-    height: 160px;
+    height: auto;
+    row-gap: 12px;
   }
   .contact_info_item {
     font-size: 14px;

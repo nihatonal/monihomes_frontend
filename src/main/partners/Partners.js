@@ -28,7 +28,7 @@ function Partners(props) {
     return (
         <section className='section_container'>
             <div className="section_wrapper partners_wrapper">
-                <h3 className="section_title">You can also book:</h3>
+                <h3 className="section_title">Maybe you might be interested in these...</h3>
                 <div className="partners_content">
                     <div className="partners_content-item">
                         <h4 className="partner_name">Villa Masal</h4>

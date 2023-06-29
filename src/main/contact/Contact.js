@@ -3,6 +3,8 @@ import { IoLocationOutline } from 'react-icons/io5';
 import { AiOutlinePhone } from 'react-icons/ai';
 import { IoIosMail } from 'react-icons/io';
 import SocialBar from '../../shared/navigation/SocialBar'
+import Payment from './components/Payment';
+
 import './Contact.css'
 function Contact(props) {
     return (
@@ -24,6 +26,7 @@ function Contact(props) {
                             <IoIosMail />monihomes48@gmail.com
                         </a>
                         <SocialBar />
+                        <Payment />
                     </div>
                     <div className="content_map">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2231.823990600379!2d29.109808223703453!3d36.621938114854785!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c0417d14b3f587%3A0xcb48dff072b01c2b!2sMoni%20Homes!5e0!3m2!1str!2sru!4v1687637006341!5m2!1str!2sru" width="100%" height="100%" style={{ border: "0" }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" title='monihomes'></iframe>

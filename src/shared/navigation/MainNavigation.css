@@ -100,10 +100,6 @@
     background-color: var(--secondary-color);
   }
 }
-.select-lang {
-  display: none;
-}
-
 .sidedrawer-navlinks {
   display: block;
 }

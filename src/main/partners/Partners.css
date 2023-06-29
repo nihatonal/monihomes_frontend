@@ -5,6 +5,7 @@
 }
 .partners_wrapper .section_title {
   color: #5e5d5d;
+  font-family: var(--dancing);
   font-weight: 600;
   font-size: 24px;
   margin-bottom: 30px;
@@ -114,6 +115,14 @@
 }
 
 @media only screen and (max-width: 767px) {
+  .partners_wrapper .section_title {
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  .partner_name {
+    font-size: 16px;
+  }
   .yoyo_villa {
     height: 600px;
     margin-top: 10px;

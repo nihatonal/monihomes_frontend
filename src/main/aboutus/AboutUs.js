@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 import washing from '../../assets/images/washing_machine - Copy.jpeg';
 import bedroom from '../../assets/images/room1/room1_1.jpg';
 import kitchen from '../../assets/images/room2/room2_5.jpg';
@@ -9,8 +8,21 @@ import airconditioner from '../../assets/images/airconditioner.jpeg';
 import wifi from '../../assets/images/wifi.jpg';
 import parking from '../../assets/images/parking.jpeg';
 import profil from '../../assets/images/profil.jpeg';
+
+import visa from '../../assets/icons/visa.png';
+import master from '../../assets/icons/mastercard.png';
+import money from '../../assets/icons/money.png';
 import './AboutUs.css'
-function AboutUs(props) {
+function AboutUs() {
+    function scrollSmoothTo(elementId) {
+        var element = document.getElementById(elementId);
+        element.scrollIntoView({
+            block: "start",
+            behavior: 'smooth',
+
+        });
+
+    }
     return (
         <section className='section_container aboutus_container' id='about-us'>
             <div className="section_wrapper aboutus_wrapper" >
@@ -48,6 +60,20 @@ function AboutUs(props) {
                         <img src={parking} alt="parking" className="aboutus_content_image" />
                         <p className="aboutus_content_item_desc">parking</p>
                     </div>
+                    <div className="aboutus_content_item payment_options">
+                        <div className="payment_options_wrapper" onClick={() => scrollSmoothTo('contact')}>
+                            <div className='payment_item'>
+                                <img className='payment_icon' src={visa} alt='visa' />
+                            </div>
+                            <div className='payment_item'>
+                                <img className='payment_icon' src={master} alt='master' />
+                            </div>
+                            <div className='payment_item'>
+                                <img className='payment_icon' src={money} alt='money' />
+                            </div>
+                        </div>
+                        <p className="aboutus_content_item_desc">payment options</p>
+                    </div>
                 </div>
 
                 <p className="aboutus_desc">
@@ -57,7 +83,7 @@ function AboutUs(props) {
                 <div className="olive_container"></div>
                 <div className="olive_container_2"></div>
             </div>
-        </section>
+        </section >
     );
 }
 
