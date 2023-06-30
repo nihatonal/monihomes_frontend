@@ -8,7 +8,7 @@ import Footer from './shared/footer/Footer'
 import PrivacyPolicy from "./shared/footer/components/PrivacyPolicy";
 
 const Main = React.lazy(() => import("./main/Main.js"));
-
+const User = React.lazy(() => import("./user/User.js"))
 function App() {
 
   useEffect(() => {
@@ -28,6 +28,7 @@ function App() {
             <MainNavigation />
             <Routes>
               <Route exact path="/" element={<Main />} />
+              <Route exact path="/admin:ugurdincer" element={<User />} />
               <Route exact path="/privacypolicy" element={<PrivacyPolicy />} />
               <Route exact path="*" element={<Main />} />
             </Routes>

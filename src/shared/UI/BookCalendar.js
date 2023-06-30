@@ -73,7 +73,7 @@ function BookCalendar(props) {
                             moment().format("YYYY/MM/DD")
                         ) {
                             return "passed";
-                        } else if (props.markDates && props.markDates.find((x) => x === moment(date).format("YYYY/MM/DD"))) {
+                        } else if (props.markDates && expandDates(props.markDates[0], props.markDates[1]).find((x) => x === moment(date).format("YYYY/MM/DD"))) {
                             return "passed";
                         } else if (expandDates(props.selectedStart, props.selectedEnd).find((x) => x === moment(date).format("YYYY/MM/DD"))) {
                             return "selected"

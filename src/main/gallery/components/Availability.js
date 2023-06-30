@@ -20,7 +20,7 @@ function Availability(props) {
         config: { duration: "300" }
     });
 
-    const [markDates, setMarkDates] = useState(['2023/07/23', '2023/07/24', '2023/07/25', '2023/07/26']);
+    const [markDates, setMarkDates] = useState(['2023/07/23', '2023/07/26']);
 
     return (
         <div className="availability_container">

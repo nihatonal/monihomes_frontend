@@ -253,7 +253,9 @@
 .close-calendar:hover {
   box-shadow: 0 0 5px #333;
 }
-
+abbr[title] {
+  text-decoration: none;
+}
 .error_modal {
   width: 100%;
   height: 100%;
