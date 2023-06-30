@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Availability from './components/Availability';
 import Modal from '../../shared/UI/Modal';
 import GalleryFancyBox from './GalleryFancyBox';
 import { IoCloseCircleSharp } from 'react-icons/io5';
@@ -16,6 +17,7 @@ import gallery_9 from '../../assets/images/room2/room2_5.jpg';
 import { TfiGallery } from "react-icons/tfi";
 import './Gallery.css';
 function Gallery(props) {
+
     const [bg, setBg] = useState();
     const [show, setShow] = useState(false);
     const bg_data = [gallery_1, gallery_2, gallery_3, gallery_4, gallery_5, gallery_6, gallery_7, gallery_8, gallery_9]
@@ -25,7 +27,8 @@ function Gallery(props) {
     }
     return (
         <section className='section_container gallery_container' id='gallery'>
-            <div className="section_wrapper">
+            
+            <div className="section_wrapper" >
                 <h3 className="section_title gallery-title">{props.title}</h3>
                 <div className="gallery_content">
                     <div id="gallery_1" className="gallery_content_item" onClick={handler}>

@@ -4,9 +4,6 @@ import React, { useContext, useState, useEffect } from "react";
 import { languageOptions } from "../../assets/languages/index";
 import { LanguageContext } from "../context/Language";
 
-import turkey from "../../assets/icons/turkey.png";
-import england from "../../assets/icons/united-kingdom.png";
-import russian from "../../assets/icons/russian.png";
 import "./LanguageSelector.css";
 
 export default function LanguageSelector(props) {

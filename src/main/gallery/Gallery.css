@@ -1,6 +1,10 @@
 .gallery_container {
+  padding-top: 100px;
   background-color: var(--white-color);
   border-radius: 350px 0 350px 0;
+}
+.gallery_container .section_wrapper {
+  padding-top: 50px;
 }
 .gallery_content {
   height: 500px;
@@ -154,6 +158,10 @@
   .gallery_container {
     background-color: var(--white-color);
     border-radius: 150px 0 150px 0;
+  }
+  .gallery_container .section_wrapper {
+    padding-top: 0;
+    padding-bottom: 150px;
   }
   .gallery_content {
     height: 600px;

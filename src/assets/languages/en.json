@@ -29,5 +29,8 @@
     "Bank branch",
     "IBAN",
     "Name Surname"
-  ]
+  ],
+  "whatsup_status": "Typically replies within 30 mins",
+  "whatsup_message": "Hello there! 🤝 \nHow can we help?",
+  "whatsup_placeholder": "Type a message.."
 }

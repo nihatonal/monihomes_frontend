@@ -5,8 +5,8 @@
     "Yorumlar",
     "İletişim"
   ],
-  "hero-title": "Fethiye KONAKLAMANIN",
-  "hero-title_span": "EN IYI YOLU",
+  "hero-title": "Fethiye'deki eviniz,",
+  "hero-title_span": "MoniHomes",
   "about_items": [
     "rahat odalar",
     "tam donanımlı mutfaklar",
@@ -29,5 +29,8 @@
     "Şube",
     "IBAN",
     "Ad Soyad / Unvan"
-  ]
+  ],
+  "whatsup_status": "Genellikle 30 dakika içinde yanıt verir",
+  "whatsup_message": "Merhaba! 🤝 \nNasıl yardımcı olabiliriz?",
+  "whatsup_placeholder": "Mesaj yazın.."
 }

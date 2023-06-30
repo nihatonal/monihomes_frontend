@@ -117,11 +117,9 @@
   justify-content: center;
 }
 .payment_options_wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
   align-items: center;
   justify-content: center;
-  justify-items: center;
   column-gap: 10px;
 }
 .payment_item .payment_icon {
@@ -132,10 +130,12 @@
 .payment_item {
   width: 45px;
 }
-.payment_options_wrapper .payment_item:nth-last-child(1) {
-  grid-column: span 2;
-}
+
 @media only screen and (max-width: 1000px) {
+  .aboutus_container .section_title {
+    text-align: left;
+  }
+
   .olive_container {
     height: 50px;
     width: 100px;
@@ -204,6 +204,6 @@
     height: 100px;
   }
   .payment_item {
-    width: 30px;
+    width: 50px;
   }
 }

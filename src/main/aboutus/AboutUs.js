@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { LanguageContext } from "../../shared/context/Language";
 import washing from '../../assets/images/washing_machine - Copy.jpeg';
 import bedroom from '../../assets/images/room1/room1_1.jpg';
-import kitchen from '../../assets/images/room2/room2_5.jpg';
+import kitchen from '../../assets/images/room3/room3_3.jpg';
 import location from '../../assets/images/location.png';
 import airconditioner from '../../assets/images/airconditioner.jpeg';
 import wifi from '../../assets/images/wifi.jpg';
@@ -10,6 +10,7 @@ import parking from '../../assets/images/parking.jpeg';
 import profil from '../../assets/images/profil.jpeg';
 
 import visa from '../../assets/icons/visa.png';
+import transfer from '../../assets/icons/transfer.png';
 import master from '../../assets/icons/mastercard.png';
 import money from '../../assets/icons/money.png';
 import './AboutUs.css'
@@ -64,14 +65,11 @@ function AboutUs(props) {
                     <div className="aboutus_content_item payment_options">
                         <div className="payment_options_wrapper" onClick={() => scrollSmoothTo('contact')}>
                             <div className='payment_item'>
-                                <img className='payment_icon' src={visa} alt='visa' />
+                                <img className='payment_icon' src={transfer} alt='visa' />
                             </div>
-                            <div className='payment_item'>
-                                <img className='payment_icon' src={master} alt='master' />
-                            </div>
-                            <div className='payment_item'>
+                            {/* <div className='payment_item'>
                                 <img className='payment_icon' src={money} alt='money' />
-                            </div>
+                            </div> */}
                         </div>
                         <p className="aboutus_content_item_desc">{lang.dictionary["about_items"][7]}</p>
                     </div>
