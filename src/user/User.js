@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { useHttpClient } from "../shared/hooks/http-hook";
-import GuestTable from './GuestTable';
+import { AuthContext } from "../shared/context/auth-context";
+import GuestTable from './components/GuestTable';
 import './User.css';
 function User(props) {
+    const auth = useContext(AuthContext);
     const { isLoading, sendRequest } = useHttpClient();
     const [startDate, setStartDate] = useState();
     const [info, setInfo] = useState('');
@@ -41,6 +43,21 @@ function User(props) {
         } catch (err) {
         }
     }
+    const confirmDeleteHandler = async (e) => {
+        console.log(e.target.parentNode.parentNode.parentNode.id)
+        try {
+            await sendRequest(
+                process.env.REACT_APP_BACKEND_URL + `/${e.target.parentNode.parentNode.parentNode.id}`,
+                "DELETE",
+                null,
+                {
+                    Authorization: "Bearer " + auth.token,
+                }
+            );
+            const posts = guests.filter((item) => item.id !== e.target.parentNode.parentNode.parentNode.id);
+            setGuests(posts);
+        } catch (err) { }
+    };
     return (
         <div className="user_container">
             <div className="user_wrapper">
@@ -70,7 +87,7 @@ function User(props) {
                         Save
                     </button>
                 </form>
-                <GuestTable data={guests} />
+                <GuestTable data={guests} onDelete={confirmDeleteHandler} />
             </div>
         </div>
     );
