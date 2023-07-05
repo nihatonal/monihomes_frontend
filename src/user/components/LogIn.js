@@ -17,7 +17,7 @@ function LogIn(props) {
     const navigate = useNavigate();
     const auth = useContext(AuthContext);
     const { isLoading, error, sendRequest } = useHttpClient();
-    const [formState, inputHandler, setFormData] = useForm(
+    const [formState, inputHandler] = useForm(
         {
             username: {
                 value: "",

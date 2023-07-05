@@ -1,37 +1,33 @@
 .add_guest_wrapper {
   position: relative;
 }
-.user_container {
-  height: auto;
-  padding: 150px 0 100px;
+.add_guest_wrapper h3 {
+  font-family: var(--Nunito_Sans);
+  font-weight: 600;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #5e5e5e;
 }
 .inputs_container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  column-gap: 26px;
-  row-gap: 20px;
-}
-.input_label {
-  font-family: var(--Nunito_Sans);
-  font-weight: 500;
-  font-size: 16px;
-  display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  column-gap: 26px;
   row-gap: 10px;
-  position: relative;
 }
-.input_label input {
+.add_guest_wrapper label,
+.add_guest_wrapper input,
+.add_guest_wrapper textarea {
   font-family: var(--Nunito_Sans);
-  font-weight: 500;
-  font-size: 14px;
-  width: 140px;
-  border: 1px solid rgb(223, 223, 223);
-  color: #5e5e5e;
-  border-radius: 40px;
-  cursor: pointer;
-  outline: none;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.add_guest_wrapper input::placeholder,
+.add_guest_wrapper textarea::placeholder {
+  font-family: var(--Nunito_Sans);
 }
 input[type="date"] {
   position: relative;
@@ -59,27 +55,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   cursor: pointer;
   z-index: 1;
 }
-.input_label input:focus {
-  border: 1px solid rgb(131, 131, 131);
-}
-.info_label {
-  width: 100%;
-}
-.info_label textarea {
-  width: 90%;
-  min-height: 150px;
-  resize: vertical;
-  border: 1px solid rgb(223, 223, 223);
-  border-radius: 10px;
-  outline: none;
-  font-family: var(--Nunito_Sans);
-  font-weight: 500;
-  font-size: 14px;
-  padding: 15px;
-}
-.info_label textarea:focus {
-  border: 1px solid rgb(134, 134, 134);
-}
+
 .save_btn {
   padding: 10px 60px;
   border-radius: 30px;
@@ -129,3 +105,14 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   color: var(--color_danger);
   text-indent: 22px;
 }
+/* @media only screen and (min-width: 767px) {
+  .inputs_container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    column-gap: 26px;
+    row-gap: 10px;
+  }
+} */

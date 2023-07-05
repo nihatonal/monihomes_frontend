@@ -4,8 +4,11 @@ const VALIDATOR_TYPE_MAXLENGTH = 'MAXLENGTH';
 const VALIDATOR_TYPE_MIN = 'MIN';
 const VALIDATOR_TYPE_EXPIRATION = 'EXPIRATION';
 const VALIDATOR_TYPE_EMAIL = 'EMAIL';
+const VALIDATOR_TYPE_PHONE = 'PHONES';
 const VALIDATOR_TYPE_FILE = 'FILE';
 const VALIDATOR_TYPE_NUMBER = 'NUMBER';
+const VALIDATOR_TYPE_STARTDATE = 'STARTDATE';
+const VALIDATOR_TYPE_ENDDATE = 'ENDDATE';
 const VALIDATOR_TYPE_CODE = 'CODE';
 const VALIDATOR_TYPE_PASSWORD = 'PASSWORD';
 const VALIDATOR_TYPE_PASSWORD_CONFIRM = 'PASSWORD_CONFIRM';
@@ -17,6 +20,16 @@ export const VALIDATOR_MINLENGTH = val => ({
   type: VALIDATOR_TYPE_MINLENGTH,
   val: val
 });
+export const VALIDATOR_STARTDATE = val => ({
+  type: VALIDATOR_TYPE_STARTDATE,
+  val: val
+});
+export const VALIDATOR_ENDDATE = (val, val2) => ({
+  type: VALIDATOR_TYPE_ENDDATE,
+  val: val,
+  val2: val2
+});
+export const VALIDATOR_PHONE = val => ({ type: VALIDATOR_TYPE_PHONE, val: val });
 export const VALIDATOR_MAXLENGTH = val => ({
   type: VALIDATOR_TYPE_MAXLENGTH,
   val: val
@@ -28,6 +41,8 @@ export const VALIDATOR_CODE = () => ({ type: VALIDATOR_TYPE_CODE });
 export const VALIDATOR_PASSWORD = () => ({ type: VALIDATOR_TYPE_PASSWORD });
 export const VALIDATOR_PASSWORD_CONFIRM = val => ({ type: VALIDATOR_TYPE_PASSWORD_CONFIRM, val: val });
 
+
+
 export const validate = (value, validators) => {
 
   let isValid = true;
@@ -38,11 +53,20 @@ export const validate = (value, validators) => {
     if (validator.type === VALIDATOR_TYPE_MINLENGTH) {
       isValid = isValid && value.trim().length >= validator.val;
     }
+    if (validator.type === VALIDATOR_TYPE_STARTDATE) {
+      isValid = isValid && value.trim().length >= validator.val;
+    }
+    if (validator.type === VALIDATOR_TYPE_ENDDATE) {
+      isValid = isValid && validator.val2 > validator.val;
+    }
     if (validator.type === VALIDATOR_TYPE_MAXLENGTH) {
       isValid = isValid && value.trim().length <= validator.val;
     }
     if (validator.type === VALIDATOR_TYPE_MIN) {
       isValid = isValid && +value >= validator.val;
+    }
+    if (validator.type === VALIDATOR_TYPE_PHONE) {
+      isValid = isValid && /[0-9]{10}$/.test(value);
     }
     if (validator.type === VALIDATOR_TYPE_EXPIRATION) {
       isValid = isValid && Number(value.slice(0, 2)) <= validator.year && Number(value.slice(-2)) <= validator.month;

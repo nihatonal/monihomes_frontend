@@ -15,10 +15,10 @@ function Accordion(props) {
     useEffect(() => {
         setHeight(contentEl.current.scrollHeight);
     }, [])
-
+    console.log(height)
     //open animation with react spring
     const openAnimation = useSpring({
-        from: { opacity: "0", maxHeight: "46px" },
+        from: { opacity: "0", maxHeight: "38px" },
         to: { opacity: "1", maxHeight: open ? `${height + 46}px` : "38px" },
         config: { duration: "300" }
     });

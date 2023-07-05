@@ -1,35 +1,74 @@
 import React from 'react';
 import LoadingSpinner from '../../shared/UI/LoadingSpinner';
 import DeleteModal from './DeleteModal';
+import Input from '../../shared/components/Input';
+import {
+    VALIDATOR_REQUIRE,
+    VALIDATOR_PHONE
 
+} from "../../shared/util/validators.js";
 import './AddGuest.css'
 function AddGuest(props) {
     return (
         <div className="add_guest_wrapper">
+            <h3>Müşteri Kaydı</h3>
             <form className="inputs_container" onSubmit={props.submitHandler}>
-                <label htmlFor="startDate" className="input_label">
-                    Check-in
-                    <input type={'date'} value={props.startDate} onChange={props.setStartDate} required />
-                    <span></span>
-                </label>
-                <label htmlFor="startDate" className="input_label">
-                    Check-out
-                    <input type={'date'} value={props.endDate} onChange={props.setEndDate} required />
-                    <span></span>
-                </label>
-                {props.validStart || props.validEnd ? <p className='invalid_dates'>Tarihleri kontrol ediniz. Bu tarihlerde daha önce rezervasyon olabilir.</p> : null}
-                <label htmlFor="startDate" className="input_label info_label">
-                    Information
-                    <textarea type={'text'} value={props.info} onChange={props.setInfo} required />
+                <Input
+                    id="guestname"
+                    element="input"
+                    type="text"
+                    label='Müşteri Adı-Soyadı'
+                    placeholder="Müşterinin ad-soyadını giriniz."
+                    validators={[VALIDATOR_REQUIRE()]}
+                    onInput={props.inputHandler}
 
-                </label>
+                />
+                <Input
+                    id="guesttel"
+                    element="input"
+                    type="text"
+                    label='Müşteri Tel No'
+                    placeholder="Müşterinin telefon numarısını giriniz."
+                    validators={[VALIDATOR_REQUIRE(), VALIDATOR_PHONE()]}
+                    onInput={props.inputHandler}
 
+                />
+                <Input
+                    id="startdate"
+                    element="input"
+                    type="date"
+                    label='Check-in'
+                    placeholder="Müşterinin telefon numarısını giriniz."
+                    validators={[VALIDATOR_REQUIRE()]}
+                    onInput={props.inputHandler}
+
+                />
+                <Input
+                    id="enddate"
+                    element="input"
+                    type="date"
+                    label='Check-out'
+                    placeholder="Müşterinin telefon numarısını giriniz."
+                    validators={[VALIDATOR_REQUIRE()]}
+                    onInput={props.inputHandler}
+
+                />
+                <Input
+                    id="info"
+                    element="textarea"
+                    type="text"
+                    label='Not'
+                    placeholder="Not eklemek ister misiniz?"
+                    validators={[]}
+                    onInput={props.inputHandler}
+
+                />
                 <button
                     type="submit"
                     className={'save_btn'}
-                    disabled={!props.startDate && !props.endDate && props.info_length < 0}
+                    disabled={props.disabled}
                 >
-                    {props.isLoading ? <LoadingSpinner /> : 'Save'}
+                    {props.isLoading ? <LoadingSpinner /> : 'Kaydet'}
                 </button>
             </form>
             <DeleteModal show={props.show} delete={props.confirmDeleteHandler} cancel={props.setShow} />

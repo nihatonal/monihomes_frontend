@@ -27,9 +27,7 @@
   background-color: rgba(34, 100, 80, 0.81);
   color: white;
 }
-#guests th:nth-last-child(2) {
-  width: 39%;
-}
+
 #guests th:nth-last-child(1) {
   width: 1%;
 }

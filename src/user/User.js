@@ -5,19 +5,43 @@ import { AuthContext } from "../shared/context/auth-context";
 import moment from "moment";
 import GuestTable from './components/GuestTable';
 import AddGuest from './components/AddGuest';
+import { useForm } from "../shared/hooks/form-hook";
+
 import './User.css';
 function User(props) {
     const auth = useContext(AuthContext);
     const { isLoading, sendRequest } = useHttpClient();
-    const [startDate, setStartDate] = useState();
-    const [info, setInfo] = useState('');
-    const [endDate, setEndDate] = useState();
+    const [validDate, setValidDate] = useState(false)
     const [guests, setGuests] = useState();
     const [show, setShow] = useState(false);
     const [deleteId, setDeleteId] = useState();
-    const [validStart, setValidStart] = useState();
-    const [validEnd, setValidEnd] = useState();
     const [dates, setDates] = useState([]);
+    const [formState, inputHandler] = useForm(
+        {
+            guestname: {
+                value: "",
+                isValid: false,
+            },
+            guesttel: {
+                value: "",
+                isValid: false,
+            },
+            startdate: {
+                value: "",
+                isValid: false,
+            },
+            enddate: {
+                value: "",
+                isValid: false,
+            },
+            info: {
+                value: "",
+                isValid: false,
+            },
+
+        },
+        false
+    );
     useEffect(() => {
         const fetchUsers = async () => {
             try {
@@ -34,22 +58,33 @@ function User(props) {
 
     }, [sendRequest]);
 
+    useEffect(() => {
+        setValidDate(formState.inputs.startdate.value > formState.inputs.enddate.value)
+
+    }, [formState.inputs.startdate.value, formState.inputs.enddate.value])
     const submitHandler = async (e) => {
         e.preventDefault();
+
+        if (dates.includes(moment(new Date(formState.inputs.startdate.value)).format("YYYY/MM/DD")) ||
+            dates.includes(moment(new Date(formState.inputs.enddate.value)).format("YYYY/MM/DD"))) {
+            alert("Bu tarihlerde rezervasyon olabilir.")
+            return
+        }
         try {
             const responseData = await sendRequest(
                 process.env.REACT_APP_BACKEND_URL + "/savedates",
                 "POST",
                 JSON.stringify({
-                    info: info,
-                    dates: [startDate, endDate]
+                    guestname: formState.inputs.guestname.value,
+                    guesttel: formState.inputs.guesttel.value,
+                    info: formState.inputs.info.value,
+                    dates: [formState.inputs.startdate.value, formState.inputs.enddate.value]
                 }),
                 {
                     "Content-Type": "application/json",
                 }
             );
             setGuests([...guests, responseData.guest]);
-           // setDates([...new Set([].concat([...guests, responseData.guest].map((guest) => expandDates(guest.dates[0], guest.dates[1]))).flat())])
         } catch (err) {
         }
     }
@@ -81,26 +116,13 @@ function User(props) {
         }
         return dateArray;
     }
-
-    useEffect(() => {
-        setValidStart(dates.includes(moment(new Date(startDate)).format("YYYY/MM/DD")));
-        setValidEnd(dates.includes(moment(new Date(endDate)).format("YYYY/MM/DD")))
-    }, [startDate, endDate, dates]);
-
     return (
         <div className="user_container">
             <div className="user_wrapper">
                 <AddGuest
+                    inputHandler={inputHandler}
                     submitHandler={submitHandler}
-                    startDate={startDate}
-                    setStartDate={(e) => setStartDate(e.target.value)}
-                    endDate={endDate}
-                    setEndDate={(e) => setEndDate(e.target.value)}
-                    validStart={validStart}
-                    validEnd={validEnd}
-                    info={info}
-                    info_length={info.length}
-                    setInfo={(e) => setInfo(e.target.value)}
+                    disabled={!formState.isValid || validDate}
                     show={show}
                     confirmDeleteHandler={confirmDeleteHandler}
                     setShow={() => setShow(false)}

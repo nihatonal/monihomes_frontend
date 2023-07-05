@@ -53,7 +53,7 @@ function BookCalendar(props) {
         return { innerWidth, innerHeight };
     }
 
-
+console.log(props.guests)
     const check_in = [...new Set([].concat(props.guests && props.guests.map((guest) => expandDates(guest.dates[0], guest.dates[1])[0])).flat())]
     const check_out = [...new Set([].concat(props.guests && props.guests.map((guest) => expandDates(guest.dates[0], guest.dates[1])[expandDates(guest.dates[0], guest.dates[1]).length - 1])).flat())]
     const reserved = [...new Set([].concat(props.guests && props.guests.map((guest) => expandDates(guest.dates[0], guest.dates[1]).slice(1, -1))).flat())]
@@ -64,10 +64,10 @@ function BookCalendar(props) {
         setSelectedDays(selected_dates)
 
     }, [props.selectedStart, props.selectedEnd])
-    console.log(reserved.concat(check_out.filter((d) => check_in.includes(d))))
-    console.log(check_out)
-    console.log(check_out.filter((d) => !check_in.includes(d)))
-    console.log(selectedDays.slice(1).filter((d) => check_in.includes(d)).filter((e) => !reserved.concat(check_out.filter((d) => check_in.includes(d))).includes(e)))
+    // console.log(reserved.concat(check_out.filter((d) => check_in.includes(d))))
+    // console.log(check_out)
+    // console.log(check_out.filter((d) => !check_in.includes(d)))
+    // console.log(selectedDays.slice(1).filter((d) => check_in.includes(d)).filter((e) => !reserved.concat(check_out.filter((d) => check_in.includes(d))).includes(e)))
 
     // console.log(selected_dates.slice(1, -1).filter((d) => !reserved.includes(d)))
     // console.log(selectedDays)
