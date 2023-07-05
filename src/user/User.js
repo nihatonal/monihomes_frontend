@@ -1,7 +1,10 @@
 import React, { useState, useEffect, useContext } from 'react';
+import "moment/locale/ru";
 import { useHttpClient } from "../shared/hooks/http-hook";
 import { AuthContext } from "../shared/context/auth-context";
+import moment from "moment";
 import GuestTable from './components/GuestTable';
+import AddGuest from './components/AddGuest';
 import './User.css';
 function User(props) {
     const auth = useContext(AuthContext);
@@ -10,23 +13,29 @@ function User(props) {
     const [info, setInfo] = useState('');
     const [endDate, setEndDate] = useState();
     const [guests, setGuests] = useState();
-
+    const [show, setShow] = useState(false);
+    const [deleteId, setDeleteId] = useState();
+    const [validStart, setValidStart] = useState();
+    const [validEnd, setValidEnd] = useState();
+    const [dates, setDates] = useState([]);
     useEffect(() => {
         const fetchUsers = async () => {
             try {
                 const responseData = await sendRequest(
                     process.env.REACT_APP_BACKEND_URL + "/getdates",
                 );
-                console.log(responseData.guests);
+
                 setGuests(responseData.guests)
+
+                setDates([...new Set([].concat(responseData.guests.map((guest) => expandDates(guest.dates[0], guest.dates[1]))).flat())])
             } catch (err) { }
         };
         fetchUsers();
 
     }, [sendRequest]);
+
     const submitHandler = async (e) => {
         e.preventDefault();
-        console.log(startDate, endDate)
         try {
             const responseData = await sendRequest(
                 process.env.REACT_APP_BACKEND_URL + "/savedates",
@@ -39,57 +48,70 @@ function User(props) {
                     "Content-Type": "application/json",
                 }
             );
-            console.log(responseData);
+            setGuests([...guests, responseData.guest]);
+           // setDates([...new Set([].concat([...guests, responseData.guest].map((guest) => expandDates(guest.dates[0], guest.dates[1]))).flat())])
         } catch (err) {
         }
     }
     const confirmDeleteHandler = async (e) => {
+        e.preventDefault();
         console.log(e.target.parentNode.parentNode.parentNode.id)
         try {
             await sendRequest(
-                process.env.REACT_APP_BACKEND_URL + `/${e.target.parentNode.parentNode.parentNode.id}`,
+                process.env.REACT_APP_BACKEND_URL + `/${deleteId}`,
                 "DELETE",
                 null,
                 {
                     Authorization: "Bearer " + auth.token,
                 }
             );
-            const posts = guests.filter((item) => item.id !== e.target.parentNode.parentNode.parentNode.id);
+            const posts = guests.filter((item) => item.id !== deleteId);
             setGuests(posts);
+            setShow(false)
+            setDates([...new Set([].concat(posts.guests.map((guest) => expandDates(guest.dates[0], guest.dates[1]))).flat())])
         } catch (err) { }
     };
+    function expandDates(startDate, stopDate) {
+        let dateArray = [];
+        let currentDate = moment(new Date(startDate));
+        let stop_Date = moment(new Date(stopDate));
+        while (currentDate <= stop_Date) {
+            dateArray.push(moment(new Date(currentDate)).format("YYYY/MM/DD"));
+            currentDate = moment(new Date(currentDate)).add(1, "days");
+        }
+        return dateArray;
+    }
+
+    useEffect(() => {
+        setValidStart(dates.includes(moment(new Date(startDate)).format("YYYY/MM/DD")));
+        setValidEnd(dates.includes(moment(new Date(endDate)).format("YYYY/MM/DD")))
+    }, [startDate, endDate, dates]);
+
     return (
         <div className="user_container">
             <div className="user_wrapper">
-
-                <form className="inputs_container" onSubmit={submitHandler}>
-                    <label htmlFor="startDate" className="input_label">
-                        Check-in
-                        <input type={'date'} value={startDate} onChange={(e) => setStartDate(e.target.value)} />
-                        <span></span>
-                    </label>
-                    <label htmlFor="startDate" className="input_label">
-                        Check-out
-                        <input type={'date'} value={endDate} onChange={(e) => setEndDate(e.target.value)} />
-                        <span></span>
-                    </label>
-                    <label htmlFor="startDate" className="input_label info_label">
-                        Information
-                        <textarea type={'text'} value={info} onChange={(e) => setInfo(e.target.value)} />
-
-                    </label>
-
-                    <button
-                        type="submit"
-                        className={'save_btn'}
-                        disabled={!startDate && !endDate && info.length < 0}
-                    >
-                        Save
-                    </button>
-                </form>
-                <GuestTable data={guests} onDelete={confirmDeleteHandler} />
+                <AddGuest
+                    submitHandler={submitHandler}
+                    startDate={startDate}
+                    setStartDate={(e) => setStartDate(e.target.value)}
+                    endDate={endDate}
+                    setEndDate={(e) => setEndDate(e.target.value)}
+                    validStart={validStart}
+                    validEnd={validEnd}
+                    info={info}
+                    info_length={info.length}
+                    setInfo={(e) => setInfo(e.target.value)}
+                    show={show}
+                    confirmDeleteHandler={confirmDeleteHandler}
+                    setShow={() => setShow(false)}
+                    isLoading={isLoading}
+                />
+                <GuestTable data={guests} onDelete={(e) => {
+                    setShow(true)
+                    setDeleteId(e.target.parentNode.parentNode.parentNode.id)
+                }} />
             </div>
-        </div>
+        </div >
     );
 }
 

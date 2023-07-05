@@ -7,7 +7,7 @@ import Gallery from './gallery/Gallery';
 import Contact from './contact/Contact';
 import Partners from './partners/Partners';
 import profil from '../assets/images/profil.jpeg'
-import Availability from './gallery/components/Availability';
+import Availability from './Availability/Availability';
 
 import { FloatingWhatsApp } from 'react-floating-whatsapp';
 import './Main.css';

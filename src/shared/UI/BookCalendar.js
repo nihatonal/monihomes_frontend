@@ -9,10 +9,10 @@ import { MdOutlineArrowBackIos } from "react-icons/md";
 import './BookCalendar.css';
 
 function BookCalendar(props) {
-    const lang = useContext(LanguageContext);
     // const sectionData = lang.dictionary["booking_words"][0];
     // const [value, onChange] = useState(moment('Tue Aug 15 2023 17:47:21 GMT+0300 (Moskova Standart Saati)'));
     const [error, setError] = useState(false);
+    const [selectedDays, setSelectedDays] = useState([])
 
     function expandDates(startDate, stopDate) {
         let dateArray = [];
@@ -28,6 +28,7 @@ function BookCalendar(props) {
 
     useEffect(() => {
         if (!props.value) return
+        if (!props.markDates) return
         let selectedRange = expandDates(moment(new Date(props.value[0])).format("YYYY/MM/DD"), moment(new Date(props.value[1])).format("YYYY/MM/DD"))
         if (checker(selectedRange, props.markDates)) {
             setError(true)
@@ -51,6 +52,32 @@ function BookCalendar(props) {
         const { innerWidth, innerHeight } = window;
         return { innerWidth, innerHeight };
     }
+
+
+    const check_in = [...new Set([].concat(props.guests && props.guests.map((guest) => expandDates(guest.dates[0], guest.dates[1])[0])).flat())]
+    const check_out = [...new Set([].concat(props.guests && props.guests.map((guest) => expandDates(guest.dates[0], guest.dates[1])[expandDates(guest.dates[0], guest.dates[1]).length - 1])).flat())]
+    const reserved = [...new Set([].concat(props.guests && props.guests.map((guest) => expandDates(guest.dates[0], guest.dates[1]).slice(1, -1))).flat())]
+    const reserved_raw = [...new Set([].concat(props.guests && props.guests.map((guest) => expandDates(guest.dates[0], guest.dates[1]))).flat())]
+    useEffect(() => {
+        let selected_dates;
+        selected_dates = expandDates(props.selectedStart, props.selectedEnd).length > 3 ? expandDates(props.selectedStart, props.selectedEnd) : expandDates(props.selectedStart, props.selectedEnd);
+        setSelectedDays(selected_dates)
+
+    }, [props.selectedStart, props.selectedEnd])
+    console.log(reserved.concat(check_out.filter((d) => check_in.includes(d))))
+    console.log(check_out)
+    console.log(check_out.filter((d) => !check_in.includes(d)))
+    console.log(selectedDays.slice(1).filter((d) => check_in.includes(d)).filter((e) => !reserved.concat(check_out.filter((d) => check_in.includes(d))).includes(e)))
+
+    // console.log(selected_dates.slice(1, -1).filter((d) => !reserved.includes(d)))
+    // console.log(selectedDays)
+    // console.log(reserved)
+    // console.log(selectedDays.filter((d) => check_out.includes(d)))
+    // console.log(selectedDays.filter((d) => check_in.includes(d)))
+    // console.log(check_out.includes(selectedDays[selectedDays.length - 1]))
+    // console.log(selectedDays.slice(0, -1).filter((d) => check_out.includes(d)))
+
+
     return (
         <div className='calendar-modal' style={props.style} ref={props.ref}>
             <div className="calendar-modal-wrapper">
@@ -68,16 +95,56 @@ function BookCalendar(props) {
 
 
                     tileClassName={({ date, view }) => {
+                        if (!props.markDates) return
                         if (
                             moment(date).format("YYYY/MM/DD") <
                             moment().format("YYYY/MM/DD")
                         ) {
                             return "passed";
-                        } else if (props.markDates && expandDates(props.markDates[0], props.markDates[1]).find((x) => x === moment(date).format("YYYY/MM/DD"))) {
-                            return "passed";
-                        } else if (expandDates(props.selectedStart, props.selectedEnd).find((x) => x === moment(date).format("YYYY/MM/DD"))) {
-                            return "selected"
                         }
+
+                        if (selectedDays.slice(0, -1).filter((d) => check_out.includes(d)).filter((e) => !reserved.concat(check_out.filter((d) => check_in.includes(d))).includes(e)).find((x) => x === moment(date).format("YYYY/MM/DD"))
+
+                        ) {
+                            return "selected-check-in"
+                        }
+
+                        if (selectedDays.slice(1).filter((d) => check_in.includes(d)).filter((e) => !reserved.concat(check_out.filter((d) => check_in.includes(d))).includes(e)).find((x) => x === moment(date).format("YYYY/MM/DD"))
+
+                        ) {
+                            return "selected-check-out"
+                        }
+
+                        if (selectedDays[0] === moment(date).format("YYYY/MM/DD")
+                            && !check_in.includes(selectedDays[0])
+                            && !reserved.includes(selectedDays[0])
+
+                        ) {
+                            return "selected-check-in-null"
+                        }
+                        if (selectedDays[selectedDays.length - 1] === moment(date).format("YYYY/MM/DD")
+                            && !reserved_raw.includes(selectedDays[selectedDays.length - 1])
+                        ) {
+                            return "selected-check-out-null"
+                        }
+                        if (check_in.filter((d) => !check_out.includes(d)).find((x) => x === moment(date).format("YYYY/MM/DD"))
+
+                        ) {
+                            return "reserved_check-in"
+                        }
+                        if (check_out.filter((d) => !check_in.includes(d)).find((x) => x === moment(date).format("YYYY/MM/DD"))) {
+                            return "reserved_check-out"
+                        }
+
+                        if (reserved.concat(check_out.filter((d) => check_in.includes(d))).find((x) => x === moment(date).format("YYYY/MM/DD"))) {
+                            return "reserved"
+                        }
+                        if (selectedDays.slice(1, -1).filter((d) => !reserved.includes(d)).find((x) => x === moment(date).format("YYYY/MM/DD"))
+
+                        ) {
+                            return "selected";
+                        }
+
                     }}
                 // tileDisabled={({ activeStartDate, date, view }) => props.markDates && expandDates(props.markDates[0], props.markDates[1]).find((x) => x === moment(date).format("YYYY/MM/DD"))}
 

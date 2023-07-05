@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Availability from './components/Availability';
 import Modal from '../../shared/UI/Modal';
 import GalleryFancyBox from './GalleryFancyBox';
 import { IoCloseCircleSharp } from 'react-icons/io5';

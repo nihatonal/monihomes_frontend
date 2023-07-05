@@ -1,0 +1,120 @@
+.availability_container {
+  padding: 50px 0 75px;
+}
+.availability__item {
+  overflow: hidden;
+  margin-top: 20px;
+}
+.availability_wrapper .section_title {
+  font-family: var(--bacasime);
+  font-size: 38px;
+  color: #3a3a3a;
+}
+.availability__item_content {
+  margin: 0;
+}
+.calendar_container {
+  margin: 0 auto;
+  height: 80px;
+  width: 70%;
+  border-radius: 50px;
+  background-color: rgba(34, 100, 80, 0.61);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 100px;
+}
+.date_inputs_container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 100px;
+}
+.calendar_label {
+  color: var(--white-color);
+  font-family: var(--Nunito_Sans);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  padding-left: 20px;
+}
+.availability_btn {
+  padding: 10px 40px;
+  border-radius: 40px;
+  font-size: 18px;
+  font-family: var(--Nunito_Sans);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: var(--white-color);
+  background-color: rgba(34, 100, 80, 0.41);
+}
+.availability_btn:hover {
+  background-color: rgba(34, 100, 80, 0.71);
+}
+.date_input {
+  display: flex;
+  flex-direction: column;
+}
+.react-datepicker-wrapper input {
+  width: 170px;
+  border: 1px solid rgb(223, 223, 223);
+  padding: 10px 40px;
+  font-family: var(--Nunito_Sans);
+  font-weight: 500;
+  font-size: 16px;
+  color: #5e5e5e;
+  border-radius: 40px;
+  cursor: pointer;
+  outline: none;
+}
+.react-datepicker-wrapper input:focus {
+  border: 1px solid rgb(131, 131, 131);
+}
+
+@media only screen and (min-width: 767px) and (max-width: 1283px) {
+  .calendar_container {
+    margin: 0 auto;
+    width: 90%;
+    padding: 0 50px;
+  }
+}
+@media only screen and (min-width: 767px) and (max-width: 850px) {
+  .calendar_container {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 30px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .availability_wrapper {
+    padding: 0;
+    height: 420px;
+  }
+  .availability_wrapper .section_title {
+    font-family: var(--bacasime);
+    font-size: 28px;
+  }
+  .availability_content {
+    margin: 0;
+  }
+  .availability__item_content {
+    margin: 0;
+  }
+  .calendar_container {
+    margin: 0 auto;
+    width: 100%;
+    padding: 15px;
+    flex-direction: column;
+    row-gap: 20px;
+    height: auto;
+    border-radius: 0;
+  }
+  .date_inputs_container {
+    column-gap: 10px;
+  }
+  .calendar_label {
+    text-align: center;
+    padding-left: 0;
+  }
+}

@@ -32,6 +32,7 @@ function App() {
     routes = (
       <React.Fragment>
         <Route exact path="/" element={<Main />} />
+        <Route exact path="/admin" element={<LogIn />} />
         <Route exact path="/signup" element={<SignUp />} />
         <Route exact path="/login" element={<LogIn />} />
         <Route exact path="/privacypolicy" element={<PrivacyPolicy />} />

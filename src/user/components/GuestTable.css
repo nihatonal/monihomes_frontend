@@ -3,6 +3,7 @@
   border-collapse: collapse;
   width: 100%;
   margin-top: 20px;
+  pointer-events: none;
 }
 
 #guests td,
@@ -37,6 +38,7 @@
   font-size: 16px;
   color: rgba(34, 100, 80, 0.81);
   cursor: pointer;
+  pointer-events: fill;
 }
 .delete_btn:hover {
   color: var(--color_danger);
