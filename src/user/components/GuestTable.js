@@ -1,58 +1,70 @@
-import { React, useState, useRef, useEffect } from "react";
+import { React, useState } from "react";
 import { useSpring, animated } from "react-spring";
 import { IoIosArrowUp } from 'react-icons/io';
 import { IoIosArrowDown } from 'react-icons/io';
+
+
 import { AiTwotoneDelete } from 'react-icons/ai';
 import './GuestTable.css'
 function GuestTable(props) {
-    const contentEl = useRef();
-    const [open, setOpen] = useState(true);
-    const [height, setHeight] = useState(0)
+    const [open, setOpen] = useState('');
 
-    let toggleHandler = (e) => {
-        setOpen(!open);
+    const toggleHandler = (x) => {
+        console.log(x)
+        if (x === open) {
+            setOpen('');
+        } else {
+            setOpen(x);
+        }
+
     };
-    useEffect(() => {
-        setHeight(contentEl.current.scrollHeight);
-    }, [])
-    console.log(height)
-    //open animation with react spring
-    const openAnimation = useSpring({
-        from: { opacity: "0", maxHeight: "38px" },
-        to: { opacity: "1", maxHeight: open ? `${height + 46}px` : "38px" },
-        config: { duration: "300" }
-    });
+
+    console.log(props.data)
 
     return (
         <div className='guest_table'>
+            <div className='guest_table_header'>
+                <p>Check-in</p>
+                <p>Check-out</p>
+                <p className='delete_btn'>
+                    <AiTwotoneDelete />
+                </p>
+            </div>
+            {props.data.map((item, i) =>
+                <div>
+                    <div id={item.id}
+                        className='guest_table_item'
+                        onClick={() => toggleHandler(i)}
+                        style={open === i ? { background: "#a0a0a0" } : null}
+                    >
+                        {/* {!open ? <IoIosArrowDown /> : <IoIosArrowUp />} */}
+                        <p className='guest_table_item_title'>{item.dates[0]}</p>
+                        <p className='guest_table_item_title'>{item.dates[1]}</p>
+                        <p className='delete_btn' onClick={props.onDelete}>
+                            <AiTwotoneDelete />
+                        </p>
+                    </div>
+                    <div className="guest_table_item_content"
+                        style={open === i ? { display: "flex" } : { display: "none" }}
+                    >
+                        <div className="guest_table_item_content_item">
+                            <p className='guest_table_item_content_item_title'>Müşteri Ad-Soyad: </p>
+                            <p className='guest_table_item_content_item_desc'>{item.guestname}</p>
+                        </div>
+                        <div className="guest_table_item_content_item">
+                            <p className='guest_table_item_content_item_title'>Müşteri Tel: </p>
+                            <p className='guest_table_item_content_item_desc'>{item.guesttel}</p>
+                        </div>
+                        <div className="guest_table_item_content_item">
+                            <p className='guest_table_item_content_item_title'>Not: </p>
+                            <p className='guest_table_item_content_item_desc'>{item.info}</p>
+                        </div>
 
-            <table id='guests'>
-                <tbody>
-                    <tr>
-                        <th>Check In</th>
-                        <th>Check Out</th>
-                        <th></th>
-                    </tr>
-                    <animated.tr className="accordion__item" style={openAnimation} id={props.id}>
-                        <div className={open ? "accordion__header open" : "accordion__header"} onClick={toggleHandler}>
-                            <h4>{!open ? <IoIosArrowDown /> : <IoIosArrowUp />}Deneme</h4>
-                        </div>
-                        <div className="accordion__content" ref={contentEl}>
-                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.
-                        </div>
-                    </animated.tr>
-                    {/* {props.data && props.data.map((item, i) =>
-                        <tr id={item.id} key={item.id+i}>
-                            <td>{item.dates[0]}</td>
-                            <td>{item.dates[1]}</td>
-                            <td>{item.info}</td>
-                            <td className='delete_btn' onClick={props.onDelete}><AiTwotoneDelete /></td>
-                        </tr>
-                    )} */}
-                </tbody>
-            </table>
+                    </div>
+                </div>
+            )}
+
         </div>
-    );
+    )
 }
-
 export default GuestTable;

@@ -1,43 +1,79 @@
-#guests {
-  font-family: Arial, Helvetica, sans-serif;
-  border-collapse: collapse;
+.guest_table {
   width: 100%;
-  margin-top: 20px;
-  pointer-events: none;
+  margin-top: 40px;
 }
-
-#guests td,
-#guests th {
+.guest_table_header {
+  font-family: var(--Nunito_Sans);
+  font-weight: 800;
+  font-size: 16px;
+  background-color: rgba(34, 100, 80, 0.81);
+  display: grid;
+  grid-template-columns: 1fr 1fr 35px;
+  border-collapse: collapse;
+  color: #fff;
+}
+.guest_table_header p {
   border: 1px solid #ddd;
   padding: 8px;
 }
-
-#guests tr:nth-child(even) {
-  background-color: #f2f2f2;
+.guest_table_item {
+  font-family: var(--Nunito_Sans);
+  font-weight: 800;
+  font-size: 16px;
+  background-color: #a0a0a091;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 35px;
+  border-collapse: collapse;
+  color: rgb(53, 53, 53);
+  cursor: pointer;
 }
-
-#guests tr:hover {
-  background-color: rgba(34, 100, 80, 0.21);
+.guest_table_item .delete_btn {
+  border: 1px solid #ddd;
+  padding: 8px;
 }
+/* .guest_table_item:nth-child(even) {
+  background-color: #a0a0a0;
+} */
 
-#guests th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: rgba(34, 100, 80, 0.81);
-  color: white;
+.guest_table_item_active {
+  background-color: #a0a0a0;
 }
-
-#guests th:nth-last-child(1) {
-  width: 1%;
+.guest_table_item_title {
+  border: 1px solid #ddd;
+  padding: 8px;
+  pointer-events: none;
 }
-#guests .delete_btn {
+.guest_table_header .delete_btn,
+.guest_table_item .delete_btn {
   text-align: center;
   font-size: 16px;
-  color: rgba(34, 100, 80, 0.81);
+  color: #fff;
   cursor: pointer;
-  pointer-events: fill;
 }
 .delete_btn:hover {
   color: var(--color_danger);
+}
+.guest_table_item_content {
+  display: flex;
+  flex-direction: column;
+  transition: all 0.5s;
+}
+.guest_table_item_content_item {
+  font-family: var(--Nunito_Sans);
+  font-weight: 400;
+  font-size: 14px;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  align-items: center;
+  border: 1px solid #d4d4d4;
+}
+.guest_table_item_content_item p {
+  padding: 5px;
+}
+.guest_table_item_content_item_title {
+  font-weight: 800;
+}
+.guest_table_item_content_item_desc {
+  border-left: 1px solid #d4d4d4;
 }

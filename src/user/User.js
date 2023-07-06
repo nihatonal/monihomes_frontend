@@ -128,8 +128,9 @@ function User(props) {
                     setShow={() => setShow(false)}
                     isLoading={isLoading}
                 />
-                <GuestTable data={guests} onDelete={(e) => {
+                <GuestTable data={guests || []} onDelete={(e) => {
                     setShow(true)
+                    console.log(e.target.parentNode.parentNode.parentNode)
                     setDeleteId(e.target.parentNode.parentNode.parentNode.id)
                 }} />
             </div>
