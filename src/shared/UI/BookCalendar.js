@@ -1,17 +1,14 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import moment from "moment";
 import "moment/locale/ru";
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
-import { LanguageContext } from "../../shared/context/Language";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 import { MdOutlineArrowBackIos } from "react-icons/md";
 import './BookCalendar.css';
 
 function BookCalendar(props) {
-    // const sectionData = lang.dictionary["booking_words"][0];
-    // const [value, onChange] = useState(moment('Tue Aug 15 2023 17:47:21 GMT+0300 (Moskova Standart Saati)'));
-    const [error, setError] = useState(false);
+
     const [selectedDays, setSelectedDays] = useState([])
 
     function expandDates(startDate, stopDate) {
@@ -24,16 +21,14 @@ function BookCalendar(props) {
         }
         return dateArray;
     }
-    let checker = (src, target) => target.some((v) => src.includes(v));
+    //let checker = (src, target) => target.some((v) => src.includes(v));
 
-    useEffect(() => {
-        if (!props.value) return
-        if (!props.markDates) return
-        let selectedRange = expandDates(moment(new Date(props.value[0])).format("YYYY/MM/DD"), moment(new Date(props.value[1])).format("YYYY/MM/DD"))
-        if (checker(selectedRange, props.markDates)) {
-            setError(true)
-        }
-    }, [props.value, props.markDates]);
+    // useEffect(() => {
+    //     if (!props.value) return
+    //     if (!props.markDates) return
+    //     let selectedRange = expandDates(moment(new Date(props.value[0])).format("YYYY/MM/DD"), moment(new Date(props.value[1])).format("YYYY/MM/DD"))
+
+    // }, [props.value, props.markDates]);
 
     const [windowSize, setWindowSize] = useState(getWindowSize());
 
@@ -53,7 +48,7 @@ function BookCalendar(props) {
         return { innerWidth, innerHeight };
     }
 
-console.log(props.guests)
+    // console.log(props.guests)
     const check_in = [...new Set([].concat(props.guests && props.guests.map((guest) => expandDates(guest.dates[0], guest.dates[1])[0])).flat())]
     const check_out = [...new Set([].concat(props.guests && props.guests.map((guest) => expandDates(guest.dates[0], guest.dates[1])[expandDates(guest.dates[0], guest.dates[1]).length - 1])).flat())]
     const reserved = [...new Set([].concat(props.guests && props.guests.map((guest) => expandDates(guest.dates[0], guest.dates[1]).slice(1, -1))).flat())]

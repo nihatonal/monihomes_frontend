@@ -32,7 +32,7 @@ function Reviews(props) {
                 <div className="reviews_content">
 
                     {reviews.length < 1 ?
-                        <div><LoadingSpinner /><p className='is_loading'>{props.loading}</p></div>
+                        <div className="reviews_loading"><LoadingSpinner /><p className='is_loading'>{props.loading}</p></div>
                         :
                         <SimpleSlider>
                             {reviews.map((review) =>

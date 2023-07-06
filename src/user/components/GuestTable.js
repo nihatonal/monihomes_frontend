@@ -1,7 +1,4 @@
 import { React, useState } from "react";
-import { useSpring, animated } from "react-spring";
-import { IoIosArrowUp } from 'react-icons/io';
-import { IoIosArrowDown } from 'react-icons/io';
 
 
 import { AiTwotoneDelete } from 'react-icons/ai';
@@ -18,26 +15,35 @@ function GuestTable(props) {
         }
 
     };
-
-    console.log(props.data)
+    function compare(a, b) {
+        if (a.dates[0] < b.dates[0]) {
+            return -1;
+        }
+        if (a.dates[0] > b.dates[0]) {
+            return 1;
+        }
+        return 0;
+    }
 
     return (
         <div className='guest_table'>
             <div className='guest_table_header'>
+                <p>No</p>
                 <p>Check-in</p>
                 <p>Check-out</p>
                 <p className='delete_btn'>
                     <AiTwotoneDelete />
                 </p>
             </div>
-            {props.data.map((item, i) =>
-                <div>
+            {props.data.sort(compare).map((item, i) =>
+                <div key={item.guestname + i}>
                     <div id={item.id}
                         className='guest_table_item'
                         onClick={() => toggleHandler(i)}
                         style={open === i ? { background: "#a0a0a0" } : null}
                     >
                         {/* {!open ? <IoIosArrowDown /> : <IoIosArrowUp />} */}
+                        <p className='guest_table_item_title'>{i + 1}</p>
                         <p className='guest_table_item_title'>{item.dates[0]}</p>
                         <p className='guest_table_item_title'>{item.dates[1]}</p>
                         <p className='delete_btn' onClick={props.onDelete}>

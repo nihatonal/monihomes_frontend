@@ -211,14 +211,6 @@
   background: rgba(34, 100, 80, 0.7);
   border-radius: 0;
 }
-/* .react-calendar__tile--rangeBothEnds {
-  background: red;
-} */
-
-/* .highlight {
-  background: var(--color-primary);
-  color: #fff;
-} */
 
 .passed {
   text-decoration: line-through;
@@ -231,11 +223,6 @@
   color: #ffffffd8;
 }
 .reserved_check-out {
-  /* background: linear-gradient(
-    -45deg,
-    rgba(34, 100, 80, 0.7) 0 50%,
-    var(--color_danger) 50% 100%
-  ); */
   background: linear-gradient(-45deg, #fff 0 50%, var(--color_danger) 50% 100%);
   border-radius: 0;
   color: #ffffffd8;
@@ -341,7 +328,6 @@ abbr[title] {
     /* position: fixed; */
     left: 0;
     top: 0;
-    display: none;
   }
   .calendar-modal-wrapper {
     display: flex;

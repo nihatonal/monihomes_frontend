@@ -1,23 +1,21 @@
 import React, { useContext, useState, useEffect } from 'react';
-import moment from "moment";
+// import moment from "moment";
 import { useHttpClient } from "../../shared/hooks/http-hook";
 import { useSpring, animated } from "react-spring";
 import { LanguageContext } from "../../shared/context/Language";
 import BookCalendar from '../../shared/UI/BookCalendar'
 import Calendar from './components/Calendar';
 
-import './Availability.css'
+import './Availability.css';
+
 function Availability(props) {
     const lang = useContext(LanguageContext);
-    const { isLoading, sendRequest } = useHttpClient();
-    const [startDate, setStartDate] = useState();
+    const { sendRequest } = useHttpClient();
+    const [startDate, setStartDate] = useState(new Date());
     const [endDate, setEndDate] = useState();
-    const [open, setOpen] = useState(true);
     const [guests, setGuests] = useState();
-    const [dates, setDates] = useState([])
-    let toggleHandler = (e) => {
-        setOpen(!open);
-    };
+
+
     useEffect(() => {
         const fetchUsers = async () => {
             try {
@@ -33,23 +31,37 @@ function Availability(props) {
     }, [sendRequest]);
 
     const openAnimation = useSpring({
-        from: { opacity: "0", maxHeight: "270px" },
-        to: { opacity: "1", maxHeight: open ? `705px` : "270px" },
-        config: { duration: "300" }
+        // from: { opacity: "0", maxHeight: "270px" },
+        // to: { opacity: "1", maxHeight: open ? `705px` : "270px" },
+        // config: { duration: "300" }
     });
-    function expandDates(startDate, stopDate) {
-        let dateArray = [];
-        let currentDate = moment(new Date(startDate));
-        let stop_Date = moment(new Date(stopDate));
-        while (currentDate <= stop_Date) {
-            dateArray.push(moment(new Date(currentDate)).format("YYYY/MM/DD"));
-            currentDate = moment(new Date(currentDate)).add(1, "days");
-        }
-        return dateArray;
-    }
-    const markDates = [
-        ...new Set([].concat(guests && guests.map((guest) => expandDates(guest.dates[0], guest.dates[1]).slice(0, -1))).flat()),
-    ];
+    // function expandDates(startDate, stopDate) {
+    //     let dateArray = [];
+    //     let currentDate = moment(new Date(startDate));
+    //     let stop_Date = moment(new Date(stopDate));
+    //     while (currentDate <= stop_Date) {
+    //         dateArray.push(moment(new Date(currentDate)).format("YYYY/MM/DD"));
+    //         currentDate = moment(new Date(currentDate)).add(1, "days");
+    //     }
+    //     return dateArray;
+    // }
+
+
+
+    // useEffect(() => {
+    //     const markDates = [
+    //         ...new Set([].concat(guests && guests.map((guest) => expandDates(guest.dates[0], guest.dates[1]).slice(0, -1))).flat()),
+    //     ];
+    //     console.log(markDates)
+    //     if (markDates.includes(moment(new Date(startDate)).format("YYYY/MM/DD"))
+    //         && moment(new Date(startDate)).format("YYYY/MM/DD") !== moment(new Date()).format("YYYY/MM/DD")) {
+    //         setError(true)
+    //         //alert('Seçtiğiniz tarihte odamız doludur.')
+    //     } else {
+    //         setError(false)
+    //     }
+
+    // }, [startDate, guests])
 
 
     return (
@@ -71,7 +83,7 @@ function Availability(props) {
                                 <p className="calendar_label">Check-out</p>
                                 <Calendar
                                     onChange={(date) => setEndDate(date)}
-                                    selected={endDate}
+                                    selected={endDate || startDate}
                                     lang={lang.userLanguage}
                                 />
                             </div>
@@ -84,12 +96,13 @@ function Availability(props) {
                             Search
                         </button> */}
                     </div>
+
                     <div className="availability__item_content">
                         <BookCalendar
-                            style={open ? { display: 'flex' } : null}
+                           // style={'open' ? { display: 'flex' } : null}
                             // close={ }
                             lang={
-                                lang.userLanguage === 'dk' ? 'da' : lang.userLanguage
+                                lang.userLanguage
                             }
                             markDates={guests}
                             guests={guests}

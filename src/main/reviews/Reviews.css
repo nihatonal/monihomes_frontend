@@ -16,6 +16,11 @@
   margin: 0 auto;
   margin-top: 50px;
 }
+.reviews_loading {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+}
 .is_loading {
   height: 40px;
   font-family: var(--Nunito_Sans);
@@ -27,10 +32,10 @@
   align-items: center;
   justify-content: center;
 }
-.is_loading .lds-dual-ring {
+.reviews_content .is_loading .lds-dual-ring {
   margin-right: 10px;
 }
-.is_loading .lds-dual-ring:after {
+.reviews_content .is_loading .lds-dual-ring:after {
   content: " ";
   display: block;
   width: 24px;
