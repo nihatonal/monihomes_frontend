@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import moment, { parseZone } from "moment";
+import moment from "moment";
 import "moment/locale/ru";
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 import { MdOutlineArrowBackIos } from "react-icons/md";
-import './BookCalendar.css';
+import '../../shared/UI/BookCalendar.css';
 
-function BookCalendar(props) {
+function UserCalendar(props) {
 
     const [selectedDays, setSelectedDays] = useState([])
-    const [markedDates, setMarkedDates] = useState([]);
-    const [datess, setDatess] = useState([]);
+
     function expandDates(startDate, stopDate) {
         let dateArray = [];
         let currentDate = moment(new Date(startDate));
@@ -48,72 +47,31 @@ function BookCalendar(props) {
         const { innerWidth, innerHeight } = window;
         return { innerWidth, innerHeight };
     }
-    function compare(a, b) {
-        if (a[0] < b[0]) {
-            return -1;
-        }
-        if (a[0] > b[0]) {
-            return 1;
-        }
-        return 0;
-    }
 
-
-    //const check_in = [...new Set([].concat(props.guests && props.guests.map((guest) => expandDates(guest.dates[0], guest.dates[1])[0])).flat())]
-    //const check_out = [...new Set([].concat(props.guests && props.guests.map((guest) => expandDates(guest.dates[0], guest.dates[1])[expandDates(guest.dates[0], guest.dates[1]).length - 1])).flat())]
-    //const reserved = [...new Set([].concat(props.guests && props.guests.map((guest) => expandDates(guest.dates[0], guest.dates[1]).slice(1, -1))).flat())]
-    //const reserved_raw = [...new Set([].concat(props.guests && props.guests.map((guest) => expandDates(guest.dates[0], guest.dates[1]))).flat())]
-
+    // console.log(props.guests)
+    const check_in = [...new Set([].concat(props.guests && props.guests.map((guest) => expandDates(guest.dates[0], guest.dates[1])[0])).flat())]
+    const check_out = [...new Set([].concat(props.guests && props.guests.map((guest) => expandDates(guest.dates[0], guest.dates[1])[expandDates(guest.dates[0], guest.dates[1]).length - 1])).flat())]
+    const reserved = [...new Set([].concat(props.guests && props.guests.map((guest) => expandDates(guest.dates[0], guest.dates[1]).slice(1, -1))).flat())]
+    const reserved_raw = [...new Set([].concat(props.guests && props.guests.map((guest) => expandDates(guest.dates[0], guest.dates[1]))).flat())]
     useEffect(() => {
         let selected_dates;
         selected_dates = expandDates(props.selectedStart, props.selectedEnd).length > 3 ? expandDates(props.selectedStart, props.selectedEnd) : expandDates(props.selectedStart, props.selectedEnd);
         setSelectedDays(selected_dates)
 
     }, [props.selectedStart, props.selectedEnd])
+    // console.log(reserved.concat(check_out.filter((d) => check_in.includes(d))))
+    // console.log(check_out)
+    // console.log(check_out.filter((d) => !check_in.includes(d)))
+    // console.log(selectedDays.slice(1).filter((d) => check_in.includes(d)).filter((e) => !reserved.concat(check_out.filter((d) => check_in.includes(d))).includes(e)))
 
+    // console.log(selected_dates.slice(1, -1).filter((d) => !reserved.includes(d)))
+    // console.log(selectedDays)
+    // console.log(reserved)
+    // console.log(selectedDays.filter((d) => check_out.includes(d)))
+    // console.log(selectedDays.filter((d) => check_in.includes(d)))
+    // console.log(check_out.includes(selectedDays[selectedDays.length - 1]))
+    // console.log(selectedDays.slice(0, -1).filter((d) => check_out.includes(d)))
 
-
-
-    useEffect(() => {
-        const dates = [...new Set([].concat(props.guests && props.guests.map((guest) => expandDates(guest.dates[0], guest.dates[1]).slice(0, -1))))].flat()
-        const map = dates.reduce((acc, e) => acc.set(e, (acc.get(e) || 0) + 1), new Map());
-
-        const reserved_ = [...map.entries()].filter((a) => a[1] > 2).sort(compare).flat().filter((a) => a !== 3)
-
-        setDatess(reserved_)
-
-    }, [props.guests])
-
-    let breaks = [0]
-    for (let i = 0; i < datess.length; i++) {
-        if (i + 1 >= datess.length || moment(new Date(datess[i])).add(1, 'days').format("YYYY/MM/DD") !== moment(new Date(datess[i + 1])).format("YYYY/MM/DD")) {
-            breaks.push(i + 1)
-        }
-    }
-
-    useEffect(() => {
-        let index = 0;
-        const result = datess.reduce((r, v, i) => {
-            if (i >= breaks[index]) {
-                r.push([]);
-                ++index;
-            }
-            r[r.length - 1].push(datess[i]);
-            return r;
-        }, []);
-        setMarkedDates(result)
-    }, [datess])
-
-
-    //console.log(datess, markedDates)
-
-    let check_in = markedDates.map((x) => x[0]);
-    let check_out = markedDates.map((x) => x[x.length - 1]);
-    let reserved = datess.filter(x => !check_in.concat(check_out).includes(x))
-    //console.log(reserved)
-    // for (let i = 0; i < result; i++) {
-    //     console.log(result[i])
-    // }
 
     return (
         <div className='calendar-modal' style={props.style} ref={props.ref}>
@@ -132,7 +90,7 @@ function BookCalendar(props) {
 
 
                     tileClassName={({ date, view }) => {
-                        if (!props.guests) return
+                        if (!props.markDates) return
                         if (
                             moment(date).format("YYYY/MM/DD") <
                             moment().format("YYYY/MM/DD")
@@ -160,7 +118,7 @@ function BookCalendar(props) {
                             return "selected-check-in-null"
                         }
                         if (selectedDays[selectedDays.length - 1] === moment(date).format("YYYY/MM/DD")
-                            && !reserved.includes(selectedDays[selectedDays.length - 1])
+                            && !reserved_raw.includes(selectedDays[selectedDays.length - 1])
                         ) {
                             return "selected-check-out-null"
                         }
@@ -169,7 +127,6 @@ function BookCalendar(props) {
                         ) {
                             return "reserved_check-in"
                         }
-
                         if (check_out.filter((d) => !check_in.includes(d)).find((x) => x === moment(date).format("YYYY/MM/DD"))) {
                             return "reserved_check-out"
                         }
@@ -184,7 +141,6 @@ function BookCalendar(props) {
                         }
 
                     }}
-                    tileContent={({ date, view }) => ('2000     ₺')}
                 // tileDisabled={({ activeStartDate, date, view }) => props.markDates && expandDates(props.markDates[0], props.markDates[1]).find((x) => x === moment(date).format("YYYY/MM/DD"))}
 
                 />
@@ -203,4 +159,4 @@ function BookCalendar(props) {
     );
 }
 
-export default BookCalendar;
+export default UserCalendar;

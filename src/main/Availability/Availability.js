@@ -99,12 +99,12 @@ function Availability(props) {
 
                     <div className="availability__item_content">
                         <BookCalendar
-                           // style={'open' ? { display: 'flex' } : null}
+                            // style={'open' ? { display: 'flex' } : null}
                             // close={ }
                             lang={
                                 lang.userLanguage
                             }
-                            markDates={guests}
+                            // markDates={guests}
                             guests={guests}
                             selectedStart={startDate}
                             selectedEnd={endDate}

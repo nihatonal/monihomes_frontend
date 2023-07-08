@@ -6,7 +6,7 @@ import moment from "moment";
 import GuestTable from './components/GuestTable';
 import AddGuest from './components/AddGuest';
 import { useForm } from "../shared/hooks/form-hook";
-
+import UserCalendar from './components/UserCalendar';
 import './User.css';
 function User(props) {
     const auth = useContext(AuthContext);
@@ -16,6 +16,10 @@ function User(props) {
     const [show, setShow] = useState(false);
     const [deleteId, setDeleteId] = useState();
     const [dates, setDates] = useState([]);
+    const [mark, setMark] = useState([]);
+    const [room, setRoom] = useState('room1');
+    const [options,setOptions] =useState(false)
+
     const [formState, inputHandler] = useForm(
         {
             guestname: {
@@ -50,8 +54,7 @@ function User(props) {
                 );
 
                 setGuests(responseData.guests)
-
-                setDates([...new Set([].concat(responseData.guests.map((guest) => expandDates(guest.dates[0], guest.dates[1]))).flat())])
+               
             } catch (err) { }
         };
         fetchUsers();
@@ -59,12 +62,17 @@ function User(props) {
     }, [sendRequest]);
 
     useEffect(() => {
+        setMark(guests && guests.filter((x) => x.room === room))
+        setDates(guests && [...new Set([].concat(guests.filter((x) => x.room === room).map((guest) => expandDates(guest.dates[0], guest.dates[1]).slice(1,-1))).flat())])
+    }, [room, guests])
+
+    useEffect(() => {
         setValidDate(formState.inputs.startdate.value > formState.inputs.enddate.value)
 
     }, [formState.inputs.startdate.value, formState.inputs.enddate.value])
     const submitHandler = async (e) => {
         e.preventDefault();
-
+        console.log(dates)
         if (dates.includes(moment(new Date(formState.inputs.startdate.value)).format("YYYY/MM/DD")) ||
             dates.includes(moment(new Date(formState.inputs.enddate.value)).format("YYYY/MM/DD"))) {
             alert("Bu tarihlerde rezervasyon olabilir.")
@@ -78,12 +86,14 @@ function User(props) {
                     guestname: formState.inputs.guestname.value,
                     guesttel: formState.inputs.guesttel.value,
                     info: formState.inputs.info.value,
+                    room: room,
                     dates: [formState.inputs.startdate.value, formState.inputs.enddate.value]
                 }),
                 {
                     "Content-Type": "application/json",
                 }
             );
+            console.log(responseData);
             setGuests([...guests, responseData.guest]);
         } catch (err) {
         }
@@ -116,6 +126,7 @@ function User(props) {
         }
         return dateArray;
     }
+
     return (
         <div className="user_container">
             <div className="user_wrapper">
@@ -127,6 +138,18 @@ function User(props) {
                     confirmDeleteHandler={confirmDeleteHandler}
                     setShow={() => setShow(false)}
                     isLoading={isLoading}
+                    room={room}
+                    roomHandler={(e) => {
+                        setRoom(e.target.id)
+                        setOptions(false)
+                    }}
+                    showOptions={()=> setOptions(!options)}
+                    options={options}
+                />
+
+                <UserCalendar
+                    markDates={mark}
+                    guests={mark}
                 />
                 <GuestTable data={guests || []} onDelete={(e) => {
                     setShow(true)

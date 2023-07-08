@@ -55,6 +55,16 @@
   outline: none;
   position: relative;
   pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  /* color: #00000071; */
+}
+abbr {
+  color: #000;
+  font-size: 16px;
 }
 .react-calendar button:enabled:hover {
   cursor: pointer;
@@ -78,6 +88,10 @@
   color: #000000;
   pointer-events: none;
   border: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 .react-calendar__navigation__label {
   display: flex;
@@ -88,7 +102,7 @@
   pointer-events: fill;
 }
 .react-calendar__navigation__label__divider {
-  display: none;
+  display: flex;
 }
 .react-calendar__navigation__prev2-button,
 .react-calendar__navigation__next2-button {
@@ -222,6 +236,9 @@
   border-radius: 0;
   color: #ffffffd8;
 }
+.reserved abbr {
+  color: #fff;
+}
 .reserved_check-out {
   background: linear-gradient(-45deg, #fff 0 50%, var(--color_danger) 50% 100%);
   border-radius: 0;
@@ -345,6 +362,20 @@ abbr[title] {
     width: 100%;
     height: 20px;
   }
+  .react-calendar__navigation button {
+    min-width: 40px;
+    background: none;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    color: #000000;
+    pointer-events: none;
+    border: none;
+    display: block;
+  }
   .error_modal {
     font-size: 18px;
     line-height: 16px;
@@ -352,6 +383,9 @@ abbr[title] {
   .error_modal p {
     font-size: 18px;
     line-height: 16px;
+  }
+  .react-calendar__navigation__label__labelText--from {
+    margin-left: 0;
   }
 }
 

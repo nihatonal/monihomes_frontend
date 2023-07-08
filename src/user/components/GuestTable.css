@@ -8,26 +8,37 @@
   font-size: 16px;
   background-color: rgba(34, 100, 80, 0.81);
   display: grid;
-  grid-template-columns: 35px 1fr 1fr 35px;
+  grid-template-columns: 35px 1fr 1fr 1fr 35px;
   border-collapse: collapse;
   color: #fff;
 }
 .guest_table_header p {
   border: 1px solid #ddd;
-  padding: 8px;
+  align-self: center;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.guest_table_ {
+  background-color: rgba(34, 100, 80, 0.55);
+}
+.guest_table_:nth-child(even) {
+  background-color: rgba(34, 100, 80, 0.41);
 }
 .guest_table_item {
   font-family: var(--Nunito_Sans);
   font-weight: 800;
   font-size: 16px;
-  background-color: #a0a0a091;
+  /* background-color: #a0a0a091; */
   display: grid;
   align-items: center;
-  grid-template-columns: 35px 1fr 1fr 35px;
+  grid-template-columns: 35px 1fr 1fr 1fr 35px;
   border-collapse: collapse;
-  color: rgb(53, 53, 53);
+  color: rgb(25, 73, 59);
   cursor: pointer;
 }
+
 .guest_table_item .delete_btn {
   border: 1px solid #ddd;
   padding: 8px;
@@ -37,27 +48,32 @@
 } */
 
 .guest_table_item_active {
-  background-color: #a0a0a0;
+  background-color: #226450cf;
 }
 .guest_table_item_title {
   border: 1px solid #ddd;
   padding: 8px;
   pointer-events: none;
 }
-.guest_table_header .delete_btn,
-.guest_table_item .delete_btn {
+.guest_table_header .delete_btn {
   text-align: center;
   font-size: 16px;
   color: #fff;
+}
+.guest_table_item .delete_btn {
+  text-align: center;
+  font-size: 16px;
+  color: rgb(25, 73, 59);
   cursor: pointer;
 }
-.delete_btn:hover {
+.guest_table_item .delete_btn:hover {
   color: var(--color_danger);
 }
 .guest_table_item_content {
   display: flex;
   flex-direction: column;
   transition: all 0.5s;
+  background-color: #fff;
 }
 .guest_table_item_content_item {
   font-family: var(--Nunito_Sans);

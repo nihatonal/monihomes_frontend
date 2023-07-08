@@ -17,7 +17,7 @@ function Reviews(props) {
             try {
                 const responseData = await sendRequest(`${process.env.REACT_APP_BACKEND_URL}/reviews`);
                 setReviews(responseData.data.result.reviews)
-                //console.log(responseData.data.result.reviews)
+                console.log(responseData)
             } catch (err) {
             }
         };

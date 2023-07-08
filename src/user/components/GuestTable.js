@@ -1,13 +1,13 @@
-import { React, useState } from "react";
+import { React, useEffect, useState } from "react";
 
 
 import { AiTwotoneDelete } from 'react-icons/ai';
 import './GuestTable.css'
 function GuestTable(props) {
     const [open, setOpen] = useState('');
-
+    const [data, setData] = useState([])
     const toggleHandler = (x) => {
-        console.log(x)
+        //   console.log(x)
         if (x === open) {
             setOpen('');
         } else {
@@ -24,26 +24,33 @@ function GuestTable(props) {
         }
         return 0;
     }
-
+    useEffect(() => {
+        setData(props.data)
+    }, [props.data])
+    //console.log(props.data)
     return (
         <div className='guest_table'>
             <div className='guest_table_header'>
                 <p>No</p>
+                <p>Room Number</p>
                 <p>Check-in</p>
                 <p>Check-out</p>
                 <p className='delete_btn'>
                     <AiTwotoneDelete />
                 </p>
             </div>
-            {props.data.sort(compare).map((item, i) =>
-                <div key={item.guestname + i}>
+            {data.sort(compare).map((item, i) =>
+                <div className="guest_table_" key={item.guestname + i}>
                     <div id={item.id}
                         className='guest_table_item'
                         onClick={() => toggleHandler(i)}
-                        style={open === i ? { background: "#a0a0a0" } : null}
+                        style={open === i ? { background: "#226450cf", color: "#fff" } : null}
                     >
                         {/* {!open ? <IoIosArrowDown /> : <IoIosArrowUp />} */}
                         <p className='guest_table_item_title'>{i + 1}</p>
+                        <p className='guest_table_item_title'> {item.room === 'room1' ? "Room 1"
+                            : item.room === 'room2' ? "Room 2"
+                                : "Room 3"}</p>
                         <p className='guest_table_item_title'>{item.dates[0]}</p>
                         <p className='guest_table_item_title'>{item.dates[1]}</p>
                         <p className='delete_btn' onClick={props.onDelete}>

@@ -7,8 +7,10 @@ import {
     VALIDATOR_PHONE
 
 } from "../../shared/util/validators.js";
+import Select from '../../shared/components/Select';
 import './AddGuest.css'
 function AddGuest(props) {
+
     return (
         <div className="add_guest_wrapper">
             <h3>Müşteri Kaydı</h3>
@@ -63,6 +65,17 @@ function AddGuest(props) {
                     onInput={props.inputHandler}
 
                 />
+                <Select 
+                onClick={props.roomHandler} 
+                room={props.room}
+                showOptions={props.showOptions}
+                options={props.options}
+                />
+                {/* <select onChange={props.roomHandler}>
+                    <option value="room1">Room 1</option>
+                    <option value="room2">Room 2</option>
+                    <option value="room3">Room 3</option>
+                </select> */}
                 <button
                     type="submit"
                     className={'save_btn'}
