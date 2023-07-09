@@ -18,7 +18,9 @@ function User(props) {
     const [dates, setDates] = useState([]);
     const [mark, setMark] = useState([]);
     const [room, setRoom] = useState('room1');
-    const [options,setOptions] =useState(false)
+    const [options, setOptions] = useState(false);
+    const [filter, setFilter] = useState('');
+    const [filteredData, setFilteredData] = useState([])
 
     const [formState, inputHandler] = useForm(
         {
@@ -54,7 +56,7 @@ function User(props) {
                 );
 
                 setGuests(responseData.guests)
-               
+
             } catch (err) { }
         };
         fetchUsers();
@@ -63,7 +65,7 @@ function User(props) {
 
     useEffect(() => {
         setMark(guests && guests.filter((x) => x.room === room))
-        setDates(guests && [...new Set([].concat(guests.filter((x) => x.room === room).map((guest) => expandDates(guest.dates[0], guest.dates[1]).slice(1,-1))).flat())])
+        setDates(guests && [...new Set([].concat(guests.filter((x) => x.room === room).map((guest) => expandDates(guest.dates[0], guest.dates[1]).slice(1, -1))).flat())])
     }, [room, guests])
 
     useEffect(() => {
@@ -127,6 +129,16 @@ function User(props) {
         return dateArray;
     }
 
+    const filterHandler = (e) => {
+        setFilter(e.target.value)
+    }
+
+    useEffect(() => {
+       // console.log(filter)
+      //  guests && console.log(guests.filter((x) => x.info.includes(filter)))
+        setFilteredData(guests && guests.filter((x) => x.guestname
+        .includes(filter)))
+    }, [filter, guests])
     return (
         <div className="user_container">
             <div className="user_wrapper">
@@ -143,7 +155,7 @@ function User(props) {
                         setRoom(e.target.id)
                         setOptions(false)
                     }}
-                    showOptions={()=> setOptions(!options)}
+                    showOptions={() => setOptions(!options)}
                     options={options}
                 />
 
@@ -151,11 +163,17 @@ function User(props) {
                     markDates={mark}
                     guests={mark}
                 />
-                <GuestTable data={guests || []} onDelete={(e) => {
-                    setShow(true)
-                    console.log(e.target.parentNode.parentNode.parentNode)
-                    setDeleteId(e.target.parentNode.parentNode.parentNode.id)
-                }} />
+                <GuestTable
+                    data={filteredData || []}
+                    onDelete={(e) => {
+
+                        setShow(true)
+                        console.log(e.target.parentNode.parentNode.parentNode)
+                        setDeleteId(e.target.parentNode.parentNode.parentNode.id)
+                    }}
+                    onChange={filterHandler}
+                    value={filter}
+                />
             </div>
         </div >
     );

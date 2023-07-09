@@ -11,7 +11,7 @@
   justify-content: center;
   transition: all 1s;
 }
-.modal-delete h3 {
+.modal-delete .modal-delete_title {
   color: #fff;
   font-size: 24px;
   text-align: center;

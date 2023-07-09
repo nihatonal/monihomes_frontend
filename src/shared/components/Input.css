@@ -46,16 +46,16 @@
   outline: none;
 }
 
-.form-control--invalid label,
+/* .form-control--invalid label,
 .form-control--invalid input {
   color: rgb(230, 34, 93);
   border: 1px solid 0 0 10px rgb(230, 34, 93);
-}
+} */
 
-.form-control--invalid input,
+/* .form-control--invalid input,
 .form-control--invalid textarea {
   border: 1px solid 0 0 10px rgb(230, 34, 93);
-}
+} */
 
 .placeholder {
   font-family: var(--primary-font-family);

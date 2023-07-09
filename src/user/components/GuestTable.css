@@ -20,6 +20,15 @@
   align-items: center;
   justify-content: center;
 }
+.filter_btn {
+  cursor: pointer;
+}
+@media only screen and (max-width: 767px) {
+  .guest_table_header p {
+    font-size: 14px;
+    height: 40px;
+  }
+}
 .guest_table_ {
   background-color: rgba(34, 100, 80, 0.55);
 }
@@ -38,14 +47,15 @@
   color: rgb(25, 73, 59);
   cursor: pointer;
 }
-
+@media only screen and (max-width: 767px) {
+  .guest_table_item {
+    font-size: 14px;
+  }
+}
 .guest_table_item .delete_btn {
   border: 1px solid #ddd;
   padding: 8px;
 }
-/* .guest_table_item:nth-child(even) {
-  background-color: #a0a0a0;
-} */
 
 .guest_table_item_active {
   background-color: #226450cf;
@@ -61,9 +71,6 @@
   color: #fff;
 }
 .guest_table_item .delete_btn {
-  text-align: center;
-  font-size: 16px;
-  color: rgb(25, 73, 59);
   cursor: pointer;
 }
 .guest_table_item .delete_btn:hover {
@@ -92,4 +99,26 @@
 }
 .guest_table_item_content_item_desc {
   border-left: 1px solid #d4d4d4;
+}
+.filter_container {
+  height: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: 2 / span 3;
+  transition: all 0.3s;
+}
+.filter_container input {
+  height: 30px;
+  width: 100%;
+  outline: none;
+  border: 1px solid transparent;
+  font-family: var(--Nunito_Sans);
+  font-weight: 400;
+  font-size: 16px;
+  padding-left: 20px;
+}
+.filter_container input:focus {
+  border: 1px solid rgba(34, 100, 80, 0.61);
 }

@@ -2,10 +2,12 @@ import { React, useEffect, useState } from "react";
 
 
 import { AiTwotoneDelete } from 'react-icons/ai';
+import { BsFilter } from 'react-icons/bs';
 import './GuestTable.css'
 function GuestTable(props) {
     const [open, setOpen] = useState('');
-    const [data, setData] = useState([])
+    const [data, setData] = useState([]);
+    const [filter, setFilter] = useState(false)
     const toggleHandler = (x) => {
         //   console.log(x)
         if (x === open) {
@@ -35,9 +37,20 @@ function GuestTable(props) {
                 <p>Room Number</p>
                 <p>Check-in</p>
                 <p>Check-out</p>
-                <p className='delete_btn'>
-                    <AiTwotoneDelete />
+                <p className='filter_btn' onClick={() => setFilter(!filter)}>
+                    <BsFilter />
                 </p>
+                <div className="filter_container"
+                    style={filter ? { height: '50px' } : { height: '0' }}
+                >
+                    <input
+                        id='filter_input'
+                        type='text'
+                        name='filter_input'
+                        onChange={props.onChange}
+                        value={props.value}
+                        placeholder='Müşteri adı giriniz' />
+                </div>
             </div>
             {data.sort(compare).map((item, i) =>
                 <div className="guest_table_" key={item.guestname + i}>
