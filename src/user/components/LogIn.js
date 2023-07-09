@@ -35,7 +35,7 @@ function LogIn(props) {
 
         try {
             const responseData = await sendRequest(
-                "http://localhost:5000/api/login",
+                process.env.REACT_APP_BACKEND_URL + "/login",
                 'POST',
                 JSON.stringify({
                     username: formState.inputs.username.value,
