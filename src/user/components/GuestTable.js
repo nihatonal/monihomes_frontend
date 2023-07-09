@@ -3,6 +3,7 @@ import { React, useEffect, useState } from "react";
 
 import { AiTwotoneDelete } from 'react-icons/ai';
 import { BsFilter } from 'react-icons/bs';
+import { AiOutlineClear } from 'react-icons/ai';
 import './GuestTable.css'
 function GuestTable(props) {
     const [open, setOpen] = useState('');
@@ -37,7 +38,9 @@ function GuestTable(props) {
                 <p>Room Number</p>
                 <p>Check-in</p>
                 <p>Check-out</p>
-                <p className='filter_btn' onClick={() => setFilter(!filter)}>
+                <p className='
+                
+                ' onClick={() => setFilter(!filter)}>
                     <BsFilter />
                 </p>
                 <div className="filter_container"
@@ -50,6 +53,7 @@ function GuestTable(props) {
                         onChange={props.onChange}
                         value={props.value}
                         placeholder='Müşteri adı giriniz' />
+                    <button onClick={props.clearFilter} className="clear_filter"><AiOutlineClear /></button>
                 </div>
             </div>
             {data.sort(compare).map((item, i) =>

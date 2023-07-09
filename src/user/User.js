@@ -134,10 +134,10 @@ function User(props) {
     }
 
     useEffect(() => {
-       // console.log(filter)
-      //  guests && console.log(guests.filter((x) => x.info.includes(filter)))
+        // console.log(filter)
+        //  guests && console.log(guests.filter((x) => x.info.includes(filter)))
         setFilteredData(guests && guests.filter((x) => x.guestname
-        .includes(filter)))
+            .includes(filter)))
     }, [filter, guests])
     return (
         <div className="user_container">
@@ -173,6 +173,7 @@ function User(props) {
                     }}
                     onChange={filterHandler}
                     value={filter}
+                    clearFilter={() => setFilter('')}
                 />
             </div>
         </div >

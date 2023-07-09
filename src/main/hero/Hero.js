@@ -1,4 +1,6 @@
 import React from 'react';
+// import VideoPlayer from '../../shared/UI/VideoPlayer';
+// import dron_video from '../../assets/video/dron.mp4'
 import { Text } from "../../shared/context/Language";
 import './Hero.css';
 function Hero() {
@@ -12,8 +14,15 @@ function Hero() {
                         <Text tid="hero-title_span" />
                     </h1>
                 </div>
-
+                {/* <div className="hero-video">
+                    <video className='videoTag' autoPlay loop muted>
+                        <source src={dron_video} type='video/mp4' />
+                    </video>
+                </div>
+                <div className="bg_filter"></div> */}
             </div>
+
+
         </div>
     );
 }

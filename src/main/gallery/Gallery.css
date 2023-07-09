@@ -115,7 +115,10 @@
   background-size: cover;
   background-position: center;
 }
-
+.gallery_content_video {
+  grid-area: gallery10;
+  border: 1px solid red;
+}
 /*Modal*/
 .modal_wrapper {
   width: 100%;
