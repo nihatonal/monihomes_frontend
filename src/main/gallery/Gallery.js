@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Modal from '../../shared/UI/Modal';
-import VideoPlayer from '../../shared/UI/VideoPlayer';
-import dron_video from '../../assets/video/dron.mp4'
+
 import GalleryFancyBox from './GalleryFancyBox';
 import { IoCloseCircleSharp } from 'react-icons/io5';
 import gallery_1 from '../../assets/images/room1/room1_1.jpg';
@@ -44,9 +43,7 @@ function Gallery(props) {
                     <div id="gallery_4" className="gallery_content_item" onClick={handler}>
                         <TfiGallery />
                     </div>
-                    {/* <div className="gallery_content_video">
-                        <VideoPlayer video_FHD={dron_video} video_SD={dron_video} video_HD={dron_video} />
-                    </div> */}
+
                     <div id="gallery_5" className="gallery_content_item" onClick={handler}>
                         <TfiGallery />
                     </div>
