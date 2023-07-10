@@ -72,14 +72,16 @@ function User(props) {
         setValidDate(formState.inputs.startdate.value > formState.inputs.enddate.value)
 
     }, [formState.inputs.startdate.value, formState.inputs.enddate.value])
+
+    let checker = (src, target) => target.some((v) => src.includes(v));
     const submitHandler = async (e) => {
         e.preventDefault();
-        console.log(dates)
-        if (dates.includes(moment(new Date(formState.inputs.startdate.value)).format("YYYY/MM/DD")) ||
-            dates.includes(moment(new Date(formState.inputs.enddate.value)).format("YYYY/MM/DD"))) {
+        if (checker(expandDates(formState.inputs.startdate.value, formState.inputs.enddate.value), dates)) {
             alert("Bu tarihlerde rezervasyon olabilir.")
+
             return
         }
+
         try {
             const responseData = await sendRequest(
                 process.env.REACT_APP_BACKEND_URL + "/savedates",

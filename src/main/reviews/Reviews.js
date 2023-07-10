@@ -17,7 +17,7 @@ function Reviews(props) {
             try {
                 const responseData = await sendRequest(`${process.env.REACT_APP_BACKEND_URL}/reviews`);
                 setReviews(responseData.data.result.reviews)
-                console.log(responseData)
+
             } catch (err) {
             }
         };
@@ -25,12 +25,13 @@ function Reviews(props) {
 
     }, [sendRequest]);
 
+
     return (
         <section className='section_container ' id='reviews'>
             <div className="reviews_wrapper">
                 <h3 className="section_title reviews-title">{props.title}</h3>
                 <div className="reviews_content">
-
+                    {/* <iframe src='https://widgets.sociablekit.com/google-reviews/iframe/164334' frameborder='0' width='100%' height='500'></iframe> */}
                     {reviews.length < 1 ?
                         <div className="reviews_loading"><LoadingSpinner /><p className='is_loading'>{props.loading}</p></div>
                         :
