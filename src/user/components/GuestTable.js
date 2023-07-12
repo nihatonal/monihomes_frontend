@@ -58,7 +58,7 @@ function GuestTable(props) {
             </div>
             {data.sort(compare).map((item, i) =>
                 <div className="guest_table_" key={item.guestname + i}>
-                    <div id={item.id}
+                    <div 
                         className='guest_table_item'
                         onClick={() => toggleHandler(i)}
                         style={open === i ? { background: "#226450cf", color: "#fff" } : null}
@@ -70,7 +70,7 @@ function GuestTable(props) {
                                 : "Room 3"}</p>
                         <p className='guest_table_item_title'>{item.dates[0]}</p>
                         <p className='guest_table_item_title'>{item.dates[1]}</p>
-                        <p className='delete_btn' onClick={props.onDelete}>
+                        <p id={i} className='delete_btn' onClick={props.onDelete}>
                             <AiTwotoneDelete />
                         </p>
                     </div>

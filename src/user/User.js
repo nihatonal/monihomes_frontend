@@ -114,7 +114,7 @@ function User(props) {
                     Authorization: "Bearer " + auth.token,
                 }
             );
-            const posts = guests.filter((item) => item.id !== deleteId);
+            const posts = guests.filter((item) => item._id !== deleteId);
             setGuests(posts);
             setShow(false)
             setDates([...new Set([].concat(posts.guests.map((guest) => expandDates(guest.dates[0], guest.dates[1]))).flat())])
@@ -168,10 +168,10 @@ function User(props) {
                 <GuestTable
                     data={filteredData || []}
                     onDelete={(e) => {
-
+                        e.preventDefault();
+                        e.stopPropagation();
                         setShow(true)
-                        console.log(e.target.parentNode.parentNode.parentNode)
-                        setDeleteId(e.target.parentNode.parentNode.parentNode.id)
+                        setDeleteId(guests[e.target.id]._id)
                     }}
                     onChange={filterHandler}
                     value={filter}
