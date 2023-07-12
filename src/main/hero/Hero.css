@@ -20,7 +20,6 @@
   align-items: center;
   position: relative;
   row-gap: 50px;
-  padding-top: 180px;
 }
 .bg_filter {
   background: linear-gradient(
@@ -91,9 +90,16 @@
     height: auto;
     padding-right: 0;
   }
+  .hero_wrapper {
+    padding-top: 140px;
+  }
+  .hero_container .calendar_container {
+    padding: 10px 0;
+    background-color: rgba(163, 163, 163, 0);
+  }
   .hero_title {
-    font-size: 34px;
-    padding: 20px 50px;
+    font-size: 28px;
+    padding: 20px 80px;
   }
   .hero-video {
     position: absolute;
