@@ -7,6 +7,7 @@
   ],
   "hero-title": "A BETTER WAY TO STAY",
   "hero-title_span": "in Fethiye",
+  "hero-search-btn": "Search",
   "about_items": [
     "comfy bedrooms",
     "fully equipped kitchens",
@@ -30,6 +31,7 @@
     "IBAN",
     "Name Surname"
   ],
+  "google-btn": "Show all reviews",
   "whatsup_status": "Typically replies within 30 mins",
   "whatsup_message": "Hello there! 🤝 \nHow can we help?",
   "whatsup_placeholder": "Type a message.."

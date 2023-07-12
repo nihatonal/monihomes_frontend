@@ -15,9 +15,12 @@
   background-position: bottom center;
   border-radius: 0 0 350px 0;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   position: relative;
+  row-gap: 50px;
+  padding-top: 180px;
 }
 .bg_filter {
   background: linear-gradient(
@@ -57,7 +60,31 @@
   color: rgba(0, 0, 0, 0.637);
   text-align: center;
 }
-
+.hero_container .calendar_container {
+  padding: 30px 0;
+  background-color: rgba(163, 163, 163, 0);
+}
+.hero_container .ant-space {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+.hero-search-btn {
+  font-family: var(--Nunito_Sans);
+  font-weight: bold;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 40px;
+  border-radius: 50px;
+  background-color: rgba(34, 100, 80, 0.61);
+  cursor: pointer;
+}
+.hero-search-btn:disabled {
+  background-color: rgba(34, 100, 80, 0.41);
+}
+.hero-search-btn:hover {
+  background-color: rgba(34, 100, 80, 0.71);
+  transition: all 0.3s;
+}
 @media only screen and (max-width: 767px) {
   .hero_content {
     width: 100%;

@@ -8,6 +8,7 @@ import Footer from './shared/footer/Footer'
 import PrivacyPolicy from "./shared/footer/components/PrivacyPolicy";
 import { AuthContext } from "./shared/context/auth-context";
 import { useAuth } from "./shared/hooks/auth-hook";
+import ShareProvider from './shared/context/ShareContext';
 
 const Main = React.lazy(() => import("./main/Main.js"));
 const User = React.lazy(() => import("./user/User.js"));
@@ -51,21 +52,25 @@ function App() {
           logout: logout
         }}
       >
-        <LanguageProvider>
-          <BrowserRouter>
-            <MainNavigation />
-            <Suspense
-              fallback={
-                <div className='suspense_container'>
-                  <LoadingSpinner />
-                </div>
-              }
-            >
-              <Routes>{routes}</Routes>
 
-              <Footer />
-            </Suspense>
-          </BrowserRouter>
+
+        <LanguageProvider>
+          <ShareProvider>
+            <BrowserRouter>
+              <MainNavigation />
+              <Suspense
+                fallback={
+                  <div className='suspense_container'>
+                    <LoadingSpinner />
+                  </div>
+                }
+              >
+                <Routes>{routes}</Routes>
+
+                <Footer />
+              </Suspense>
+            </BrowserRouter>
+          </ShareProvider>
         </LanguageProvider>
       </AuthContext.Provider>
     </div>

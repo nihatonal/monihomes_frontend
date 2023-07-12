@@ -3,20 +3,17 @@ import { useNavigate } from "react-router-dom";
 import Input from '../../shared/components/Input'
 import {
     VALIDATOR_REQUIRE,
-    VALIDATOR_EMAIL,
-    VALIDATOR_MINLENGTH,
-    VALIDATOR_PASSWORD,
-    VALIDATOR_PASSWORD_CONFIRM,
+    VALIDATOR_PASSWORD
 } from "../../shared/util/validators.js";
 import { useHttpClient } from "../../shared/hooks/http-hook";
 import { useForm } from "../../shared/hooks/form-hook";
 import { AuthContext } from '../../shared/context/auth-context';
-import LoadingSpinner from '../../shared/UI/LoadingSpinner'
+// import LoadingSpinner from '../../shared/UI/LoadingSpinner'
 import "./LogIn.css"
 function LogIn(props) {
     const navigate = useNavigate();
     const auth = useContext(AuthContext);
-    const { isLoading, error, sendRequest } = useHttpClient();
+    const { sendRequest } = useHttpClient();
     const [formState, inputHandler] = useForm(
         {
             username: {

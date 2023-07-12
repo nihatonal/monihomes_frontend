@@ -9,10 +9,10 @@ import wifi from '../../assets/images/wifi.jpg';
 import parking from '../../assets/images/parking.jpeg';
 import profil from '../../assets/images/profil.jpeg';
 
-import visa from '../../assets/icons/visa.png';
+// import visa from '../../assets/icons/visa.png';
 import transfer from '../../assets/icons/transfer.png';
-import master from '../../assets/icons/mastercard.png';
-import money from '../../assets/icons/money.png';
+// import master from '../../assets/icons/mastercard.png';
+// import money from '../../assets/icons/money.png';
 import './AboutUs.css'
 function AboutUs(props) {
     const lang = useContext(LanguageContext);
