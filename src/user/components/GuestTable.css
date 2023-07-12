@@ -75,7 +75,11 @@
 }
 .guest_table_item_title {
   border: 1px solid #ddd;
-  padding: 8px;
+  /* padding: 8px; */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   pointer-events: none;
 }
 .guest_table_header .delete_btn {

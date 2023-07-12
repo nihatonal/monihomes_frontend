@@ -10,7 +10,8 @@ import UserCalendar from './components/UserCalendar';
 import './User.css';
 function User(props) {
     const auth = useContext(AuthContext);
-    const { isLoading, sendRequest } = useHttpClient();
+    const { sendRequest } = useHttpClient();
+    const [isLoading, setIsLoading] = useState(false)
     const [validDate, setValidDate] = useState(false)
     const [guests, setGuests] = useState();
     const [show, setShow] = useState(false);
@@ -81,7 +82,7 @@ function User(props) {
 
             return
         }
-
+        setIsLoading(true)
         try {
             const responseData = await sendRequest(
                 process.env.REACT_APP_BACKEND_URL + "/savedates",
@@ -98,6 +99,7 @@ function User(props) {
                 }
             );
             console.log(responseData);
+            setIsLoading(false)
             setGuests([...guests, responseData.guest]);
         } catch (err) {
         }

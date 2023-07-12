@@ -16,7 +16,7 @@
   border-radius: 0 0 350px 0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   position: relative;
   row-gap: 50px;
@@ -60,7 +60,8 @@
   text-align: center;
 }
 .hero_container .calendar_container {
-  padding: 30px 0;
+  padding: 0;
+  column-gap: 50px;
   background-color: rgba(163, 163, 163, 0);
 }
 .hero_container .ant-space {
@@ -101,6 +102,16 @@
     font-size: 28px;
     padding: 20px 80px;
   }
+  .hero_container .calendar_container {
+    padding: 30px 0;
+    background-color: rgba(163, 163, 163, 0);
+  }
+  .hero-search-btn {
+    font-size: 14px;
+    padding: 10px 40px;
+    border-radius: 50px;
+  }
+ 
   .hero-video {
     position: absolute;
     width: 100%;
