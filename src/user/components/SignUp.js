@@ -3,11 +3,11 @@ import React, { useContext } from "react";
 import { useHttpClient } from "../../shared/hooks/http-hook";
 import { AuthContext } from '../../shared/context/auth-context';
 
-
+import BounceLoader from "react-spinners/BounceLoader";
 import './SignUp.css'
 function SignUp(props) {
     const auth = useContext(AuthContext);
-    const { sendRequest } = useHttpClient();
+    const { isLoading, sendRequest } = useHttpClient();
 
 
     const authSubmitHandler = async event => {
@@ -34,7 +34,7 @@ function SignUp(props) {
 
     return (
         <div className="signup_wrapper"
-            style={{ height: '350px', paddingTop: '150px' }}
+        // style={{ height: '350px', paddingTop: '150px' }}
         >
 
             <form onSubmit={authSubmitHandler}>
@@ -43,7 +43,15 @@ function SignUp(props) {
                 <button type="submit"
                     // disabled={!formState.isValid} 
                     className="signup_button">
-                    Sign Up
+                    {isLoading ? <BounceLoader
+
+                        color={"white"}
+                        loading={true}
+                        cssOverride={''}
+                        size={30}
+                        aria-label="Loading Spinner"
+                        data-testid="loader"
+                    /> : "Sign Up"}
 
                 </button>
                 {/* !isLoading ? <LoadingSpinner /> */}

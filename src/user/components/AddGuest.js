@@ -84,7 +84,12 @@ function AddGuest(props) {
                     {props.isLoading ? <LoadingSpinner /> : 'Kaydet'}
                 </button>
             </form>
-            <DeleteModal show={props.show} delete={props.confirmDeleteHandler} cancel={props.setShow} />
+            <DeleteModal 
+            show={props.show} 
+            delete={props.confirmDeleteHandler} 
+            cancel={props.setShow}
+            isloading={props.isloading}
+            />
 
         </div>
     );

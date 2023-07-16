@@ -9,11 +9,12 @@ import { useHttpClient } from "../../shared/hooks/http-hook";
 import { useForm } from "../../shared/hooks/form-hook";
 import { AuthContext } from '../../shared/context/auth-context';
 // import LoadingSpinner from '../../shared/UI/LoadingSpinner'
+import PropagateLoader from "react-spinners/PropagateLoader";
 import "./LogIn.css"
 function LogIn(props) {
     const navigate = useNavigate();
     const auth = useContext(AuthContext);
-    const { sendRequest } = useHttpClient();
+    const { error, isLoading, sendRequest } = useHttpClient();
     const [formState, inputHandler] = useForm(
         {
             username: {
@@ -49,6 +50,9 @@ function LogIn(props) {
     }
     return (
         <div className="login_wrapper">
+            {error && <div className="error_container">
+                Bir hata oluştu. Tekrar Deneyiniz.
+            </div>}
             <form onSubmit={authSubmitHandler}>
                 <Input
                     id="username"
@@ -70,7 +74,15 @@ function LogIn(props) {
                     VALIDATOR_PASSWORD()]}
                     onInput={inputHandler}
                 />
-                <button className="login_btn">Login</button>
+                <button className="login_btn">{
+                    isLoading ? <PropagateLoader
+                        color={'white'}
+                        loading={true}
+                        cssOverride={''}
+                        size={5}
+                        aria-label="Loading Spinner"
+                        data-testid="loader"
+                    /> : 'Login'}</button>
             </form>
         </div>
     );

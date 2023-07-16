@@ -22,7 +22,7 @@ function User(props) {
     const [options, setOptions] = useState(false);
     const [filter, setFilter] = useState('');
     const [filteredData, setFilteredData] = useState([])
-
+    const [deleteLoading, setDeleteLoading] = useState(false);
     const [formState, inputHandler] = useForm(
         {
             guestname: {
@@ -98,7 +98,7 @@ function User(props) {
                     "Content-Type": "application/json",
                 }
             );
-            console.log(responseData);
+            // console.log(responseData);
             setIsLoading(false)
             setGuests([...guests, responseData.guest]);
         } catch (err) {
@@ -106,7 +106,8 @@ function User(props) {
     }
     const confirmDeleteHandler = async (e) => {
         e.preventDefault();
-        console.log(e.target.parentNode.parentNode.parentNode.id)
+        setDeleteLoading(true)
+        //console.log(e.target.parentNode.parentNode.parentNode.id)
         try {
             await sendRequest(
                 process.env.REACT_APP_BACKEND_URL + `/${deleteId}`,
@@ -118,6 +119,7 @@ function User(props) {
             );
             const posts = guests.filter((item) => item._id !== deleteId);
             setGuests(posts);
+            setDeleteLoading(false)
             setShow(false)
             setDates([...new Set([].concat(posts.guests.map((guest) => expandDates(guest.dates[0], guest.dates[1]))).flat())])
         } catch (err) { }
@@ -154,6 +156,7 @@ function User(props) {
                     confirmDeleteHandler={confirmDeleteHandler}
                     setShow={() => setShow(false)}
                     isLoading={isLoading}
+                    isloading={deleteLoading}
                     room={room}
                     roomHandler={(e) => {
                         setRoom(e.target.id)
@@ -172,8 +175,8 @@ function User(props) {
                     onDelete={(e) => {
                         e.preventDefault();
                         e.stopPropagation();
+                        setDeleteId(guests[e.target.id]._id);
                         setShow(true)
-                        setDeleteId(guests[e.target.id]._id)
                     }}
                     onChange={filterHandler}
                     value={filter}

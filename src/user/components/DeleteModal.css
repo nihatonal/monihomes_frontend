@@ -29,7 +29,12 @@
   font-weight: 500;
   width: 100px;
   border-radius: 10px;
-  padding: 10px 20px;
+  height: 40px;
+  width: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 10px 20px; */
   color: #fff;
   cursor: pointer;
   transition: all 0.2s;
