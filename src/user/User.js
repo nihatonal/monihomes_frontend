@@ -31,7 +31,7 @@ function User(props) {
             },
             guesttel: {
                 value: "",
-                isValid: false,
+                isValid: true,
             },
             startdate: {
                 value: "",
@@ -43,7 +43,7 @@ function User(props) {
             },
             info: {
                 value: "",
-                isValid: false,
+                isValid: true,
             },
 
         },
@@ -148,10 +148,15 @@ function User(props) {
     return (
         <div className="user_container">
             <div className="user_wrapper">
+                <div className="logout">
+                    <button
+                        onClick={auth.logout}
+                    >Çıkış</button>
+                </div>
                 <AddGuest
                     inputHandler={inputHandler}
                     submitHandler={submitHandler}
-                    disabled={!formState.isValid || validDate}
+                    disabled={validDate}
                     show={show}
                     confirmDeleteHandler={confirmDeleteHandler}
                     setShow={() => setShow(false)}

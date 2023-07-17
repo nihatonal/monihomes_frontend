@@ -3,8 +3,7 @@ import LoadingSpinner from '../../shared/UI/LoadingSpinner';
 import DeleteModal from './DeleteModal';
 import Input from '../../shared/components/Input';
 import {
-    VALIDATOR_REQUIRE,
-    VALIDATOR_PHONE
+    VALIDATOR_REQUIRE
 
 } from "../../shared/util/validators.js";
 import Select from '../../shared/components/Select';
@@ -31,7 +30,7 @@ function AddGuest(props) {
                     type="text"
                     label='Müşteri Tel No'
                     placeholder="Müşterinin telefon numarısını giriniz."
-                    validators={[VALIDATOR_REQUIRE(), VALIDATOR_PHONE()]}
+                    validators={[]}
                     onInput={props.inputHandler}
 
                 />

@@ -1,4 +1,21 @@
 .user_container {
-    height: auto;
-    padding: 100px 0 100px;
-  }
+  height: auto;
+  padding: 100px 0 100px;
+}
+.logout {
+  width: 100%;
+  font-family: var(--Nunito_Sans);
+  font-weight: bold;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 50px;
+  margin-bottom: 20px;
+}
+.logout button {
+  background-color: var(--secondary-color);
+  padding: 6px 20px;
+  color: white;
+  border-radius: 100px;
+}
