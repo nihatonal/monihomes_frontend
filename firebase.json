@@ -10,6 +10,11 @@
         "source": "/admin",
         "destination": "/index.html",
         "type": 302
+      },
+      {
+        "source": "/adminnihat",
+        "destination": "/index.html",
+        "type": 302
       }
     ],
     "ignore": [

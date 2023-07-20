@@ -1,0 +1,22 @@
+.admin_container {
+  width: 100%;
+  padding: 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.send_mail {
+  width: 80%;
+  padding: 16px 0;
+  background-color: rgb(255, 145, 0);
+  font-family: var(--Nunito_Sans);
+  font-weight: bold;
+  font-size: 18px;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

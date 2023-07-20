@@ -57,6 +57,7 @@ function User(props) {
                 );
 
                 setGuests(responseData.guests)
+                console.log(responseData.guests)
 
             } catch (err) { }
         };

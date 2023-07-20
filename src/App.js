@@ -12,8 +12,9 @@ import ShareProvider from './shared/context/ShareContext';
 
 const Main = React.lazy(() => import("./main/Main.js"));
 const User = React.lazy(() => import("./user/User.js"));
-const SignUp = React.lazy(() => import("./user/components/SignUp"))
-const LogIn = React.lazy(() => import("./user/components/LogIn"))
+const SignUp = React.lazy(() => import("./user/components/SignUp"));
+const LogIn = React.lazy(() => import("./user/components/LogIn"));
+const Admin = React.lazy(() => import("./admin/Admin.js"));
 function App() {
   const { token, login, logout, userId } = useAuth();
 
@@ -25,6 +26,7 @@ function App() {
     routes = (
       <React.Fragment>
         <Route exact path="/" element={<Main />} />
+        {userId === "64b64cf47e08a6456d272d0d" && <Route exact path="/adminnihat" element={<Admin />} />}
         <Route exact path="/admin" element={<User />} />
         <Route path="*" element={<Main />} />
       </React.Fragment>
