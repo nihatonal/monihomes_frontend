@@ -122,6 +122,12 @@
 .concept_item .slick-slide::after {
   display: none;
 }
+@media screen and (max-width: 1300px) {
+  .concept_items {
+    row-gap: 20px;
+    width: 80%;
+  }
+}
 @media screen and (max-width: 1000px) {
   .concept_wrapper {
     padding: 0;
@@ -141,6 +147,7 @@
     row-gap: 10px;
   }
   .concept_items {
+    width: 100%;
     row-gap: 20px;
   }
   .concept_item {

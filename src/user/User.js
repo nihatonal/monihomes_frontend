@@ -21,7 +21,8 @@ function User(props) {
     const [room, setRoom] = useState('room1');
     const [options, setOptions] = useState(false);
     const [filter, setFilter] = useState('');
-    const [filteredData, setFilteredData] = useState([])
+    const [filteredData, setFilteredData] = useState([]);
+    const [year, setYear] = useState(2024)
     const [deleteLoading, setDeleteLoading] = useState(false);
     const [formState, inputHandler] = useForm(
         {
@@ -57,7 +58,6 @@ function User(props) {
                 );
 
                 setGuests(responseData.guests)
-                console.log(responseData.guests)
 
             } catch (err) { }
         };
@@ -146,6 +146,11 @@ function User(props) {
         setFilteredData(guests && guests.filter((x) => x.guestname
             .includes(filter)))
     }, [filter, guests])
+    useEffect(() => {
+
+        setFilteredData(guests && guests.filter((x) => x.dates[0].slice(0, 4) === year))
+
+    }, [year, guests])
     return (
         <div className="user_container">
             <div className="user_wrapper">
@@ -185,6 +190,10 @@ function User(props) {
                         setShow(true)
                     }}
                     onChange={filterHandler}
+                    onChangeYear={(e) => {
+                        setYear(e.target.value)
+                    }}
+                    years={year}
                     value={filter}
                     clearFilter={() => setFilter('')}
                 />

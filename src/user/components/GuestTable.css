@@ -123,20 +123,29 @@
   overflow: hidden;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   grid-column: 2 / span 3;
   transition: all 0.3s;
 }
 .filter_container input {
   height: 30px;
-  width: 100%;
+  width: 80%;
   outline: none;
   border: 1px solid transparent;
   font-family: var(--Nunito_Sans);
   font-weight: 400;
   font-size: 16px;
   padding-left: 20px;
+  margin-right: 20px;
 }
 .filter_container input:focus {
   border: 1px solid rgba(34, 100, 80, 0.61);
+}
+.filter_year {
+  font-family: var(--Nunito_Sans);
+  font-weight: 400;
+  font-size: 16px;
+  outline: none;
+  border: 1px solid transparent;
+  cursor: pointer;
 }

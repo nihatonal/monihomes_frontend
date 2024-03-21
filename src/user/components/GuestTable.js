@@ -8,7 +8,8 @@ import './GuestTable.css'
 function GuestTable(props) {
     const [open, setOpen] = useState('');
     const [data, setData] = useState([]);
-    const [filter, setFilter] = useState(false)
+    const [filter, setFilter] = useState(false);
+    const [year, selectedYear] = useState(2023)
     const toggleHandler = (x) => {
         //   console.log(x)
         if (x === open) {
@@ -29,8 +30,10 @@ function GuestTable(props) {
     }
     useEffect(() => {
         setData(props.data)
-    }, [props.data])
-    //console.log(props.data)
+    }, [props.data]);
+    //const year = (new Date()).getFullYear();
+    const years = Array.from(new Array(6), (val, index) => index + year);
+
     return (
         <div className='guest_table'>
             <div className='guest_table_header'>
@@ -53,12 +56,24 @@ function GuestTable(props) {
                         onChange={props.onChange}
                         value={props.value}
                         placeholder='Müşteri adı giriniz' />
+                    <select
+                        onChange={props.onChangeYear}
+                        value={props.years}
+                        className='filter_year'
+                    >
+                        {
+                            years.map((year, index) => {
+                                return <option key={`year${index}`} value={year}>{year}</option>
+                            })
+                        }
+                    </select>
+
                     <button onClick={props.clearFilter} className="clear_filter"><AiOutlineClear /></button>
                 </div>
             </div>
             {data.sort(compare).map((item, i) =>
                 <div className="guest_table_" key={item.guestname + i}>
-                    <div 
+                    <div
                         className='guest_table_item'
                         onClick={() => toggleHandler(i)}
                         style={open === i ? { background: "#226450cf", color: "#fff" } : null}

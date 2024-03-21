@@ -39,7 +39,7 @@ function AddGuest(props) {
                     element="input"
                     type="date"
                     label='Check-in'
-                    placeholder="Müşterinin telefon numarısını giriniz."
+                    placeholder="Check-in tarihini giriniz"
                     validators={[VALIDATOR_REQUIRE()]}
                     onInput={props.inputHandler}
 
@@ -49,7 +49,7 @@ function AddGuest(props) {
                     element="input"
                     type="date"
                     label='Check-out'
-                    placeholder="Müşterinin telefon numarısını giriniz."
+                    placeholder="Check-out tarihini giriniz"
                     validators={[VALIDATOR_REQUIRE()]}
                     onInput={props.inputHandler}
 
