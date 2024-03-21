@@ -128,6 +128,14 @@ export const sectionsData =
         }
 
 
+    ],
+    video_data:[
+        {
+            'video': require('./video/boattrip_video.mp4')
+        },
+        {
+            'video': require('./video/boattrip_video_2.mp4')
+        }
     ]
 }
 

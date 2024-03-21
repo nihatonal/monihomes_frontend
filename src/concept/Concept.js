@@ -3,10 +3,10 @@ import { useParams } from 'react-router-dom';
 import { LanguageContext } from "../shared/context/Language";
 import SectionCard from '../shared/components/SectionCard';
 import { sectionsData } from '../assets/sectionsData';
-
 import './Concept.css';
 function Concept(props) {
     const lang = useContext(LanguageContext);
+   
     let { cid } = useParams();
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -19,6 +19,7 @@ function Concept(props) {
             return obj;
         }, {});
     const item = sectionData.filter((x) => x['section-id'] === cid)[0];
+
     return (
         <div className='concept-container'>
             <div className="concept-wrapper">
@@ -29,6 +30,7 @@ function Concept(props) {
                     buttons={item['section-buttons']}
                     desc={item['section-desc']}
                     features={item['section-features']}
+                    video_={sectionsData.video_data[0].video}
                 />
             </div>
         </div>

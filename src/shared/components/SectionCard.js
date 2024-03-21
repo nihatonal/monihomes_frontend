@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useParams } from "react-router-dom";
 import { ReactSVG } from 'react-svg';
 import ConceptSlider from '../UI/ConceptSlider';
-import video_ from '../../assets/video/boattrip_video.mp4';
+
 import VideoPlayer from "react-background-video-player";
 import { BsCheckCircle } from 'react-icons/bs';
 import ArrowLeft from '../../assets/icons/mini_slide_arrow-left.svg'
@@ -53,7 +53,7 @@ function SectionCard(props) {
                         {cid === 'boat_trip' && <div className="video_wrapper">
                             <VideoPlayer
                                 className="video_concept"
-                                src={video_}
+                                src={props.video_}
                                 autoPlay={true}
                                 muted={true}
                                 loop={true}

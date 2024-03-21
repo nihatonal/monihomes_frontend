@@ -4,7 +4,6 @@ import { NavLink } from 'react-router-dom';
 import ConceptSlider from '../../shared/UI/ConceptSlider';
 import { sectionsData } from '../../assets/sectionsData';
 
-import video_ from '../../assets/video/boattrip_video_2.mp4'
 import './Concept.css';
 function Concept(props) {
 
@@ -27,7 +26,7 @@ function Concept(props) {
                                 {item['section-id'] === 'boat_trip' ?
                                     <VideoPlayer
                                         className="video"
-                                        src={video_}
+                                        src={sectionsData.video_data[1].video}
                                         autoPlay={true}
                                         muted={true}
                                         loop={true}
