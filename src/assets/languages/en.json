@@ -3,6 +3,7 @@
     "About Us",
     "Gallery",
     "Reviews",
+    "Concept",
     "Contacts"
   ],
   "hero-title": "A BETTER WAY TO STAY",
@@ -34,5 +35,85 @@
   "google-btn": "Show all reviews",
   "whatsup_status": "Typically replies within 30 mins",
   "whatsup_message": "Hello there! 🤝 \nHow can we help?",
-  "whatsup_placeholder": "Type a message.."
+  "whatsup_placeholder": "Type a message..",
+  "concept": "Consept",
+  "concept_page": [
+    {
+      "section-title": "Monihomes",
+      "section-id": "monihomes",
+      "section-buttons": [
+        "Rooms",
+        "Location",
+        "Features"
+      ],
+      "section-desc": [
+        "You will feel yourself at home in this small cozy apart hotel. Kitchen, iron, parking lot, wifi.. In short, we are ready to meet your every need. Our rooms are for 3 people and 2 of our rooms have balconies. And We have free car parking for our guests.",
+        "Our hotel is located exactly in the city center. The beaches are 10 minutes away by public transport. The coastal walking path is 3 minutes away, and you can shop on the historical Paspatur street, and you can enjoy an incredible seafood in the famous fish market."
+      ],
+      "section-features": [
+        "Caring host",
+        "Kitchens",
+        "Air-conditioner",
+        "Free wifi",
+        "City center",
+        "Parking",
+        "washing and dryer machine"
+      ]
+    },
+    {
+      "section-title": "Villa Masal",
+      "section-id": "villamasal",
+      "section-buttons": [
+        "Villa",
+        "Location",
+        "Features"
+      ],
+      "section-desc": [
+        "It consists of stone architecture suitable for the texture of the region. The interior of the villa, which serves with very comfortable garden furniture, a lodge positioned by the pool and a mini playground for the use of our little guests, also has a very spacious structure. There is also a jacuzzi in one bedroom and you can enjoy the sauna and fireplace with your loved ones.",
+        "Our location is Fethiye Cenger neighborhood. You are in the right place to start the day with the sounds of birds and enjoy the sun, the nature and the pool, away from the hustle and bustle of the city.\n An important reminder: In order to have a comfortable holiday, you need to do your shopping before going to the villa, because the nearest market is 12 KM away."
+      ],
+      "section-features": [
+        "Pool",
+        "Sauan",
+        "Jacuzzi",
+        "Two Bathrooms",
+        "Fireplace",
+        "Kitchen",
+        "Quiet",
+        "Children's Playground",
+        "Nature"
+      ]
+    },
+    {
+      "section-title": "Yoyo Tinyhouse",
+      "section-id": "yoyo_tinyhouse",
+      "section-buttons": [
+        "Villa",
+        "Location",
+        "Features"
+      ],
+      "section-desc": [
+        "Accommodating with Yoyo Tinyhouse in Fethiye is a great option for those who want to get away from ordinary holiday experiences. It is ideal for those who like to be in touch with nature, experience a minimalist lifestyle and relax in a peaceful atmosphere. \n TinyHouse is designed as a 1+1 house and is suitable for 4 people. It offers the opportunity to dine and spend time outdoors with its large veranda.",
+        "Yoyo Tinyhouse offers a calm and peaceful rest away from the crowd and noise of the city. Our location is in Calica region close to Zincirlikavak. \n It is 13 km from Oludeniz beach and 7.5 km from Calis beach."
+      ],
+      "section-features": [
+        "Kitchen",
+        "Clean",
+        "Garden",
+        "Parking",
+        "Free Wifi",
+        "Nature",
+        "Comfort"
+      ]
+    },
+    {
+      "section-title": "Boat Trip",
+      "section-id": "boat_trip",
+      "section-buttons": [],
+      "section-desc": [
+        "Accommodating with Yoyo Tinyhouse in Fethiye is a great option for those who want to get away from ordinary holiday experiences. It is ideal for those who like to be in touch with nature, experience a minimalist lifestyle and relax in a peaceful atmosphere. \n TinyHouse is designed as a 1+1 house and is suitable for 4 people. It offers the opportunity to dine and spend time outdoors with its large veranda."
+      ],
+      "section-features": []
+    }
+  ]
 }

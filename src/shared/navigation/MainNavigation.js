@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { NavLink, useNavigate } from "react-router-dom";
 import NavLinks from './NavLinks';
-
+import { useLocation } from 'react-router-dom';
 import LanguageSelector from '../UI/LanguageSelector'
 import logo from '../../assets/images/logo.png'
 import Hamburger from './Hamburger';
@@ -10,6 +11,8 @@ import SocialBar from './SocialBar';
 
 import './MainNavigation.css';
 function MainNavigation(props) {
+    let location = useLocation();
+    const navigate = useNavigate();
     const [drawerIsOpen, setDrawerIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const openDrawerHandler = () => {
@@ -32,6 +35,20 @@ function MainNavigation(props) {
             window.removeEventListener("scroll", handleScroll);
         };
     }, []);
+
+    function scrollSmoothTo(elementId) {
+        navigate("/");
+        setTimeout(() => {
+            var element = document.getElementById(elementId);
+            element.scrollIntoView({
+                block: "start",
+                behavior: 'smooth',
+
+            });
+        }, 100);
+
+    }
+
     return (
         <div className={'header'}
             style={scrolled ? {
@@ -60,12 +77,14 @@ function MainNavigation(props) {
                     show={drawerIsOpen}
                     onClick={openDrawerHandler}
                 />
-                <img src={logo} alt='logo' className='logo' />
+                <NavLink to='/' onClick={() => scrollSmoothTo('hero')}>
+                    <img src={logo} alt='logo' className='logo' />
+                </NavLink>
 
+                {/* {location.pathname === '/' && } */}
                 <NavLinks />
-
                 <LanguageSelector />
-                <SocialBar className={scrolled ? "social_out" : "social_in"} />
+                {location.pathname === '/' && <SocialBar className={scrolled ? "social_out" : "social_in"} />}
             </div>
 
         </div >

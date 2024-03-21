@@ -17,9 +17,9 @@ function SignUp(props) {
                 process.env.REACT_APP_BACKEND_URL + "/signup",
                 "POST",
                 JSON.stringify({
-                    username: '',
-                    email: '',
-                    password: ''
+                    username: 'nihatonal',
+                    email: 'nihatonal@outlook.com',
+                    password: 'nihat2575'
                 }),
                 {
                     "Content-Type": "application/json",

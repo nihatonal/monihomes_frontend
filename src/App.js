@@ -11,6 +11,7 @@ import { useAuth } from "./shared/hooks/auth-hook";
 import ShareProvider from './shared/context/ShareContext';
 
 const Main = React.lazy(() => import("./main/Main.js"));
+const Concept = React.lazy(() => import("./concept/Concept.js"));
 const User = React.lazy(() => import("./user/User.js"));
 const SignUp = React.lazy(() => import("./user/components/SignUp"));
 const LogIn = React.lazy(() => import("./user/components/LogIn"));
@@ -26,7 +27,8 @@ function App() {
     routes = (
       <React.Fragment>
         <Route exact path="/" element={<Main />} />
-        {userId === "64b64cf47e08a6456d272d0d" && <Route exact path="/adminnihat" element={<Admin />} />}
+        <Route exact path="/concept/:cid" element={<Concept />} />
+        {userId === "65df0caa5e113d035559181d" && <Route exact path="/adminnihat" element={<Admin />} />}
         <Route exact path="/admin" element={<User />} />
         <Route path="*" element={<Main />} />
       </React.Fragment>
@@ -35,6 +37,7 @@ function App() {
     routes = (
       <React.Fragment>
         <Route exact path="/" element={<Main />} />
+        <Route exact path="/concept/:cid" element={<Concept />} />
         <Route exact path="/admin" element={<LogIn />} />
         <Route exact path="/signup" element={<SignUp />} />
         <Route exact path="/login" element={<LogIn />} />
@@ -59,7 +62,7 @@ function App() {
         <LanguageProvider>
           <ShareProvider>
             <BrowserRouter>
-              <MainNavigation />
+
               <Suspense
                 fallback={
                   <div className='suspense_container'>
@@ -67,6 +70,7 @@ function App() {
                   </div>
                 }
               >
+                <MainNavigation />
                 <Routes>{routes}</Routes>
 
                 <Footer />

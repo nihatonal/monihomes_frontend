@@ -20,6 +20,10 @@
   position: relative;
   padding: 15px 15px 0;
 }
+.main_header_concept {
+  justify-content: space-between;
+  padding: 15px 50px 0;
+}
 @keyframes social_in {
   from {
     opacity: 0;
@@ -55,6 +59,9 @@
   .main_header {
     padding: 10px 0 0;
   }
+  .logo {
+    height: 60px;
+  }
 
   .hide-navlinks {
     right: -100%;
@@ -69,6 +76,9 @@
   }
   .main_header {
     justify-content: space-between;
+    padding: 10px 30px 0;
+  }
+  .main_header_concept {
     padding: 10px 30px 0;
   }
   .main_header .socialbar-container {

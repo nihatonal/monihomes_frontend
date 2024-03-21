@@ -31,7 +31,7 @@ function Hero() {
 
     }
     return (
-        <div className='hero_container'>
+        <div className='hero_container' id='hero'>
             <div className="hero_wrapper">
                 <div className="hero_content">
                     <h1 className="hero_title">

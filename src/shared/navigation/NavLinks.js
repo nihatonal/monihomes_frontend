@@ -1,20 +1,22 @@
-import React, { useState,useContext } from 'react';
-import { NavLink } from "react-router-dom";
-
+import React, { useState, useContext, useEffect } from 'react';
+import { NavLink, useNavigate } from "react-router-dom";
 import { LanguageContext } from "../context/Language";
 import './NavLinks.css';
 function NavLinks(props) {
     const lang = useContext(LanguageContext);
-
-    const [active, setActive] = useState()
+    const navigate = useNavigate();
+    const [active, setActive] = useState();
     function scrollSmoothTo(elementId) {
-        var element = document.getElementById(elementId);
-        element.scrollIntoView({
-            block: "start",
-            behavior: 'smooth',
+        navigate("/");
+        setTimeout(() => {
+            var element = document.getElementById(elementId);
+            element.scrollIntoView({
+                block: "start",
+                behavior: 'smooth',
 
-        });
-        setActive(elementId)
+            });
+            setActive(elementId);
+        }, 100);
 
     }
 
@@ -38,7 +40,7 @@ function NavLinks(props) {
                     to=""
                     onClick={() => scrollSmoothTo('gallery')}
                 >
-                   {lang.dictionary["navlinks"][1]}
+                    {lang.dictionary["navlinks"][1]}
                 </NavLink>
             </div>
             <div className={props.sidebar_nav_item_wrapper} onClick={props.closeDrawer}>
@@ -47,7 +49,16 @@ function NavLinks(props) {
                     to=""
                     onClick={() => scrollSmoothTo('reviews')}
                 >
-                   {lang.dictionary["navlinks"][2]}
+                    {lang.dictionary["navlinks"][2]}
+                </NavLink>
+            </div>
+            <div className={props.sidebar_nav_item_wrapper} onClick={props.closeDrawer}>
+                <NavLink
+                    className={active === 'concept' ? "nav-item active-nav-item" : "nav-item"}
+                    to=""
+                    onClick={() => scrollSmoothTo('concept')}
+                >
+                    {lang.dictionary["navlinks"][3]}
                 </NavLink>
             </div>
             <div className={props.sidebar_nav_item_wrapper} onClick={props.closeDrawer}>
@@ -56,12 +67,12 @@ function NavLinks(props) {
                     to=""
                     onClick={() => scrollSmoothTo('contact')}
                 >
-                   {lang.dictionary["navlinks"][3]}
+                    {lang.dictionary["navlinks"][4]}
                 </NavLink>
             </div>
 
 
-        </div>
+        </div >
     );
 }
 

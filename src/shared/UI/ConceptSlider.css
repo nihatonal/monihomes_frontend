@@ -1,0 +1,131 @@
+.concept_slide-container {
+  width: 546px;
+  height: 550px;
+  position: relative;
+}
+.slick-slider {
+  width: 100%;
+  height: 478px;
+  z-index: 95;
+  grid-column: 1 / span 2;
+}
+.slick-slider img {
+  height: 478px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.slick-track {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 20px 0; */
+}
+/* .slick-slide {
+    margin: 0 20px;
+  } */
+
+.slick-prev:before,
+.slick-next:before {
+  display: none;
+}
+
+.slide-wrapper {
+  height: 478px;
+  display: flex;
+  grid-column: 1 / span 2;
+  position: relative;
+  transition: all 0.3s;
+  left: 0;
+}
+.slick-arrow {
+  background-color: transparent;
+}
+.slide-arrow-wrapper {
+  width: 113px;
+  height: 15px;
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  grid-row: 2;
+}
+.slide-arrow-btn {
+  height: 15px;
+  background: none;
+  position: relative;
+  transition: all 0.3s;
+  
+}
+.slide-arrow-btn:hover {
+  transform: translateX(-5px);
+}
+
+.slide-arrow-btn:nth-last-child(2):hover {
+  transform: translateX(5px);
+}
+/* slide bar*/
+.slide_bar {
+  grid-column: 2;
+  grid-row: 2;
+  width: 139px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  margin-left: auto;
+  cursor: none;
+}
+.slide_bar input[type="range"] {
+  -webkit-appearance: none;
+  height: 1.5px;
+  width: 88px;
+  background-color: #dcdcdc;
+  border: none;
+  cursor: none;
+}
+.slide_bar input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 1.5px;
+  width: 15px;
+  background: #333333;
+  cursor: none;
+}
+@media screen and (max-width: 1000px) {
+  .slide-container {
+    width: 100%;
+    height: 350px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+  }
+  .slick-slider {
+    width: 100%;
+    height: 300px;
+    z-index: 95;
+    grid-column: 1 / span 2;
+  }
+  .slick-slider img {
+    height: 300px;
+    object-fit: cover;
+  }
+  .slide-wrapper {
+    height: auto;
+    display: flex;
+    grid-column: 1 / span 2;
+    position: relative;
+    transition: all 0.3s;
+    left: 0;
+  }
+
+  .slide-wrapper .slide-image {
+    height: 250px;
+    object-fit: cover;
+  }
+  .slide-arrow-wrapper {
+    margin-left: 20px;
+  }
+  .slide_bar {
+    margin-right: 20px;
+  }
+}
