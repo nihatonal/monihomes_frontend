@@ -117,7 +117,7 @@
 }
 .gallery_content_video {
   grid-area: gallery10;
-  border: 1px solid red;
+
 }
 /*Modal*/
 .modal_wrapper {
@@ -142,6 +142,12 @@
 }
 .close_modal:hover {
   background-color: var(--color_danger);
+}
+.gallery_monihomes {
+
+  background-color: aliceblue;
+  width: 200px;
+  height: 150px;
 }
 @media only screen and (min-width: 767px) and (max-width: 967px) {
   .gallery_content {

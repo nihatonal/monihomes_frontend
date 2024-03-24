@@ -7,6 +7,7 @@ import GuestTable from './components/GuestTable';
 import AddGuest from './components/AddGuest';
 import { useForm } from "../shared/hooks/form-hook";
 import UserCalendar from './components/UserCalendar';
+import SetPrice from './components/SetPrice';
 import './User.css';
 function User(props) {
     const auth = useContext(AuthContext);
@@ -24,6 +25,7 @@ function User(props) {
     const [filteredData, setFilteredData] = useState([]);
     const [year, setYear] = useState(2024)
     const [deleteLoading, setDeleteLoading] = useState(false);
+    const [page, setPage] = useState('')
     const [formState, inputHandler] = useForm(
         {
             guestname: {
@@ -153,50 +155,58 @@ function User(props) {
     }, [year, guests])
     return (
         <div className="user_container">
+
             <div className="user_wrapper">
                 <div className="logout">
                     <button
                         onClick={auth.logout}
                     >Çıkış</button>
                 </div>
-                <AddGuest
-                    inputHandler={inputHandler}
-                    submitHandler={submitHandler}
-                    disabled={validDate}
-                    show={show}
-                    confirmDeleteHandler={confirmDeleteHandler}
-                    setShow={() => setShow(false)}
-                    isLoading={isLoading}
-                    isloading={deleteLoading}
-                    room={room}
-                    roomHandler={(e) => {
-                        setRoom(e.target.id)
-                        setOptions(false)
-                    }}
-                    showOptions={() => setOptions(!options)}
-                    options={options}
-                />
+                <div className="user_btns_container">
+                    <button onClick={() => setPage("customer")} className="user_btn">Müşteri Kaydı</button>
+                    <button onClick={() => setPage("price")} className="user_btn">Fiyat Kaydı</button>
+                </div>
+                {page === "price" && <SetPrice />}
+                {page === "customer" && <>
+                    <AddGuest
+                        inputHandler={inputHandler}
+                        submitHandler={submitHandler}
+                        disabled={validDate}
+                        show={show}
+                        confirmDeleteHandler={confirmDeleteHandler}
+                        setShow={() => setShow(false)}
+                        isLoading={isLoading}
+                        isloading={deleteLoading}
+                        room={room}
+                        roomHandler={(e) => {
+                            setRoom(e.target.id)
+                            setOptions(false)
+                        }}
+                        showOptions={() => setOptions(!options)}
+                        options={options}
+                    />
 
-                <UserCalendar
-                    markDates={mark}
-                    guests={mark}
-                />
-                <GuestTable
-                    data={filteredData || []}
-                    onDelete={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        setDeleteId(guests[e.target.id]._id);
-                        setShow(true)
-                    }}
-                    onChange={filterHandler}
-                    onChangeYear={(e) => {
-                        setYear(e.target.value)
-                    }}
-                    years={year}
-                    value={filter}
-                    clearFilter={() => setFilter('')}
-                />
+                    <UserCalendar
+                        markDates={mark}
+                        guests={mark}
+                    />
+                    <GuestTable
+                        data={filteredData || []}
+                        onDelete={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            setDeleteId(guests[e.target.id]._id);
+                            setShow(true)
+                        }}
+                        onChange={filterHandler}
+                        onChangeYear={(e) => {
+                            setYear(e.target.value)
+                        }}
+                        years={year}
+                        value={filter}
+                        clearFilter={() => setFilter('')}
+                    />
+                </>}
             </div>
         </div >
     );

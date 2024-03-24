@@ -19,3 +19,25 @@
   color: white;
   border-radius: 100px;
 }
+.user_btns_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+  width: 80%;
+  margin: 0 auto;
+}
+.user_btn {
+  font-family: var(--Nunito_Sans);
+  font-weight: bold;
+  font-size: 16px;
+  background-color: var(--secondary-color);
+  padding: 6px 20px;
+  color: white;
+  border-radius: 100px;
+  cursor: pointer;
+  border: none;
+  margin-bottom: 40px;
+}
+.user_btn:hover {
+  background-color: rgba(34, 100, 80, 0.81);
+}

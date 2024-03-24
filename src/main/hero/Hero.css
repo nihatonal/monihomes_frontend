@@ -41,7 +41,7 @@
   justify-content: flex-end;
   padding-right: 100px;
   position: relative;
-  z-index: 99;
+  z-index: 95;
 }
 .hero_title {
   font-family: var(--Nunito_Sans);

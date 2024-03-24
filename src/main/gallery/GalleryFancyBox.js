@@ -7,7 +7,8 @@ function GalleryFancyBox(props) {
 
     return (
         <div className='gallery_wrapper'>
-            {roomsData.map((room, index) =>
+            {/* <div style={{color:"white"}}onClick={props.onClose}>Back</div> */}
+            {props.roomsData.map((room, index) =>
                 <div className="gallery_item" key={room.id}>
                     <h4 className="gallery_item_title">
                         {room.title}

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Modal from '../../shared/UI/Modal';
-
+import { roomsData } from '../../assets/roomsData';
 import GalleryFancyBox from './GalleryFancyBox';
 import { IoCloseCircleSharp } from 'react-icons/io5';
 import gallery_1 from '../../assets/images/room1/room1_1.jpg';
@@ -20,6 +20,8 @@ function Gallery(props) {
 
     const [bg, setBg] = useState();
     const [show, setShow] = useState(false);
+    const [gallery, setGallery] = useState(false);
+    const [dataGallery, setDataGallery] = useState([])
     const bg_data = [gallery_1, gallery_2, gallery_3, gallery_4, gallery_5, gallery_6, gallery_7, gallery_8, gallery_9]
     const handler = (e) => {
         setShow(!show);
@@ -27,7 +29,7 @@ function Gallery(props) {
     }
     return (
         <section className='section_container gallery_container' id='gallery'>
-            
+
             <div className="section_wrapper" >
                 <h3 className="section_title gallery-title">{props.title}</h3>
                 <div className="gallery_content">
@@ -72,15 +74,28 @@ function Gallery(props) {
                           ), url(${bg})`
                     }}>
                     <IoCloseCircleSharp className='close_modal' onClick={() => setShow(false)} />
-                    <GalleryFancyBox />
+                    {/* {!gallery && <div className='gallery_monihomes'
+                        onClick={() => {
+                            setGallery(true)
+                            setDataGallery(roomsData)
+                        }
+                        }
+                    >
+                        Monihomes
+                    </div>} */}
+                    {<GalleryFancyBox
+                        roomsData={roomsData}
+                        onClose={() => setGallery(false)}
+                    />}
                 </div>
 
             </Modal>
-        </section>
+        </section >
     );
 }
 
 export default Gallery;
+
 // import React from 'react';
 
 // import gallery_1 from '../../assets/images/room1/room1_1.jpg';
