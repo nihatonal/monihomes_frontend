@@ -39,15 +39,15 @@ function BookCalendar(props) {
                 const responseData = await sendRequest(
                     process.env.REACT_APP_BACKEND_URL + "/getprices",
                 );
-
-                setPriceData(responseData.prices[0].price)
-                console.log(responseData.prices[0].price)
+               
+                setPriceData(responseData.prices[props.filter === "room" ? 0 : 1].price)
 
             } catch (err) { }
         };
         fetchUsers();
 
-    }, [sendRequest]);
+    }, [sendRequest, props.filter]);
+
     const [windowSize, setWindowSize] = useState(getWindowSize());
 
     useEffect(() => {
@@ -97,7 +97,7 @@ function BookCalendar(props) {
 
         const reserved_ = [...map.entries()].filter((a) => a[1] > 2).sort(compare).flat().filter((a) => a !== 3)
 
-        setDatess(reserved_)
+        setDatess(props.filter === "room" ? reserved_ : dates)
 
     }, [props.guests])
 
@@ -149,6 +149,12 @@ function BookCalendar(props) {
 
 
                     tileClassName={({ date, view }) => {
+                        if (
+                            moment(date).format("YYYY/MM/DD") <
+                            moment().format("YYYY/MM/DD")
+                        ) {
+                            return "passed";
+                        }
                         if (!props.guests) return
                         if (
                             moment(date).format("YYYY/MM/DD") <
@@ -203,128 +209,13 @@ function BookCalendar(props) {
 
 
                     }}
-                    //tileContent={({ date, view }) => ('2000     ₺')}
                     tileContent={({ date, view }) =>
                         priceData.map((el) => el.date === moment(date).format("YYYY/MM/DD") ? <p key={el.date}>{el.price} ₺</p> : null)
-                        // date.getDay() === 0 ? <p>It's Sunday!</p> : null
-
 
                     }
-                // priceData && priceData.map((el) => moment(el.date).format("YYYY/MM/DD") === moment(date).format("YYYY/MM/DD") && el.price)
-
-
-
-                // if (
-                //     moment(date).format("YYYY/MM/DD") >
-                //     moment("2023/12/31").format("YYYY/MM/DD") &&
-                //     moment(date).format("YYYY/MM/DD") <
-                //     moment("2024/02/05").format("YYYY/MM/DD")
-                // ) {
-                //     return "1200     ₺";
-                // }
-                // if (
-                //     moment(date).format("YYYY/MM/DD") >
-                //     moment("2023/02/04").format("YYYY/MM/DD") &&
-                //     moment(date).format("YYYY/MM/DD") <
-                //     moment("2024/04/06").format("YYYY/MM/DD")
-                // ) {
-                //     return "1400     ₺";
-                // }
-                // if (
-                //     moment(date).format("YYYY/MM/DD") >=
-                //     moment("2024/04/06").format("YYYY/MM/DD") &&
-                //     moment(date).format("YYYY/MM/DD") <
-                //     moment("2024/04/15").format("YYYY/MM/DD")
-                // ) {
-                //     return "2000     ₺";
-                // }
-                // if (
-                //     moment(date).format("YYYY/MM/DD") >
-                //     moment("2024/04/14").format("YYYY/MM/DD") &&
-                //     moment(date).format("YYYY/MM/DD") <
-                //     moment("2024/05/01").format("YYYY/MM/DD")
-                // ) {
-                //     return "1800     ₺";
-                // }
-                // if (
-                //     moment(date).format("YYYY/MM/DD") >
-                //     moment("2024/04/30").format("YYYY/MM/DD") &&
-                //     moment(date).format("YYYY/MM/DD") <
-                //     moment("2024/06/01").format("YYYY/MM/DD")
-                // ) {
-                //     return "1900     ₺";
-                // }
-                // if (
-                //     moment(date).format("YYYY/MM/DD") >
-                //     moment("2024/05/31").format("YYYY/MM/DD") &&
-                //     moment(date).format("YYYY/MM/DD") <
-                //     moment("2024/06/14").format("YYYY/MM/DD")
-                // ) {
-                //     return "2000     ₺";
-                // }
-                // if (
-                //     moment(date).format("YYYY/MM/DD") >
-                //     moment("2024/06/13").format("YYYY/MM/DD") &&
-                //     moment(date).format("YYYY/MM/DD") <
-                //     moment("2024/09/01").format("YYYY/MM/DD")
-                // ) {
-                //     return "2500     ₺";
-                // }
-                // if (
-                //     moment(date).format("YYYY/MM/DD") >
-                //     moment("2024/08/31").format("YYYY/MM/DD") &&
-                //     moment(date).format("YYYY/MM/DD") <
-                //     moment("2024/10/01").format("YYYY/MM/DD")
-                // ) {
-                //     return "2000     ₺";
-                // }
-                // if (
-                //     moment(date).format("YYYY/MM/DD") >
-                //     moment("2024/09/31").format("YYYY/MM/DD") &&
-                //     moment(date).format("YYYY/MM/DD") <
-                //     moment("2024/10/25").format("YYYY/MM/DD")
-                // ) {
-                //     return "1900     ₺";
-                // }
-                // if (
-                //     moment(date).format("YYYY/MM/DD") >
-                //     moment("2024/10/24").format("YYYY/MM/DD") &&
-                //     moment(date).format("YYYY/MM/DD") <
-                //     moment("2024/11/01").format("YYYY/MM/DD")
-                // ) {
-                //     return "2000     ₺";
-                // }
-                // if (
-                //     moment(date).format("YYYY/MM/DD") >
-                //     moment("2024/10/31").format("YYYY/MM/DD") &&
-                //     moment(date).format("YYYY/MM/DD") <
-                //     moment("2024/12/21").format("YYYY/MM/DD")
-                // ) {
-                //     return "1700     ₺";
-                // }
-                // if (
-                //     moment(date).format("YYYY/MM/DD") >
-                //     moment("2024/12/19").format("YYYY/MM/DD") &&
-                //     moment(date).format("YYYY/MM/DD") <
-                //     moment("2025/01/01").format("YYYY/MM/DD")
-                // ) {
-                //     return "2000     ₺";
-                // }
-                //}
-                // }
-                // tileDisabled={({ activeStartDate, date, view }) => props.markDates && expandDates(props.markDates[0], props.markDates[1]).find((x) => x === moment(date).format("YYYY/MM/DD"))}
 
                 />
-                {/* <div className="calendar-btns-wrapper">
-                    <button onClick={() => onChange(null)} className="clear-dates">{sectionData.clear}</button>
-                    <button onClick={props.close} className="close-calendar">{sectionData.close}</button>
-                </div>
-                <div className="error_modal"
-                    style={error ? { display: "flex" } : null}
-                    onClick={() => setError(false)}
-                >
-                    <p>{sectionData.error_dates}</p>
-                </div> */}
+
             </div>
         </div>
     );

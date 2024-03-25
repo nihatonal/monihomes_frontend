@@ -1,0 +1,28 @@
+.price_add_wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 40px;
+}
+.filter_room {
+  display: flex;
+  column-gap: 10px;
+}
+.filter_btn {
+  font-family: var(--Nunito_Sans);
+  font-weight: bold;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 40px;
+  border-radius: 50px;
+  border: 1px solid rgba(34, 100, 80, 0.61);
+  color: rgba(34, 100, 80, 0.91);
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.active_filter_btn {
+  color: #fff;
+  background-color: rgba(34, 100, 80, 0.61);
+  /* transition: all 0.2s; */
+}

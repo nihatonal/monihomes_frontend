@@ -32,6 +32,7 @@ function Admin(props) {
             Info: ${t.info}
             Check-in: ${t.dates[0]}
             Check-out: ${t.dates[1]}
+           Room: ${t.room}
 
             `
             )

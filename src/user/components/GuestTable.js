@@ -28,11 +28,12 @@ function GuestTable(props) {
         }
         return 0;
     }
-    useEffect(() => {
-        setData(props.data)
-    }, [props.data]);
-    //const year = (new Date()).getFullYear();
+    // useEffect(() => {
+    //     setData(props.data)
+    // }, [props.data,props.save]);
     const years = Array.from(new Array(6), (val, index) => index + year);
+
+
 
     return (
         <div className='guest_table'>
@@ -71,7 +72,7 @@ function GuestTable(props) {
                     <button onClick={props.clearFilter} className="clear_filter"><AiOutlineClear /></button>
                 </div>
             </div>
-            {data.sort(compare).map((item, i) =>
+            {props.data.sort(compare).map((item, i) =>
                 <div className="guest_table_" key={item.guestname + i}>
                     <div
                         className='guest_table_item'
@@ -82,10 +83,12 @@ function GuestTable(props) {
                         <p className='guest_table_item_title'>{i + 1}</p>
                         <p className='guest_table_item_title'> {item.room === 'room1' ? "Room 1"
                             : item.room === 'room2' ? "Room 2"
-                                : "Room 3"}</p>
+                                : item.room === 'room3' ? "Room 3"
+                                    : "Villa Masal"}</p>
                         <p className='guest_table_item_title'>{item.dates[0]}</p>
                         <p className='guest_table_item_title'>{item.dates[1]}</p>
-                        <p id={i} className='delete_btn' onClick={props.onDelete}>
+                       
+                        <p id={item.id} className='delete_btn' onClick={props.onDelete}>
                             <AiTwotoneDelete />
                         </p>
                     </div>

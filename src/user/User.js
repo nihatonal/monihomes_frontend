@@ -23,7 +23,7 @@ function User(props) {
     const [options, setOptions] = useState(false);
     const [filter, setFilter] = useState('');
     const [filteredData, setFilteredData] = useState([]);
-    const [year, setYear] = useState(2024)
+    const [year, setYear] = useState("2024")
     const [deleteLoading, setDeleteLoading] = useState(false);
     const [page, setPage] = useState('')
     const [formState, inputHandler] = useForm(
@@ -59,13 +59,13 @@ function User(props) {
                     process.env.REACT_APP_BACKEND_URL + "/getdates",
                 );
 
-                setGuests(responseData.guests)
+                setGuests(responseData.guests);
 
             } catch (err) { }
         };
         fetchUsers();
 
-    }, [sendRequest]);
+    }, [sendRequest,isLoading]);
 
     useEffect(() => {
         setMark(guests && guests.filter((x) => x.room === room))
@@ -103,12 +103,14 @@ function User(props) {
             );
             // console.log(responseData);
             setIsLoading(false)
-            setGuests([...guests, responseData.guest]);
+            // setGuests([...guests, responseData.guest]);
+          
         } catch (err) {
         }
     }
     const confirmDeleteHandler = async (e) => {
         e.preventDefault();
+        console.log()
         setDeleteLoading(true)
         //console.log(e.target.parentNode.parentNode.parentNode.id)
         try {
@@ -148,10 +150,9 @@ function User(props) {
         setFilteredData(guests && guests.filter((x) => x.guestname
             .includes(filter)))
     }, [filter, guests])
+
     useEffect(() => {
-
         setFilteredData(guests && guests.filter((x) => x.dates[0].slice(0, 4) === year))
-
     }, [year, guests])
     return (
         <div className="user_container">
@@ -191,17 +192,18 @@ function User(props) {
                         guests={mark}
                     />
                     <GuestTable
-                        data={filteredData || []}
+                        data={filteredData}
                         onDelete={(e) => {
                             e.preventDefault();
                             e.stopPropagation();
-                            setDeleteId(guests[e.target.id]._id);
+                            setDeleteId(e.target.id);
                             setShow(true)
                         }}
                         onChange={filterHandler}
                         onChangeYear={(e) => {
                             setYear(e.target.value)
                         }}
+                        save={isLoading}
                         years={year}
                         value={filter}
                         clearFilter={() => setFilter('')}

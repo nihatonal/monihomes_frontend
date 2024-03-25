@@ -23,6 +23,7 @@
   align-items: center;
   justify-content: center;
   padding: 0 100px;
+  column-gap: 10px;
 }
 .date_inputs_container {
   display: flex;
@@ -71,7 +72,26 @@
 .react-datepicker-wrapper input:focus {
   border: 1px solid rgb(131, 131, 131);
 }
-
+.filter_room {
+  display: flex;
+  column-gap: 10px;
+}
+.filter_btn {
+  font-family: var(--Nunito_Sans);
+  font-weight: bold;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 40px;
+  border-radius: 50px;
+  background-color: rgba(34, 100, 80, 0.61);
+  cursor: pointer;
+}
+.filter_btn:hover,
+.active_filter_btn {
+  color: rgba(34, 100, 80, 0.91);
+  background-color: #fff;
+  transition: all 0.3s;
+}
 @media only screen and (min-width: 767px) and (max-width: 1283px) {
   .calendar_container {
     margin: 0 auto;

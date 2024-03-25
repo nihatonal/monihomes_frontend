@@ -21,6 +21,8 @@ function SetPrice(props) {
     const [priceData, setPriceData] = useState([]);
     const [filtered, setFiltered] = useState([]);
     const [dates, setDates] = useState([]);
+    const [filter, setFilter] = useState();
+    const [selected, setSelected] = useState()
     const [formState, inputHandler] = useForm(
         {
             start_date: {
@@ -47,13 +49,14 @@ function SetPrice(props) {
                     process.env.REACT_APP_BACKEND_URL + "/getprices",
                 );
 
-                setPriceData(responseData.prices[0].price)
-
+                setPriceData(responseData.prices[filter].price)
+                console.log(responseData.prices[filter].price);
+                setSelected(responseData.prices[filter]._id)
             } catch (err) { }
         };
         fetchUsers();
 
-    }, [sendRequest, isLoading]);
+    }, [sendRequest, isLoading, filter]);
     function expandDates(startDate, stopDate) {
         let dateArray = [];
         let currentDate = moment(new Date(startDate));
@@ -86,13 +89,6 @@ function SetPrice(props) {
         )
     }, [formState.inputs.price.value, dates]);
 
-    const filterObjectArray = (arr, filterArr) => (
-        arr.filter(el =>
-            filterArr.some(f =>
-                f.date !== el.date
-            )
-        )
-    );
     useEffect(() => {
         const result = priceData.filter(person => !dates.includes(person.date))
         setFiltered(result)
@@ -113,10 +109,11 @@ function SetPrice(props) {
         console.log(formState.inputs.price.isValid)
         try {
             const responseData = await sendRequest(
-                process.env.REACT_APP_BACKEND_URL + "/savepricess",
+                process.env.REACT_APP_BACKEND_URL + "/saveprices",
                 "POST",
                 JSON.stringify({
-                    price: arr
+                    price: arr,
+                    id: selected
                 }),
                 {
                     "Content-Type": "application/json",
@@ -130,49 +127,59 @@ function SetPrice(props) {
     }
     return (
         <div className="add_guest_wrapper" style={{ margin: "20px" }}>
-            <h3>Fiyat Kaydı</h3>
-            <form className="inputs_container" onSubmit={submitHandler}>
+            <div className='price_add_wrapper'>
+                <div className="filter_room">
+                    <button className={filter === 0 ? `filter_btn active_filter_btn` : `filter_btn`}
+                        onClick={(e) => setFilter(0)}
+                    >Moni Homes</button>
+                    <button className={filter === 1 ? `filter_btn active_filter_btn` : `filter_btn`}
+                        onClick={(e) => setFilter(1)}
+                    >Villa Masal</button>
+                </div>
+                <h3>Fiyat Kaydı</h3>
+                <form className="inputs_container" onSubmit={submitHandler}>
 
-                <Input
-                    id="start_date"
-                    element="input"
-                    type="date"
-                    label='Start'
-                    placeholder="Start Date of price"
-                    validators={[VALIDATOR_REQUIRE()]}
-                    onInput={inputHandler}
+                    <Input
+                        id="start_date"
+                        element="input"
+                        type="date"
+                        label='Start'
+                        placeholder="Start Date of price"
+                        validators={[VALIDATOR_REQUIRE()]}
+                        onInput={inputHandler}
 
-                />
-                <Input
-                    id="end_date"
-                    element="input"
-                    type="date"
-                    label='End'
-                    placeholder="End Date of price"
-                    validators={[VALIDATOR_REQUIRE()]}
-                    onInput={inputHandler}
+                    />
+                    <Input
+                        id="end_date"
+                        element="input"
+                        type="date"
+                        label='End'
+                        placeholder="End Date of price"
+                        validators={[VALIDATOR_REQUIRE()]}
+                        onInput={inputHandler}
 
-                />
-                <Input
-                    id="price"
-                    element="input"
-                    type="text"
-                    label='Price'
-                    placeholder="Write the price"
-                    validators={[VALIDATOR_REQUIRE()]}
-                    onInput={inputHandler}
+                    />
+                    <Input
+                        id="price"
+                        element="input"
+                        type="text"
+                        label='Price'
+                        placeholder="Write the price"
+                        validators={[VALIDATOR_REQUIRE()]}
+                        onInput={inputHandler}
 
-                />
+                    />
 
-                <button
-                    type="submit"
-                    className={'save_btn'}
-                    style={{ marginTop: "20px" }}
-                    disabled={!formState.inputs.price.isValid}
-                >
-                    {isLoading ? <LoadingSpinner /> : 'Save'}
-                </button>
-            </form>
+                    <button
+                        type="submit"
+                        className={'save_btn'}
+                        style={{ marginTop: "20px" }}
+                        disabled={!formState.inputs.price.isValid}
+                    >
+                        {isLoading ? <LoadingSpinner /> : 'Save'}
+                    </button>
+                </form>
+            </div>
             {/* <DeleteModal
                 show={props.show}
                 delete={props.confirmDeleteHandler}
@@ -182,7 +189,7 @@ function SetPrice(props) {
             <div className="availability__item_content">
                 <BookCalendar
                     guests={[]}
-
+                    filter={filter === 0 ? "room" : "villamasal"}
                 />
             </div>
         </div>
