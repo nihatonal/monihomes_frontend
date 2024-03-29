@@ -33,7 +33,7 @@ function Main() {
 
     return (
         <div className="main_container">
-            <Hero />
+            {/* <Hero /> */}
             <AboutUs
                 title={lang.dictionary["navlinks"][0]}
             />
