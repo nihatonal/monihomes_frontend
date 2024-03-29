@@ -19,9 +19,11 @@ const Admin = React.lazy(() => import("./admin/Admin.js"));
 function App() {
   const { token, login, logout, userId } = useAuth();
 
-  useEffect(() => {
-    window.history.scrollRestoration = 'manual'
-  }, []);
+  // useEffect(() => {
+  //   window.history.scrollRestoration = 'manual'
+  // }, []);
+
+
   let routes;
   if (token) {
     routes = (
