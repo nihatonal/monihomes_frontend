@@ -21,19 +21,19 @@ function MainNavigation(props) {
         setDrawerIsOpen(false);
     };
 
-    useEffect((_) => {
-        const handleScroll = (_) => {
-            if (window.pageYOffset > 90) {
-                setScrolled(true);
-            } else {
-                setScrolled(false);
-            }
-        };
-        window.addEventListener("scroll", handleScroll);
-        return (_) => {
-            window.removeEventListener("scroll", handleScroll);
-        };
-    }, []);
+    // useEffect((_) => {
+    //     const handleScroll = (_) => {
+    //         if (window.pageYOffset > 90) {
+    //             setScrolled(true);
+    //         } else {
+    //             setScrolled(false);
+    //         }
+    //     };
+    //     window.addEventListener("scroll", handleScroll);
+    //     return (_) => {
+    //         window.removeEventListener("scroll", handleScroll);
+    //     };
+    // }, []);
 
     function scrollSmoothTo(elementId) {
         setTimeout(() => {
