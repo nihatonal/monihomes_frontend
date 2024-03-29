@@ -1,5 +1,6 @@
-import React, { useEffect, Suspense } from 'react';
+import React, { Suspense, useLayoutEffect } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import './App.css';
 import LoadingSpinner from './shared/UI/LoadingSpinner';
 import MainNavigation from './shared/navigation/MainNavigation'
@@ -22,12 +23,20 @@ function App() {
   // useEffect(() => {
   //   window.history.scrollRestoration = 'manual'
   // }, []);
+  const Wrapper = ({ children }) => {
+    const location = useLocation();
+    useLayoutEffect(() => {
+      document.documentElement.scrollTo(0, 0);
+    }, [location.pathname]);
+    return children;
+  };
 
 
   let routes;
   if (token) {
     routes = (
       <React.Fragment>
+
         <Route exact path="/" element={<Main />} />
         <Route exact path="/concept/:cid" element={<Concept />} />
         {userId === "65df0caa5e113d035559181d" && <Route exact path="/adminnihat" element={<Admin />} />}
@@ -50,6 +59,7 @@ function App() {
   }
   return (
     <div className="root-wrapper">
+
       <AuthContext.Provider
         value={{
           isLoggedIn: !!token,
@@ -72,15 +82,17 @@ function App() {
                   </div>
                 }
               >
-                <MainNavigation />
-                <Routes>{routes}</Routes>
-
+                <Wrapper>
+                  <MainNavigation />
+                  <Routes>{routes}</Routes>
+                </Wrapper>
                 <Footer />
               </Suspense>
             </BrowserRouter>
           </ShareProvider>
         </LanguageProvider>
       </AuthContext.Provider>
+
     </div>
   );
 }
