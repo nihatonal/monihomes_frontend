@@ -23,7 +23,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 20px;
-  width: 80%;
+  width: 50%;
   margin: 0 auto;
 }
 .user_btn {
@@ -40,4 +40,10 @@
 }
 .user_btn:hover {
   background-color: rgba(34, 100, 80, 0.81);
+}
+
+@media only screen and (max-width: 767px) {
+  .user_btns_container {
+    width: 80%;
+  }
 }

@@ -1,6 +1,7 @@
 .hero_container {
   height: 100vh;
   background-color: #fff;
+  overflow: auto;
 }
 
 .hero_wrapper {
