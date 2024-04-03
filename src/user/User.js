@@ -172,14 +172,6 @@ function User(props) {
         setFilteredData(guests && guests.filter((x) => x.dates[0].slice(0, 4) === year))
     }, [year, guests]);
 
-    // google_calendar_api=AIzaSyC_LLjxFhwwTUupKoqgaZkw0jckNgM_R3Q
-    // google_calendar_id=https://calendar.google.com/calendar/embed?src=monihomes48%40gmail.com&ctz=UTC
-    //url =`https://www.googleapis.com/calendar/v3/calendars/${google_calendar_id}/events/${google_calendar_api}`
-
-
-
-
-
 
     return (
         <div className="user_container">
