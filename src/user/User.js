@@ -8,6 +8,8 @@ import AddGuest from './components/AddGuest';
 import { useForm } from "../shared/hooks/form-hook";
 import UserCalendar from './components/UserCalendar';
 import SetPrice from './components/SetPrice';
+
+
 import './User.css';
 function User(props) {
     const auth = useContext(AuthContext);
@@ -65,7 +67,22 @@ function User(props) {
         };
         fetchUsers();
 
-    }, [sendRequest,isLoading]);
+    }, [sendRequest, isLoading]);
+    
+    useEffect(() => {
+        const fetchUsers = async () => {
+            try {
+                const responseData = await sendRequest(
+                    process.env.REACT_APP_BACKEND_URL + "/google",
+                );
+
+                //console.log(responseData.data.items);
+
+            } catch (err) { }
+        };
+        fetchUsers();
+
+    }, [sendRequest, isLoading]);
 
     useEffect(() => {
         setMark(guests && guests.filter((x) => x.room === room))
@@ -104,7 +121,7 @@ function User(props) {
             // console.log(responseData);
             setIsLoading(false)
             // setGuests([...guests, responseData.guest]);
-          
+
         } catch (err) {
         }
     }
@@ -153,10 +170,20 @@ function User(props) {
 
     useEffect(() => {
         setFilteredData(guests && guests.filter((x) => x.dates[0].slice(0, 4) === year))
-    }, [year, guests])
+    }, [year, guests]);
+
+    // google_calendar_api=AIzaSyC_LLjxFhwwTUupKoqgaZkw0jckNgM_R3Q
+    // google_calendar_id=https://calendar.google.com/calendar/embed?src=monihomes48%40gmail.com&ctz=UTC
+    //url =`https://www.googleapis.com/calendar/v3/calendars/${google_calendar_id}/events/${google_calendar_api}`
+
+
+
+
+
+
     return (
         <div className="user_container">
-
+           
             <div className="user_wrapper">
                 <div className="logout">
                     <button

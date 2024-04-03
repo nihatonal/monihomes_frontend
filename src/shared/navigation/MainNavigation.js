@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import NavLinks from './NavLinks';
 import { useLocation } from 'react-router-dom';
 import LanguageSelector from '../UI/LanguageSelector'
@@ -12,6 +12,7 @@ import SocialBar from './SocialBar';
 import './MainNavigation.css';
 function MainNavigation(props) {
     let location = useLocation();
+    const navigate = useNavigate();
     const [drawerIsOpen, setDrawerIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const openDrawerHandler = () => {
@@ -21,21 +22,22 @@ function MainNavigation(props) {
         setDrawerIsOpen(false);
     };
 
-    // useEffect((_) => {
-    //     const handleScroll = (_) => {
-    //         if (window.pageYOffset > 90) {
-    //             setScrolled(true);
-    //         } else {
-    //             setScrolled(false);
-    //         }
-    //     };
-    //     window.addEventListener("scroll", handleScroll);
-    //     return (_) => {
-    //         window.removeEventListener("scroll", handleScroll);
-    //     };
-    // }, []);
+    useEffect((_) => {
+        const handleScroll = (_) => {
+            if (window.pageYOffset > 90) {
+                setScrolled(true);
+            } else {
+                setScrolled(false);
+            }
+        };
+        window.addEventListener("scroll", handleScroll);
+        return (_) => {
+            window.removeEventListener("scroll", handleScroll);
+        };
+    }, []);
 
     function scrollSmoothTo(elementId) {
+        navigate("/");
         setTimeout(() => {
             var element = document.getElementById(elementId);
             element.scrollIntoView({

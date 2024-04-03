@@ -1,18 +1,31 @@
-import React from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import VideoPlayer from "react-background-video-player";
-import { NavLink } from 'react-router-dom';
 import ConceptSlider from '../../shared/UI/ConceptSlider';
+import { LanguageContext } from "../../shared/context/Language";
 import { sectionsData } from '../../assets/sectionsData';
+import Modal from "../../shared/UI/Modal"
+import ConceptItem from "../../concept/ConceptItem"
 
 import './Concept.css';
 function Concept(props) {
-
+    const lang = useContext(LanguageContext);
+    const [open, setOpen] = useState(false);
+    const [select, setSelect] = useState({});
+    const sectionData = lang.dictionary["concept_page"];
     const filteredData = (x) => Object.keys(sectionsData)
         .filter(key => x.includes(key))
         .reduce((obj, key) => {
             obj[key] = sectionsData[key];
             return obj;
         }, {});
+    // const modalHandler = (x) => {
+    //     setSelect(x)
+    //     const data = sectionsData.filter((x) => x['section-id'] === )[0];
+    // }
+    useEffect(() => {
+        console.log(select)
+    }, [select])
+
     return (
         <section className='section_container' id='concept'>
             <div className="section_wrapper concept_wrapper">
@@ -36,7 +49,15 @@ function Concept(props) {
                                     <ConceptSlider autoplay={true} slides={filteredData(item['section-id'])[item['section-id']]} />}
                                 <div className="concept_item_desc">
                                     <p> {item['section-desc'][0].slice(0, 120)}...</p>
-                                    <NavLink className='read_more_btn' to={`/concept/${item['section-id']}`}>Read More</NavLink>
+                                    <Modal show={open}>
+                                        <ConceptItem item={select} close={() => setOpen(false)} />
+                                    </Modal>
+                                    <button className='read_more_btn'
+                                        onClick={() => {
+                                            setOpen(true)
+                                            setSelect(sectionData.filter((x) => x['section-id'] === item['section-id'])[0])
+                                        }}
+                                    >Read More</button>
                                 </div>
                             </div>
 

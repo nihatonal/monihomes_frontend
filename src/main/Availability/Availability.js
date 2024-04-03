@@ -19,6 +19,7 @@ function Availability(props) {
     const [guests, setGuests] = useState();
     const [filtered, setFiltered] = useState();
     const [filter, setFilter] = useState('room')
+    const [events, setEvents] = useState(null);
 
     useEffect(() => {
         const fetchUsers = async () => {
@@ -36,6 +37,26 @@ function Availability(props) {
 
     }, [sendRequest]);
 
+    useEffect(() => {
+        const fetchUsers = async () => {
+            try {
+                const responseData = await sendRequest(
+                    process.env.REACT_APP_BACKEND_URL + "/google",
+                );
+                setEvents(responseData.data.items)
+               
+
+            } catch (err) { }
+        };
+        fetchUsers();
+
+    }, [sendRequest]);
+
+    useEffect(() => {
+        const filtered_events = events && events.filter((el) => el.summary.toLowerCase().includes(filter))
+        // console.log(events && events.filter((el) => el.summary.toLowerCase().includes(filter)))
+    }, [filter, events])
+
     const openAnimation = useSpring({
         // from: { opacity: "0", maxHeight: "270px" },
         // to: { opacity: "1", maxHeight: open ? `705px` : "270px" },
@@ -51,12 +72,15 @@ function Availability(props) {
         if (!dates) return
         share.setDateRange([moment(new Date(dates[0])).format("YYYY/MM/DD"), moment(new Date(dates[1])).format("YYYY/MM/DD")])
     }
+
     useEffect(() => {
         const result = (guests && guests.filter((x) => x.room
             .includes(filter)))
         setFiltered(result)
 
-    }, [filter])
+    }, [filter]);
+
+
 
     return (
         <div className="availability_container" id='availability'>
@@ -89,6 +113,7 @@ function Availability(props) {
                             selectedStart={share.dates[0]}
                             selectedEnd={share.dates[1]}
                             value={share.dates[0]}
+                            events={events && events.filter((el) => el.summary.toLowerCase().includes(filter))}
                         />
 
                     </div>

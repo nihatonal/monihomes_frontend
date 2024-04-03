@@ -39,7 +39,7 @@ function BookCalendar(props) {
                 const responseData = await sendRequest(
                     process.env.REACT_APP_BACKEND_URL + "/getprices",
                 );
-               
+
                 setPriceData(responseData.prices[props.filter === "room" ? 0 : 1].price)
 
             } catch (err) { }
@@ -91,15 +91,32 @@ function BookCalendar(props) {
 
 
 
+    // useEffect(() => {
+    //     const dates = [...new Set([].concat(props.guests && props.guests.map((guest) => expandDates(guest.dates[0], guest.dates[1]).slice(0, -1))))].flat()
+    //     const map = dates.reduce((acc, e) => acc.set(e, (acc.get(e) || 0) + 1), new Map());
+
+    //     const reserved_ = [...map.entries()].filter((a) => a[1] > 2).sort(compare).flat().filter((a) => a !== 3)
+
+    //     setDatess(props.filter === "room" ? reserved_ : dates)
+
+    // }, [props.guests])
+
     useEffect(() => {
-        const dates = [...new Set([].concat(props.guests && props.guests.map((guest) => expandDates(guest.dates[0], guest.dates[1]).slice(0, -1))))].flat()
+        // console.log(props.events)
+        //console.log(props.events && props.events.filter((x) => x.summary.toLowerCase().includes("room")))
+
+        const dates = [...new Set([].concat(props.events && props.events.map((guest) => expandDates(guest.start.date, guest.end.date).slice(0, -1))))].flat()
+
+        //console.log(dates)
         const map = dates.reduce((acc, e) => acc.set(e, (acc.get(e) || 0) + 1), new Map());
-
+        //console.log(map)
         const reserved_ = [...map.entries()].filter((a) => a[1] > 2).sort(compare).flat().filter((a) => a !== 3)
-
+        //console.log(reserved_)
         setDatess(props.filter === "room" ? reserved_ : dates)
 
-    }, [props.guests])
+    }, [props.events, props.filter])
+
+
 
     let breaks = [0]
     for (let i = 0; i < datess.length; i++) {

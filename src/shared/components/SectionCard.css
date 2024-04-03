@@ -114,7 +114,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  
+  cursor: pointer;
 }
 
 @media screen and (max-width: 1000px) {
@@ -129,7 +129,7 @@
     align-items: flex-start;
     justify-content: flex-start;
     order: -1;
-    padding: 20px 20px 20px 20px;
+    padding: 0 20px 20px 20px;
   }
   .section-card-content-title {
     font-size: 30px;
@@ -163,6 +163,5 @@
     position: absolute;
     top: 0;
     right: 20px;
-    
   }
 }
