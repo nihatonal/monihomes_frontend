@@ -22,8 +22,6 @@ function GuestTable(props) {
 
     // const years = Array.from(new Array(6), (val, index) => index + year);
 
-
-
     return (
         <div className='guest_table'>
             <div className='guest_table_header'>

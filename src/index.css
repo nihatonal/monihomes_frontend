@@ -19,6 +19,7 @@ html,
 body {
   height: auto;
   width: 100%;
+  overflow-x: clip;
 }
 a {
   text-decoration: none;

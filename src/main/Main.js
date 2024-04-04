@@ -46,15 +46,15 @@ function Main() {
                 title={lang.dictionary["navlinks"][1]}
             />
             <Availability />
-            {/* <Partners
+            <Partners
                 title={lang.dictionary["partner_title"]}
                 villa_1={lang.dictionary["villa_masal"]}
                 villa_2={lang.dictionary["villa_yoyo"]}
-            /> */}
-            <Concept
+            />
+            {/* <Concept
                 title={lang.dictionary["navlinks"][3]}
                 data={lang.dictionary["concept_page"]}
-            />
+            /> */}
 
             <Contact
                 title={lang.dictionary["navlinks"][4]}

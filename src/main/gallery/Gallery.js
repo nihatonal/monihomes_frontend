@@ -68,11 +68,12 @@ function Gallery(props) {
                 <div className="modal_wrapper"
                     style={{
                         backgroundImage: `linear-gradient(
-                            135deg,
-                            rgba(0, 0, 0, 0.8),
+                            45deg,
+                            rgba(0, 0, 0, 0.2),
                             rgba(0, 0, 0, 0.6)
                           ), url(${bg})`
-                    }}>
+                    }}
+                    >
                     <IoCloseCircleSharp className='close_modal' onClick={() => setShow(false)} />
                     {/* {!gallery && <div className='gallery_monihomes'
                         onClick={() => {

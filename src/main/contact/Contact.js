@@ -12,7 +12,7 @@ function Contact(props) {
     //lang.dictionary["partner_title"]
     return (
         <section className='section_container' id='contact'>
-            <div className="section_wrapper" >
+            <div className="contact_wrapper" >
                 <h3 className="section_title">{props.title}</h3>
                 <div className="contact_content">
                     <div className="contact_info">
