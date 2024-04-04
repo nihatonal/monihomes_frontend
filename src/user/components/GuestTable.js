@@ -1,15 +1,14 @@
-import { React, useEffect, useState } from "react";
+import { React, useState } from "react";
 
 
-import { AiTwotoneDelete } from 'react-icons/ai';
+// import { AiTwotoneDelete } from 'react-icons/ai';
 import { BsFilter } from 'react-icons/bs';
-import { AiOutlineClear } from 'react-icons/ai';
+// import { AiOutlineClear } from 'react-icons/ai';
 import './GuestTable.css'
 function GuestTable(props) {
     const [open, setOpen] = useState('');
-    const [data, setData] = useState([]);
     const [filter, setFilter] = useState(false);
-    const [year, selectedYear] = useState(2023)
+    //const [year, selectedYear] = useState(2023)
     const toggleHandler = (x) => {
         //   console.log(x)
         if (x === open) {
@@ -19,19 +18,9 @@ function GuestTable(props) {
         }
 
     };
-    function compare(a, b) {
-        if (a.dates[0] < b.dates[0]) {
-            return -1;
-        }
-        if (a.dates[0] > b.dates[0]) {
-            return 1;
-        }
-        return 0;
-    }
-    // useEffect(() => {
-    //     setData(props.data)
-    // }, [props.data,props.save]);
-    const years = Array.from(new Array(6), (val, index) => index + year);
+
+
+    // const years = Array.from(new Array(6), (val, index) => index + year);
 
 
 
@@ -47,7 +36,7 @@ function GuestTable(props) {
                 ' onClick={() => setFilter(!filter)}>
                     <BsFilter />
                 </p>
-                <div className="filter_container"
+                {/* <div className="filter_container"
                     style={filter ? { height: '50px' } : { height: '0' }}
                 >
                     <input
@@ -70,45 +59,43 @@ function GuestTable(props) {
                     </select>
 
                     <button onClick={props.clearFilter} className="clear_filter"><AiOutlineClear /></button>
-                </div>
+                </div> */}
             </div>
-            {props.data.sort(compare).map((item, i) =>
-                <div className="guest_table_" key={item.guestname + i}>
+            {props.data && props.data.map((item, i) =>
+                <div className="guest_table_" key={item.id}>
                     <div
                         className='guest_table_item'
                         onClick={() => toggleHandler(i)}
                         style={open === i ? { background: "#226450cf", color: "#fff" } : null}
                     >
-                        {/* {!open ? <IoIosArrowDown /> : <IoIosArrowUp />} */}
+
                         <p className='guest_table_item_title'>{i + 1}</p>
-                        <p className='guest_table_item_title'> {item.room === 'room1' ? "Room 1"
-                            : item.room === 'room2' ? "Room 2"
-                                : item.room === 'room3' ? "Room 3"
+                        <p className='guest_table_item_title'> {props.filter === 'room1' ? "Room 1"
+                            : props.filter === 'room2' ? "Room 2"
+                                : props.filter === 'room3' ? "Room 3"
                                     : "Villa Masal"}</p>
-                        <p className='guest_table_item_title'>{item.dates[0]}</p>
-                        <p className='guest_table_item_title'>{item.dates[1]}</p>
-                       
-                        <p id={item.id} className='delete_btn' onClick={props.onDelete}>
+                        {/* <p className='guest_table_item_title'>{item.summary}</p> */}
+                        <p className='guest_table_item_title'>{item.start.date}</p>
+                        <p className='guest_table_item_title'>{item.end.date}</p>
+
+                        {/* <p id={item.id} className='delete_btn' onClick={props.onDelete}>
                             <AiTwotoneDelete />
-                        </p>
+                        </p> */}
                     </div>
-                    <div className="guest_table_item_content"
+                    {/* <div className="guest_table_item_content"
                         style={open === i ? { display: "flex" } : { display: "none" }}
                     >
                         <div className="guest_table_item_content_item">
                             <p className='guest_table_item_content_item_title'>Müşteri Ad-Soyad: </p>
-                            <p className='guest_table_item_content_item_desc'>{item.guestname}</p>
+                            <p className='guest_table_item_content_item_desc'>{item.summary}</p>
                         </div>
                         <div className="guest_table_item_content_item">
                             <p className='guest_table_item_content_item_title'>Müşteri Tel: </p>
                             <p className='guest_table_item_content_item_desc'>{item.guesttel}</p>
                         </div>
-                        <div className="guest_table_item_content_item">
-                            <p className='guest_table_item_content_item_title'>Not: </p>
-                            <p className='guest_table_item_content_item_desc'>{item.info}</p>
-                        </div>
 
-                    </div>
+
+                    </div> */}
                 </div>
             )}
 
