@@ -117,7 +117,6 @@
 }
 .gallery_content_video {
   grid-area: gallery10;
-
 }
 /*Modal*/
 .modal_wrapper {
@@ -144,7 +143,6 @@
   background-color: var(--color_danger);
 }
 .gallery_monihomes {
-
   background-color: aliceblue;
   width: 200px;
   height: 150px;
@@ -207,5 +205,11 @@
   }
   .gallery_content_item:nth-last-child(6) {
     background-position: top center;
+  }
+  .gallery-title {
+    margin-bottom: 20px;
+  }
+  .gallery_container .section_wrapper {
+    padding: 0;
   }
 }

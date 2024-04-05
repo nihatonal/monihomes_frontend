@@ -1,38 +1,39 @@
-import React, { useState } from 'react';
-import Modal from '../../shared/UI/Modal';
-import { roomsData } from '../../assets/roomsData';
-import GalleryFancyBox from './GalleryFancyBox';
-import { IoCloseCircleSharp } from 'react-icons/io5';
-import gallery_1 from '../../assets/images/room1/room1_1.jpg';
-import gallery_2 from '../../assets/images/monihomes_night.jpg';
-import gallery_3 from '../../assets/images/room3/room3_7.jpg';
-import gallery_4 from '../../assets/images/room3/room3_6.jpg';
-import gallery_5 from '../../assets/images/room1/room1_9.jpg';
-import gallery_6 from '../../assets/images/room2/room2_2.jpg';
-import gallery_7 from '../../assets/images/room2/room2_4.jpg';
-import gallery_8 from '../../assets/images/room3/room3_3.jpg';
-import gallery_9 from '../../assets/images/room2/room2_5.jpg';
+import React from 'react';
+// import Modal from '../../shared/UI/Modal';
+// import { roomsData } from '../../assets/roomsData';
+// import GalleryFancyBox from './GalleryFancyBox';
+// import { IoCloseCircleSharp } from 'react-icons/io5';
+// import gallery_1 from '../../assets/images/room1/room1_1.jpg';
+// import gallery_2 from '../../assets/images/monihomes_night.jpg';
+// import gallery_3 from '../../assets/images/room3/room3_7.jpg';
+// import gallery_4 from '../../assets/images/room3/room3_6.jpg';
+// import gallery_5 from '../../assets/images/room1/room1_9.jpg';
+// import gallery_6 from '../../assets/images/room2/room2_2.jpg';
+// import gallery_7 from '../../assets/images/room2/room2_4.jpg';
+// import gallery_8 from '../../assets/images/room3/room3_3.jpg';
+// import gallery_9 from '../../assets/images/room2/room2_5.jpg';
 
+import ImageGallery from '../../shared/UI/ImageGallery';
 
-import { TfiGallery } from "react-icons/tfi";
+// import { TfiGallery } from "react-icons/tfi";
 import './Gallery.css';
 function Gallery(props) {
 
-    const [bg, setBg] = useState();
-    const [show, setShow] = useState(false);
-    const [gallery, setGallery] = useState(false);
-    const [dataGallery, setDataGallery] = useState([])
-    const bg_data = [gallery_1, gallery_2, gallery_3, gallery_4, gallery_5, gallery_6, gallery_7, gallery_8, gallery_9]
-    const handler = (e) => {
-        setShow(!show);
-        setBg(bg_data[e.target.id.slice(-1) - 1])
-    }
+    // const [bg, setBg] = useState();
+    // const [show, setShow] = useState(false);
+    // const [gallery, setGallery] = useState(false);
+    // const [dataGallery, setDataGallery] = useState([])
+   // const bg_data = [gallery_1, gallery_2, gallery_3, gallery_4, gallery_5, gallery_6, gallery_7, gallery_8, gallery_9]
+    // const handler = (e) => {
+    //     setShow(!show);
+    //     setBg(bg_data[e.target.id.slice(-1) - 1])
+    // }
     return (
         <section className='section_container gallery_container' id='gallery'>
 
             <div className="section_wrapper" >
                 <h3 className="section_title gallery-title">{props.title}</h3>
-                <div className="gallery_content">
+                {/* <div className="gallery_content">
                     <div id="gallery_1" className="gallery_content_item" onClick={handler}>
                         <TfiGallery />
                     </div>
@@ -61,9 +62,10 @@ function Gallery(props) {
                     <div id="gallery_9" className="gallery_content_item" onClick={handler}>
                         <TfiGallery />
                     </div>
-                </div>
+                </div> */}
+                <ImageGallery />
             </div>
-            <Modal show={show}
+            {/* <Modal show={show}
             >
                 <div className="modal_wrapper"
                     style={{
@@ -73,24 +75,15 @@ function Gallery(props) {
                             rgba(0, 0, 0, 0.6)
                           ), url(${bg})`
                     }}
-                    >
+                >
                     <IoCloseCircleSharp className='close_modal' onClick={() => setShow(false)} />
-                    {/* {!gallery && <div className='gallery_monihomes'
-                        onClick={() => {
-                            setGallery(true)
-                            setDataGallery(roomsData)
-                        }
-                        }
-                    >
-                        Monihomes
-                    </div>} */}
                     {<GalleryFancyBox
                         roomsData={roomsData}
                         onClose={() => setGallery(false)}
                     />}
                 </div>
 
-            </Modal>
+            </Modal> */}
         </section >
     );
 }
