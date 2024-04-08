@@ -1,7 +1,7 @@
 import React from 'react';
 
-import SectionCard from '../shared/components/SectionCard';
-import { sectionsData } from '../assets/sectionsData';
+import SectionCard from '../../../shared/components/SectionCard';
+import { sectionsData } from '../../../assets/sectionsData';
 import './Concept.css';
 function ConceptItem(props) {
 

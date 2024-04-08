@@ -4,7 +4,7 @@ import ConceptSlider from '../../shared/UI/ConceptSlider';
 import { LanguageContext } from "../../shared/context/Language";
 import { sectionsData } from '../../assets/sectionsData';
 import Modal from "../../shared/UI/Modal"
-import ConceptItem from "../../concept/ConceptItem"
+import ConceptItem from "./components/ConceptItem"
 
 import './Concept.css';
 function Concept(props) {
