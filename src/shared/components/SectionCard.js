@@ -12,13 +12,14 @@ function SectionCard(props) {
     const buttonHandler = (x) => {
         setDesc(x)
     }
-    const conditions = ["Features", "Özellikler", "howdy"];
+    const conditions = ["Features", "Özellikler", "howdy", "Ücret", "Route", "Маршрут"];
+
     return (
         <div className={`section-card-container ${props.className}`}>
             {/* {props.title_content} */}
 
             <ConceptSlider slides={props.slides} />
-
+           
             <div className="section-card-content"
                 style={cid === 'boat_trip' ? { padding: '0' } : null}>
 
@@ -44,7 +45,9 @@ function SectionCard(props) {
                 </div>}
                 {conditions.some(el => props.buttons.includes(el))
                     && desc === 2 ?
-                    <ul className='section-features'>
+                    <ul className='section-features'
+                        style={props.id === 'boat_trip' ? { gridTemplateColumns: "repeat(2, 1fr)" } : null}
+                    >
                         {props.features.map((item, index) =>
                             <li className="section-desc" key={index}><BsCheckCircle />{item}</li>
                         )}

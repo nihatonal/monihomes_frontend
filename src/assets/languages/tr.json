@@ -86,35 +86,22 @@
       ]
     },
     {
-      "section-title": "Yoyo Tinyhouse",
-      "section-id": "yoyo_tinyhouse",
+      "section-title": "Tekne Turu",
+      "section-id": "boat_trip",
       "section-buttons": [
-        "Odalar",
-        "Lokasyon",
-        "Özellikler"
+        "Bilgi",
+        "Ücret",
+        "Güzergah"
       ],
       "section-desc": [
-        "Yoyo Tinyhouse ile Fethiye'de konaklamak, sıradan tatil deneyimlerinden uzaklaşmak isteyenler için harika bir seçenek. Doğa ile iç içe olmayı, minimalist bir yaşam tarzını deneyimlemeyi ve huzurlu bir atmosferde dinlenmeyi sevenler için idealdir. \n TinyHouse 1+1 ev olarak tasarlanmış olup 4 kişinin konaklamasına uygundur. Geniş verandası ile açık havada yemek yeme ve vakit geçirme imkanı sunmaktadır.",
-        "Yoyo Tinyhouse, şehrin kalabalığından ve gürültüsünden uzakta sakin ve huzurlu bir dinlenme sunuyor. Yerimiz Zincirlikavak'a yakın Çalıca bölgesindedir. \n Ölüdeniz plajına 13 km, Çalış plajına 7,5 km uzaklıktadır."
+        "Fethiye sürat teknesi, 5.50 m. boyunda ve 115 HP4 zamanli motoru ile sizlere eşsiz bir deniz turu sunmaktadır. Teknemiz 24 saat hizmet vermekte olup, maksimum 4 kişi misafir edebilmekteyiz. ",
+        "4 saatlik turumuz 500$ olup, tur saatini uzatmak ekstra ücrete tabidir."
       ],
       "section-features": [
-        "Mutfak",
-        "Hijyen",
-        "Bahçe",
-        "Park",
-        "Ücretsiz Wifi",
-        "Doğa",
-        "Konfor"
+        "Kızıl Ada - Göcek",
+        "İnlice - Göcek koyları"
       ]
-    },
-    {
-      "section-title": "Boat Trip",
-      "section-id": "boat_trip",
-      "section-buttons": [],
-      "section-desc": [
-        "Accommodating with Yoyo Tinyhouse in Fethiye is a great option for those who want to get away from ordinary holiday experiences. It is ideal for those who like to be in touch with nature, experience a minimalist lifestyle and relax in a peaceful atmosphere. \n TinyHouse is designed as a 1+1 house and is suitable for 4 people. It offers the opportunity to dine and spend time outdoors with its large veranda."
-      ],
-      "section-features": []
     }
-  ]
+  ],
+  "read_more":"Devamını Oku"
 }

@@ -7,9 +7,10 @@ import Reviews from './reviews/Reviews';
 import Gallery from './gallery/Gallery';
 import Contact from './contact/Contact';
 import Concept from './concept/Concept';
-// import Partners from './partners/Partners';
+//import Partners from './partners/Partners';
 import profil from '../assets/images/profil.jpeg'
 import Availability from './Availability/Availability';
+import ImageGallery from '../shared/UI/ImageGallery';
 
 import { FloatingWhatsApp } from 'react-floating-whatsapp';
 import './Main.css';
@@ -45,6 +46,7 @@ function Main() {
             <Gallery
                 title={lang.dictionary["navlinks"][1]}
             />
+           
             <Availability />
             {/* <Partners
                 title={lang.dictionary["partner_title"]}

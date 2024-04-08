@@ -1,3 +1,4 @@
-/* .image_gallery_container {
-    padding: 0 150px;
-} */
+.image_gallery_container img {
+  box-shadow: 5px 10px 15px rgba(0, 0, 0, 0.4);
+ padding: 4px;
+}

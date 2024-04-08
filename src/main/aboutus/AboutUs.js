@@ -7,7 +7,7 @@ import location from '../../assets/images/location.png';
 import airconditioner from '../../assets/images/airconditioner.jpeg';
 import wifi from '../../assets/images/wifi.jpg';
 import parking from '../../assets/images/parking.jpeg';
-import profil from '../../assets/images/profil.jpeg';
+import profil from '../../assets/images/ugur_profil.jpeg';
 
 // import visa from '../../assets/icons/visa.png';
 import transfer from '../../assets/icons/transfer.png';

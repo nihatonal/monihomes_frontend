@@ -87,11 +87,20 @@
     {
       "section-title": "Boat Trip",
       "section-id": "boat_trip",
-      "section-buttons": [],
-      "section-desc": [
-        "Accommodating with Yoyo Tinyhouse in Fethiye is a great option for those who want to get away from ordinary holiday experiences. It is ideal for those who like to be in touch with nature, experience a minimalist lifestyle and relax in a peaceful atmosphere. \n TinyHouse is designed as a 1+1 house and is suitable for 4 people. It offers the opportunity to dine and spend time outdoors with its large veranda."
+      "section-buttons": [
+        "Information",
+        "Fee",
+        "Route"
       ],
-      "section-features": []
+      "section-desc": [
+        "Fethiye speedboat offers you a unique sea tour with its 5.50 m length and 115 HP 4-stroke engine. Our boat provides 24-hour service and can accommodate a maximum of 4 people.",
+        "4-hours tour is $500, extending the tour time needs extra fee."
+      ],
+      "section-features": [
+        "Kizil Ada - Gocek",
+        "Inlice - Gocek bays"
+      ]
     }
-  ]
+  ],
+  "read_more":"Read More"
 }

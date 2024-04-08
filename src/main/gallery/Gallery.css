@@ -1,6 +1,7 @@
 .gallery_container {
   padding-top: 100px;
-  background-color: var(--white-color);
+  background-color: white;
+
   border-radius: 350px 0 350px 0;
 }
 .gallery_container .section_wrapper {

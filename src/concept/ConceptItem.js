@@ -12,7 +12,7 @@ function ConceptItem(props) {
             obj[key] = sectionsData[key];
             return obj;
         }, {});
-
+    console.log(props.item['section-id'])
     return (
         <div className='concept-container'>
             <div className="concept-wrapper">
@@ -25,6 +25,7 @@ function ConceptItem(props) {
                     features={props.item['section-features']}
                     video_={sectionsData.video_data[0].video}
                     close={props.close}
+                    id={props.item['section-id']}
                 />
             </div>
         </div>

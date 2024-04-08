@@ -57,7 +57,7 @@ function Concept(props) {
                                             setOpen(true)
                                             setSelect(sectionData.filter((x) => x['section-id'] === item['section-id'])[0])
                                         }}
-                                    >Read More</button>
+                                    >{lang.dictionary["read_more"]}</button>
                                 </div>
                             </div>
 
