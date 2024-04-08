@@ -47,7 +47,7 @@ function Concept(props) {
                                         preload={'true'}
                                     /> :
                                     <ConceptSlider autoplay={true} slides={filteredData(item['section-id'])[item['section-id']]} />}
-                                <div className="concept_item_desc">
+                                <div className={item['section-id'] !== 'boat_trip' ? "concept_item_desc" : "concept_item_desc concept_item_desc_boat"}>
                                     <p> {item['section-desc'][0].slice(0, 120)}...</p>
                                     <Modal show={open}>
                                         <ConceptItem item={select} close={() => setOpen(false)} />

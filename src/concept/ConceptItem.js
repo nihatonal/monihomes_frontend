@@ -12,7 +12,6 @@ function ConceptItem(props) {
             obj[key] = sectionsData[key];
             return obj;
         }, {});
-    console.log(props.item['section-id'])
     return (
         <div className='concept-container'>
             <div className="concept-wrapper">

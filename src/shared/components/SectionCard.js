@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { useParams } from "react-router-dom";
 import { ReactSVG } from 'react-svg';
+import { LanguageContext } from "../../shared/context/Language";
 import ConceptSlider from '../UI/ConceptSlider';
 import VideoPlayer from "react-background-video-player";
 import { BsCheckCircle } from 'react-icons/bs';
-import ArrowLeft from '../../assets/icons/mini_slide_arrow-left.svg'
+import { AiOutlineClose } from "react-icons/ai";
+import { sectionsData } from '../../assets/sectionsData';
 import './SectionCard.css';
 function SectionCard(props) {
     let { cid } = useParams();
@@ -19,12 +21,12 @@ function SectionCard(props) {
             {/* {props.title_content} */}
 
             <ConceptSlider slides={props.slides} />
-           
+
             <div className="section-card-content"
                 style={cid === 'boat_trip' ? { padding: '0' } : null}>
 
                 <div className="back_btn" onClick={props.close}>
-                    <ReactSVG src={ArrowLeft} />
+                    <AiOutlineClose />
                 </div>
                 <h3 className="section-card-content-title"
                     style={cid === 'boat_trip' ? { padding: '0 0 30px 20px' } : null}
@@ -57,7 +59,7 @@ function SectionCard(props) {
                         {cid === 'boat_trip' && <div className="video_wrapper">
                             <VideoPlayer
                                 className="video_concept"
-                                src={props.video_}
+                                src={sectionsData.video_data[1].video}
                                 autoPlay={true}
                                 muted={true}
                                 loop={true}

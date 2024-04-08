@@ -75,6 +75,7 @@ export default class ConceptSlider extends Component {
                             <img src={slider.image} alt={index} key={index} />
                         </div>
                     )}
+                    
                 </Slider>
                 <div className="slide-arrow-wrapper">
                     <button className={this.state.current < 1 ? "slide-arrow-btn disable_btn" : "slide-arrow-btn"}
