@@ -9,7 +9,8 @@ import {
 
 } from "../../shared/util/validators.js";
 import { useForm } from "../../shared/hooks/form-hook";
-import BookCalendar from '../../shared/UI/BookCalendar'
+import BookCalendar from '../../shared/UI/BookCalendar';
+import PriceTable from './PriceTable'
 
 
 import './SetPrice.css';
@@ -22,7 +23,9 @@ function SetPrice(props) {
     const [filtered, setFiltered] = useState([]);
     const [dates, setDates] = useState([]);
     const [filter, setFilter] = useState();
-    const [selected, setSelected] = useState()
+    const [priceOption, setPriceOption] = useState();
+    const [selected, setSelected] = useState();
+    const [priceList, setPriceList] = useState([])
     const [formState, inputHandler] = useForm(
         {
             start_date: {
@@ -50,13 +53,26 @@ function SetPrice(props) {
                 );
 
                 setPriceData(responseData.prices[filter].price)
-                console.log(responseData.prices[filter].price);
+                // console.log(responseData.prices[filter].price);
                 setSelected(responseData.prices[filter]._id)
             } catch (err) { }
         };
         fetchUsers();
 
     }, [sendRequest, isLoading, filter]);
+    useEffect(() => {
+        const result = Object.values(priceData.reduce((acc, { date, price }) => {
+            if (!acc[price]) {
+                acc[price] = { price, date: [] };
+            }
+            acc[price].date.push(date);
+            return acc;
+        }, {}));
+        setPriceList(result)
+        console.log(result)
+    }, [priceData])
+
+
     function expandDates(startDate, stopDate) {
         let dateArray = [];
         let currentDate = moment(new Date(startDate));
@@ -119,7 +135,7 @@ function SetPrice(props) {
                     "Content-Type": "application/json",
                 }
             );
-            console.log(responseData);
+            // console.log(responseData);
             setIsLoading(false)
 
         } catch (err) {
@@ -136,49 +152,66 @@ function SetPrice(props) {
                         onClick={(e) => setFilter(1)}
                     >Villa Masal</button>
                 </div>
-                <h3>Fiyat Kaydı</h3>
-                <form className="inputs_container" onSubmit={submitHandler}>
+                <div className="filter_room">
+                    <button className={priceOption === 0 ? `filter_btn active_filter_btn` : `filter_btn`}
+                        onClick={(e) => setPriceOption(0)}
+                    >Fiyat Listesi</button>
+                    <button className={priceOption === 1 ? `filter_btn active_filter_btn` : `filter_btn`}
+                        onClick={(e) => setPriceOption(1)}
+                    >Fiyat Kaydı</button>
+                </div>
 
-                    <Input
-                        id="start_date"
-                        element="input"
-                        type="date"
-                        label='Start'
-                        placeholder="Start Date of price"
-                        validators={[VALIDATOR_REQUIRE()]}
-                        onInput={inputHandler}
+                <div className="price_content_wrapper">
+                    {priceOption === 0 ? <div className="price_content_item">
+                        <h3>Fiyat Listesi</h3>
+                        <PriceTable data={priceList}/>
+                    </div> :
+                        <div className="price_content_item">
+                            <h3>Fiyat Kaydı</h3>
+                            <form className="inputs_container" onSubmit={submitHandler}>
 
-                    />
-                    <Input
-                        id="end_date"
-                        element="input"
-                        type="date"
-                        label='End'
-                        placeholder="End Date of price"
-                        validators={[VALIDATOR_REQUIRE()]}
-                        onInput={inputHandler}
+                                <Input
+                                    id="start_date"
+                                    element="input"
+                                    type="date"
+                                    label='Start'
+                                    placeholder="Start Date of price"
+                                    validators={[VALIDATOR_REQUIRE()]}
+                                    onInput={inputHandler}
 
-                    />
-                    <Input
-                        id="price"
-                        element="input"
-                        type="text"
-                        label='Price'
-                        placeholder="Write the price"
-                        validators={[VALIDATOR_REQUIRE()]}
-                        onInput={inputHandler}
+                                />
+                                <Input
+                                    id="end_date"
+                                    element="input"
+                                    type="date"
+                                    label='End'
+                                    placeholder="End Date of price"
+                                    validators={[VALIDATOR_REQUIRE()]}
+                                    onInput={inputHandler}
 
-                    />
+                                />
+                                <Input
+                                    id="price"
+                                    element="input"
+                                    type="text"
+                                    label='Price'
+                                    placeholder="Write the price"
+                                    validators={[VALIDATOR_REQUIRE()]}
+                                    onInput={inputHandler}
 
-                    <button
-                        type="submit"
-                        className={'save_btn'}
-                        style={{ marginTop: "20px" }}
-                        disabled={!formState.inputs.price.isValid}
-                    >
-                        {isLoading ? <LoadingSpinner /> : 'Save'}
-                    </button>
-                </form>
+                                />
+
+                                <button
+                                    type="submit"
+                                    className={'save_btn'}
+                                    style={{ marginTop: "20px" }}
+                                    disabled={!formState.inputs.price.isValid}
+                                >
+                                    {isLoading ? <LoadingSpinner /> : 'Save'}
+                                </button>
+                            </form>
+                        </div>}
+                </div>
             </div>
             {/* <DeleteModal
                 show={props.show}
@@ -192,7 +225,8 @@ function SetPrice(props) {
                     filter={filter === 0 ? "room" : "villamasal"}
                 />
             </div>
-        </div>
+
+        </div >
     );
 }
 

@@ -22,9 +22,9 @@ function Concept(props) {
     //     setSelect(x)
     //     const data = sectionsData.filter((x) => x['section-id'] === )[0];
     // }
-    useEffect(() => {
-        console.log(select)
-    }, [select])
+    // useEffect(() => {
+    //     console.log(select)
+    // }, [select])
 
     return (
         <section className='section_container' id='concept'>

@@ -1,0 +1,79 @@
+.price_list_container {
+  width: 100%;
+  margin-top: 20px;
+}
+.price_list_wrapper {
+  width: 400px;
+}
+.price_list_filter_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+}
+.price_list_filter_options_items {
+  display: flex;
+  column-gap: 10px;
+  width: 160px;
+}
+.price_list_filter_option_item {
+  font-family: var(--Nunito_Sans);
+  font-weight: 600;
+  font-size: 14px;
+  color: var(--primary-color);
+  cursor: pointer;
+  width: 40px;
+  text-align: center;
+}
+.price_list_filter_options_info {
+  font-family: var(--Nunito_Sans);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--third-color);
+}
+.price_list_filter_option_indicater {
+  height: 3px;
+  background-color: #ebf0f3;
+}
+.price_list_filter_option_indicater span {
+  height: 3px;
+  width: 40px;
+  display: block;
+  position: relative;
+  left: 0;
+  background-color: orange;
+  transition: all 0.3s;
+}
+
+.price_list_items {
+  display: flex;
+  flex-direction: column;
+  row-gap: 4px;
+  margin-top: 20px;
+}
+.price_list_item {
+  font-family: var(--Nunito_Sans);
+  background-color: #ebf0f3;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 10px 12px;
+  row-gap: 2px;
+}
+.price_list_item_dates {
+  font-size: 16px;
+  font-weight: 600;
+}
+.price_list_item_info {
+  font-size: 14px;
+  color: rgb(167, 167, 167);
+  grid-column: 1;
+}
+.price_list_item_price {
+  font-size: 16px;
+  font-weight: 600;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+  text-align: right;
+}
