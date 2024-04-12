@@ -68,6 +68,9 @@
   flex-direction: column;
   row-gap: 4px;
   margin-top: 20px;
+  overflow-y: scroll;
+  height: 465px;
+  padding: 0 10px;
 }
 .price_list_item {
   font-family: var(--Nunito_Sans);
@@ -128,4 +131,26 @@
   .price_list_wrapper {
     width: 100%;
   }
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+  cursor: pointer;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  background: var(--secondary-color);
 }

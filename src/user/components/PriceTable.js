@@ -8,6 +8,7 @@ import axios from 'axios';
 import { useHttpClient } from "../../shared/hooks/http-hook";
 import PulseLoader from "react-spinners/PulseLoader";
 
+
 import './PriceTable.css'
 function PriceTable(props) {
     const { sendRequest, isLoading } = useHttpClient();
