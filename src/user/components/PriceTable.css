@@ -1,15 +1,33 @@
 .price_list_container {
-  width: 100%;
-  margin-top: 20px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .price_list_wrapper {
   width: 400px;
+}
+.price_loading {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30%;
+}
+.filter_room {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  margin: 40px 0;
 }
 .price_list_filter_wrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 0 12px;
+  margin-top: 20px;
 }
 .price_list_filter_options_items {
   display: flex;
@@ -76,4 +94,38 @@
   grid-row: 1 / span 2;
   align-self: center;
   text-align: right;
+}
+.filter_btn {
+  font-family: var(--Nunito_Sans);
+  font-weight: bold;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 40px;
+  border-radius: 50px;
+  border: 1px solid rgba(34, 100, 80, 0.61);
+  color: rgba(34, 100, 80, 0.91);
+  background-color: #fff;
+  cursor: pointer;
+}
+.filter_btn:hover {
+  color: #fff;
+  background-color: rgba(34, 100, 80, 0.61);
+}
+
+.active_filter_btn {
+  color: #fff;
+  background-color: rgba(34, 100, 80, 0.61);
+  /* transition: all 0.2s; */
+}
+.active_filter_btn:hover {
+  color: #fff;
+  background-color: rgba(34, 100, 80, 0.61);
+}
+@media screen and (max-width: 767px) {
+  .price_list_container {
+    padding: 0 30px;
+  }
+  .price_list_wrapper {
+    width: 100%;
+  }
 }

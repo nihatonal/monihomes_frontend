@@ -1,11 +1,9 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 import { useParams } from "react-router-dom";
-import { ReactSVG } from 'react-svg';
-import { LanguageContext } from "../../shared/context/Language";
+
 import ConceptSlider from '../UI/ConceptSlider';
 import VideoPlayer from "react-background-video-player";
 import { BsCheckCircle } from 'react-icons/bs';
-import { AiOutlineClose } from "react-icons/ai";
 import { sectionsData } from '../../assets/sectionsData';
 import './SectionCard.css';
 function SectionCard(props) {
@@ -25,9 +23,6 @@ function SectionCard(props) {
             <div className="section-card-content"
                 style={cid === 'boat_trip' ? { padding: '0' } : null}>
 
-                <div className="back_btn" onClick={props.close}>
-                    <AiOutlineClose />
-                </div>
                 <h3 className="section-card-content-title"
                     style={cid === 'boat_trip' ? { padding: '0 0 30px 20px' } : null}
                 >{props.title}</h3>

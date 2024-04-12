@@ -53,13 +53,13 @@ function SetPrice(props) {
                 );
 
                 setPriceData(responseData.prices[filter].price)
-                // console.log(responseData.prices[filter].price);
                 setSelected(responseData.prices[filter]._id)
             } catch (err) { }
         };
         fetchUsers();
 
     }, [sendRequest, isLoading, filter]);
+    
     useEffect(() => {
         const result = Object.values(priceData.reduce((acc, { date, price }) => {
             if (!acc[price]) {
@@ -69,7 +69,7 @@ function SetPrice(props) {
             return acc;
         }, {}));
         setPriceList(result)
-        console.log(result)
+       
     }, [priceData])
 
 
@@ -144,14 +144,7 @@ function SetPrice(props) {
     return (
         <div className="add_guest_wrapper" style={{ margin: "20px" }}>
             <div className='price_add_wrapper'>
-                <div className="filter_room">
-                    <button className={filter === 0 ? `filter_btn active_filter_btn` : `filter_btn`}
-                        onClick={(e) => setFilter(0)}
-                    >Moni Homes</button>
-                    <button className={filter === 1 ? `filter_btn active_filter_btn` : `filter_btn`}
-                        onClick={(e) => setFilter(1)}
-                    >Villa Masal</button>
-                </div>
+                
                 <div className="filter_room">
                     <button className={priceOption === 0 ? `filter_btn active_filter_btn` : `filter_btn`}
                         onClick={(e) => setPriceOption(0)}
@@ -160,6 +153,14 @@ function SetPrice(props) {
                         onClick={(e) => setPriceOption(1)}
                     >Fiyat Kaydı</button>
                 </div>
+                {priceOption === 1 && <div className="filter_room">
+                    <button className={filter === 0 ? `filter_btn active_filter_btn` : `filter_btn`}
+                        onClick={(e) => setFilter(0)}
+                    >Moni Homes</button>
+                    <button className={filter === 1 ? `filter_btn active_filter_btn` : `filter_btn`}
+                        onClick={(e) => setFilter(1)}
+                    >Villa Masal</button>
+                </div>}
 
                 <div className="price_content_wrapper">
                     {priceOption === 0 ? <div className="price_content_item">

@@ -11,6 +11,7 @@ import Concept from './concept/Concept';
 import profil from '../assets/images/profil.jpeg'
 import Availability from './Availability/Availability';
 import ImageGallery from '../shared/UI/ImageGallery';
+import Price from './price/Price';
 
 import { FloatingWhatsApp } from 'react-floating-whatsapp';
 import './Main.css';
@@ -35,6 +36,7 @@ function Main() {
     return (
         <div className="main_container">
             <Hero />
+            <Price />
             <AboutUs
                 title={lang.dictionary["navlinks"][0]}
             />
@@ -46,7 +48,7 @@ function Main() {
             <Gallery
                 title={lang.dictionary["navlinks"][1]}
             />
-           
+
             <Availability />
             {/* <Partners
                 title={lang.dictionary["partner_title"]}
