@@ -104,5 +104,6 @@
   ],
   "read_more":"Read More",
   "price_info":"Minimum 4 nights stay",
-  "price_night":"Per night"
+  "price_night":"Per night",
+  "price_btn": "Price List"
 }

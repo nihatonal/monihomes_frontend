@@ -125,7 +125,7 @@ function PriceTable(props) {
                     {priceList && priceList.map((item) =>
                         <div className="price_list_item" key={item.date[0]}>
                             <div className="price_list_item_dates">
-                                {moment(item.date[0]).locale(lang.userLanguage).format("DD MMMM")} - {moment(item.date[item.date.length - 1]).format("DD MMMM YYYY")}
+                                {moment(item.date[0]).locale(lang.userLanguage).format("DD MMM")} - {moment(item.date[item.date.length - 1]).format("DD MMM YYYY")}
                             </div>
                             <div className="price_list_item_info">{lang.dictionary["price_info"]}</div>
                             <div className="price_list_item_price">{

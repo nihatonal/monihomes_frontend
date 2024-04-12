@@ -103,7 +103,8 @@
       ]
     }
   ],
-  "read_more":"Devamını Oku",
-  "price_info":"Minimum 4 gece konaklama",
-  "price_night":"Gecelik"
+  "read_more": "Devamını Oku",
+  "price_info": "Minimum 4 gece konaklama",
+  "price_night": "Gecelik",
+  "price_btn": "Fiyatlar"
 }

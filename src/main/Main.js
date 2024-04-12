@@ -36,7 +36,7 @@ function Main() {
     return (
         <div className="main_container">
             <Hero />
-            <Price />
+            <Price price_btn={lang.dictionary["price_btn"]} />
             <AboutUs
                 title={lang.dictionary["navlinks"][0]}
             />

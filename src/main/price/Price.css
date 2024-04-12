@@ -15,17 +15,17 @@
   background-color: var(--secondary-color);
   color: #fff;
   padding: 10px 36px;
-  width: 150px;
+  width: 160px;
   transform: rotate(-90deg);
   cursor: pointer;
   position: absolute;
-  right: -60px;
+  right: -65px;
   top: 0;
   border-radius: 20px 20px 0 0;
-  transition: all 0.3s;
+  transition: all 0.2s;
 }
 .price_modal button:hover {
-  right: -50px;
+  right: -60px;
 }
 .price_close {
   position: absolute;

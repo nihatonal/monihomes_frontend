@@ -10,7 +10,7 @@ function Price(props) {
         <div className="price_modal">
             <button 
             onClick={() => setOpenPrice(!openPrice)}
-            >Price List
+            >{props.price_btn}
             </button>
             <Modal show={openPrice} onClose={() => setOpenPrice(false)}>
                 <PriceTable />
