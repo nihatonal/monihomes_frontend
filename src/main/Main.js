@@ -65,13 +65,17 @@ function Main() {
             />
 
             <FloatingWhatsApp
-                phoneNumber='+90 530 899 77 09'
+                phoneNumber='+905308997709'
                 accountName='Moni Homes'
                 avatar={profil}
                 statusMessage={lang.dictionary['whatsup_status']}
                 chatMessage={lang.dictionary['whatsup_message']}
                 placeholder={lang.dictionary['whatsup_placeholder']}
                 buttonClassName={!scrolled ? "social_out whatsup_btn" : "social_in whatsup_btn"}
+                allowEsc
+                allowClickAway
+                notification
+                notificationSound
             />
         </div>
     );
