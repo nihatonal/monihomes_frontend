@@ -65,7 +65,7 @@ function Main() {
             />
 
             <FloatingWhatsApp
-                phoneNumber='+905308997709'
+                phoneNumber='905308997709'
                 accountName='Moni Homes'
                 avatar={profil}
                 statusMessage={lang.dictionary['whatsup_status']}

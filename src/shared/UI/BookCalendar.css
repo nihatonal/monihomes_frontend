@@ -250,9 +250,8 @@ abbr {
   color: #ffffffd8;
 }
 .selected {
-  color: #fff;
   background: rgba(34, 100, 80, 0.7);
-  color: #ffffffd8;
+  color: rgb(17, 80, 61);
 }
 .selected-check-out {
   background: linear-gradient(
@@ -260,7 +259,7 @@ abbr {
     var(--color_danger) 0 50%,
     rgba(34, 100, 80, 0.7) 50% 100%
   );
-  color: #ffffffd8;
+  color: rgb(17, 80, 61);
 }
 .selected-check-out-null {
   background: linear-gradient(
@@ -268,7 +267,7 @@ abbr {
     #fff 0 50%,
     rgba(34, 100, 80, 0.7) 50% 100%
   );
-  color: #ffffffd8;
+  color: rgb(17, 80, 61);
 }
 .selected-check-in {
   background: linear-gradient(
@@ -276,7 +275,7 @@ abbr {
     rgba(34, 100, 80, 0.7) 0 50%,
     var(--color_danger) 50% 100%
   );
-  color: #ffffffd8;
+  color: rgb(17, 80, 61);
 }
 .selected-check-in-null {
   background: linear-gradient(
@@ -284,7 +283,7 @@ abbr {
     rgba(34, 100, 80, 0.7) 0 50%,
     #fff 50% 100%
   );
-  color: #ffffffd8;
+  color:  rgb(17, 80, 61);
 }
 
 .calendar-btns-wrapper {
