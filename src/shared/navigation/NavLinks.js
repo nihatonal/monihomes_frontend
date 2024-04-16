@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
 import { NavLink, useNavigate } from "react-router-dom";
 import { LanguageContext } from "../context/Language";
+import Price from '../components/Price'
 import './NavLinks.css';
 function NavLinks(props) {
     const lang = useContext(LanguageContext);
@@ -70,6 +71,7 @@ function NavLinks(props) {
                     {lang.dictionary["navlinks"][4]}
                 </NavLink>
             </div>
+            <Price price_btn={lang.dictionary["price_btn"]} />
 
 
         </div >

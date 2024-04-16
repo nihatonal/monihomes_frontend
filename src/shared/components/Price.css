@@ -1,0 +1,47 @@
+.price_modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.price_modal button {
+  font-family: var(--Nunito_Sans);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--black-color);
+  background: none;
+  padding: 2px 20px;
+  color: var(--black-color);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+  border: 1px solid rgba(0, 0, 0, 0);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+  border: 1px solid #91ccaf;
+}
+.price_modal button:hover {
+  box-shadow: 0 0 8px var(--secondary-color);
+  border: 1px solid #91ccaf;
+  color: var(--secondary-color);
+}
+.price_close {
+  position: absolute;
+  right: 10%;
+  top: 15%;
+  cursor: pointer;
+}
+@media screen and (max-width: 567px) {
+  .price_close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+  .sidedrawer-navlinks .price_modal button {
+    margin: 15px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+  .price_modal button {
+    font-size: 10px;
+    padding: 1px 10px;
+  }
+}

@@ -18,7 +18,10 @@ function MainNavigation(props) {
     const openDrawerHandler = () => {
         setDrawerIsOpen(!drawerIsOpen);
     };
-    const closeDrawerHandler = () => {
+    const closeDrawerHandler = (e) => {
+        e.preventDefault();
+        if (e.target.id === "price_btn") return
+        console.log(e.target.id)
         setDrawerIsOpen(false);
     };
 
@@ -77,7 +80,10 @@ function MainNavigation(props) {
                     show={drawerIsOpen}
                     onClick={openDrawerHandler}
                 />
-                <NavLink to='/' onClick={() => scrollSmoothTo('hero')}>
+                <NavLink to='/' onClick={() => {
+                    scrollSmoothTo('hero')
+                    setDrawerIsOpen(false);
+                }}>
                     <img src={logo} alt='logo' className='logo' />
                 </NavLink>
 

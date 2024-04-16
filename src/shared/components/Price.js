@@ -7,9 +7,9 @@ function Price(props) {
     const [openPrice, setOpenPrice] = useState(false)
 
     return (
-        <div className="price_modal">
-            <button 
-            onClick={() => setOpenPrice(!openPrice)}
+        <div className="price_modal" >
+            <button id={'price_btn'}
+                onClick={() => setOpenPrice(!openPrice)}
             >{props.price_btn}
             </button>
             <Modal show={openPrice} onClose={() => setOpenPrice(false)}>
