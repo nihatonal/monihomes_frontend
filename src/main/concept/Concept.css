@@ -156,6 +156,9 @@
     padding: 10px 20px;
     row-gap: 10px;
   }
+  .read_more_btn {
+    padding-right: 10px;
+  }
   .concept_items {
     width: 100%;
     row-gap: 20px;
