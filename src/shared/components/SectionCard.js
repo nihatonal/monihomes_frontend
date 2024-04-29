@@ -12,7 +12,7 @@ function SectionCard(props) {
     const buttonHandler = (x) => {
         setDesc(x)
     }
-    const conditions = ["Features", "Özellikler", "howdy", "Ücret", "Route", "Маршрут"];
+    const conditions = ["Features", "Özellikler", "Особенности", "howdy", "Ücret", "Route", "Маршрут"];
 
     return (
         <div className={`section-card-container ${props.className}`}>

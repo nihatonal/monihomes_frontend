@@ -62,7 +62,7 @@ function MainNavigation(props) {
 
             {drawerIsOpen && <Backdrop onClick={closeDrawerHandler} />}
             {
-                <SideDrawer show={drawerIsOpen} onClick={closeDrawerHandler}
+                <SideDrawer show={drawerIsOpen}
                     style={{ top: '80px', paddingTop: '100px' }}
                 >
                     <NavLinks

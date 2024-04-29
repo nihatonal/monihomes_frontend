@@ -71,7 +71,7 @@ function NavLinks(props) {
                     {lang.dictionary["navlinks"][4]}
                 </NavLink>
             </div>
-            <Price price_btn={lang.dictionary["price_btn"]} />
+            <Price price_btn={lang.dictionary["price_btn"]} onClick={props.closeDrawer}/>
 
 
         </div >

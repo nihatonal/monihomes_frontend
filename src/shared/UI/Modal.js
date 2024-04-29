@@ -25,7 +25,7 @@ const Modal = props => {
         </CSSTransition>
     );
 
-    return ReactDOM.createPortal(content, document.getElementById('drawer-hook'));
+    return ReactDOM.createPortal(content, document.getElementById('modal-hook'));
 };
 
 export default Modal;

@@ -81,6 +81,9 @@
   padding: 10px 12px;
   row-gap: 2px;
 }
+.price_list_item:nth-child(odd) {
+  background-color: #d3e2eb;
+}
 .price_list_item_dates {
   font-size: 16px;
   font-weight: 600;

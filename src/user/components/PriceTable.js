@@ -47,6 +47,7 @@ function PriceTable(props) {
                 );
 
                 setPriceData(responseData.prices[filter].price)
+                //console.log(responseData.prices[filter].price)
 
             } catch (err) { }
         };
@@ -55,14 +56,42 @@ function PriceTable(props) {
     }, [sendRequest, filter]);
 
     useEffect(() => {
-        const result = Object.values(priceData.reduce((acc, { date, price }) => {
-            if (!acc[price]) {
-                acc[price] = { price, date: [] };
-            }
-            acc[price].date.push(date);
-            return acc;
-        }, {}));
-        setPriceList(result)
+        let groupKey = 2,
+            groups = priceData.reduce(function (r, o) {
+                var m = o.date.split(('/'))[1];
+                (r[m]) ? r[m].data.push(o) : r[m] = { group: String(groupKey++), data: [o] };
+                return r;
+            }, {});
+
+
+        const months = Object.keys(groups).map(function (k) { return groups[k]; });
+        const sonuc = months.map((el) =>
+            Object.values(el.data.reduce((acc, { date, price }) => {
+                if (!acc[price]) {
+                    acc[price] = { price, date: [] };
+                }
+                acc[price].date.push(date);
+                return acc;
+            }, {}))
+
+        )
+        // const result = Object.values(priceData.reduce((acc, { date, price }) => {
+        //     if (!acc[price]) {
+        //         acc[price] = { price, date: [] };
+        //     }
+        //     acc[price].date.push(date);
+        //     return acc;
+        // }, {}));
+
+
+
+        const lastone = sonuc.flat().sort(function (a, b) {
+            // Turn your strings into dates, and then subtract them
+            // to get a value that is either negative, positive, or zero.
+            return new Date(b.date[0]) - new Date(a.date[0]);
+        }).reverse();
+       // console.log(lastone.filter((x) => x.price !== "*"))
+        setPriceList(lastone.filter((x) => x.price !== "*"))
 
     }, [priceData])
     return (

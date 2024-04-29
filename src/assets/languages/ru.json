@@ -42,46 +42,46 @@
       "section-title": "Monihomes",
       "section-id": "monihomes",
       "section-buttons": [
-        "Rooms",
-        "Location",
-        "Features"
+        "Номер",
+        "Расположение",
+        "Особенности"
       ],
       "section-desc": [
-        "You will feel yourself at home in this small cozy apart hotel. Kitchen, iron, parking lot, wifi.. In short, we are ready to meet your every need. Our rooms are for 3 people and 2 of our rooms have balconies. And We have free car parking for our guests.",
-        "Our hotel is located exactly in the city center. The beaches are 10 minutes away by public transport. The coastal walking path is 3 minutes away, and you can shop on the historical Paspatur street, and you can enjoy an incredible seafood in the famous fish market."
+        "В этом небольшом уютном апарт-отеле вы почувствуете себя как дома. Кухня, утюг, парковка, Wi-Fi.. Одним словом, мы готовы удовлетворить любые ваши потребности. Наши номера рассчитаны на 3 человек, в 2 номерах есть балконы. И у нас есть бесплатная парковка для наших гостей.",
+        "Наш отель расположен ровно в центре города. Пляжи находятся в 10 минутах езды на общественном транспорте. Прибрежная пешеходная дорожка находится в 3 минутах ходьбы, вы можете делать покупки на исторической улице Паспатур и наслаждаться невероятными морепродуктами на знаменитом рыбном рынке."
       ],
       "section-features": [
-        "Caring host",
-        "Kitchens",
-        "Air-conditioner",
-        "Free wifi",
-        "City center",
-        "Parking",
-        "washing and dryer machine"
+        "Заботливый хозяин",
+        "Кухня",
+        "Кондиционер",
+        "Bай-фай",
+        "Центр города",
+        "Парковка",
+        "Cтиральная и сушильная машина"
       ]
     },
     {
       "section-title": "Villa Masal",
       "section-id": "villamasal",
       "section-buttons": [
-        "Villa",
-        "Location",
-        "Features"
+        "Вилла",
+        "Расположение",
+        "Особенности"
       ],
       "section-desc": [
-        "It consists of stone architecture suitable for the texture of the region. The interior of the villa, which serves with very comfortable garden furniture, a lodge positioned by the pool and a mini playground for the use of our little guests, also has a very spacious structure. There is also a jacuzzi in one bedroom and you can enjoy the sauna and fireplace with your loved ones.",
-        "Our location is Fethiye Cenger neighborhood. You are in the right place to start the day with the sounds of birds and enjoy the sun, the nature and the pool, away from the hustle and bustle of the city.\n An important reminder: In order to have a comfortable holiday, you need to do your shopping before going to the villa, because the nearest market is 12 KM away."
+        "Вилла состоит из каменной архитектуры, подходящей к фактуре региона. Интерьер виллы с очень удобной садовой мебелью, домиком у бассейна и мини-игровой площадкой для наших маленьких гостей также имеет очень просторную структуру. В одной спальне также есть джакузи, и вы можете насладиться сауной и камином со своими близкими.",
+        "Наше местоположение — район Фетхие Ченгер. Вы находитесь в правильном месте, чтобы начать день под звуки птиц и насладиться солнцем, природой и бассейном, вдали от городского шума и суеты.\n Важное напоминание: для комфортного отдыха, Прежде чем отправиться на виллу, вам нужно сделать покупки, потому что ближайший рынок находится в 12 км."
       ],
       "section-features": [
-        "Pool",
-        "Sauan",
-        "Jacuzzi",
-        "Two Bathrooms",
-        "Fireplace",
-        "Kitchen",
-        "Quiet",
-        "Children's Playground",
-        "Nature"
+        "Бассейн",
+        "Сауна",
+        "Джакузи",
+        "Два санузла",
+        "Камин",
+        "Кухня",
+        "Тихо",
+        "Детская площадка",
+        "Природа"
       ]
     },
     {

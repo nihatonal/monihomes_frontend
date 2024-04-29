@@ -227,7 +227,7 @@ function BookCalendar(props) {
 
                     }}
                     tileContent={({ date, view }) =>
-                        priceData.map((el) => el.date === moment(date).format("YYYY/MM/DD") ? <p key={el.date}>{el.price} ₺</p> : null)
+                        priceData.map((el) => el.date === moment(date).format("YYYY/MM/DD") ? <p key={el.date}>{el.price === "*" ? " " : el.price + "₺"} </p> : null)
 
                     }
 
