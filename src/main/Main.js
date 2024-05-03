@@ -24,7 +24,7 @@ function Main() {
         threshold: 0.5,
         rootMargin: "-35px",
     });
-    console.log(inView && "asd")
+
     useEffect((_) => {
         const handleScroll = (_) => {
             if (window.pageYOffset > 90 && !inView) {

@@ -50,7 +50,7 @@ function Concept(props) {
 
                             </div>
                             <div className={"concept_item_desc"}>
-                                <p> {item['section-desc'][0].slice(0, 144)}...</p>
+                                <p> {item['section-desc'][0].slice(0, 132)}...</p>
                                 <Modal show={open} onClose={() => setOpen(false)}>
                                     <ConceptItem item={select} close={() => setOpen(false)} />
                                 </Modal>
