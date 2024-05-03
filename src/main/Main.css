@@ -6,5 +6,6 @@
 
 
 .styles-module_whatsappButton__tVits {
-  z-index: 95;
+  z-index: 99;
+  right: 10px;
 }

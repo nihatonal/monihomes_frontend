@@ -21,7 +21,6 @@ function MainNavigation(props) {
     const closeDrawerHandler = (e) => {
         e.preventDefault();
         if (e.target.id === "price_btn") return
-        console.log(e.target.id)
         setDrawerIsOpen(false);
     };
 

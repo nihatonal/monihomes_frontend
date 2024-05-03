@@ -11,7 +11,7 @@ function Contact(props) {
     const lang = useContext(LanguageContext);
     //lang.dictionary["partner_title"]
     return (
-        <section className='section_container' id='contact'>
+        <section className='section_container' id='contact' >
             <div className="contact_wrapper" >
                 <h3 className="section_title">{props.title}</h3>
                 <div className="contact_content">

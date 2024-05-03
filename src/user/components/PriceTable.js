@@ -92,7 +92,7 @@ function PriceTable(props) {
         }).reverse();
        // console.log(lastone.filter((x) => x.price !== "*"))
         setPriceList(lastone.filter((x) => x.price !== "*"))
-
+        
     }, [priceData])
     return (
         <div className='price_list_container'>

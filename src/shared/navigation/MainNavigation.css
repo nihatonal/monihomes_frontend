@@ -104,7 +104,8 @@
     margin: 0 6px;
   }
   .socialbar_wrapper span:nth-child(3),
-  .socialbar_wrapper span:nth-child(5) {
+  .socialbar_wrapper span:nth-child(5),
+  .socialbar_wrapper span:nth-child(7) {
     display: block;
     width: 10px;
     height: 3px;
@@ -114,6 +115,10 @@
 .sidedrawer-navlinks {
   display: block;
   width: 100%;
+}
+.side-drawer #price_btn {
+color: var(--secondary-color);
+font-size: 1rem;
 }
 .sidedrawer-navlink_wrapper {
   text-align: center;

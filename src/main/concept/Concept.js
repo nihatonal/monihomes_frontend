@@ -35,7 +35,7 @@ function Concept(props) {
                     {props.data.map((item, index) =>
                         <div className="concept_item" key={index}>
                             <h4 className='concept_name'>{item['section-title']}</h4>
-                            <div className="concept_item_content">
+                            <div className={item['section-id'] === 'boat_trip' ? "concept_item_content concept_boat" : "concept_item_content "}>
                                 {item['section-id'] === 'boat_trip' ?
                                     <VideoPlayer
                                         className="video"
@@ -47,18 +47,19 @@ function Concept(props) {
                                         preload={'true'}
                                     /> :
                                     <ConceptSlider autoplay={true} slides={filteredData(item['section-id'])[item['section-id']]} />}
-                                <div className={item['section-id'] !== 'boat_trip' ? "concept_item_desc" : "concept_item_desc concept_item_desc_boat"}>
-                                    <p> {item['section-desc'][0].slice(0, 120)}...</p>
-                                    <Modal show={open} onClose={()=>setOpen(false)}>
-                                        <ConceptItem item={select} close={() => setOpen(false)} />
-                                    </Modal>
-                                    <button className='read_more_btn'
-                                        onClick={() => {
-                                            setOpen(true)
-                                            setSelect(sectionData.filter((x) => x['section-id'] === item['section-id'])[0])
-                                        }}
-                                    >{lang.dictionary["read_more"]}</button>
-                                </div>
+
+                            </div>
+                            <div className={"concept_item_desc"}>
+                                <p> {item['section-desc'][0].slice(0, 144)}...</p>
+                                <Modal show={open} onClose={() => setOpen(false)}>
+                                    <ConceptItem item={select} close={() => setOpen(false)} />
+                                </Modal>
+                                <button className='read_more_btn'
+                                    onClick={() => {
+                                        setOpen(true)
+                                        setSelect(sectionData.filter((x) => x['section-id'] === item['section-id'])[0])
+                                    }}
+                                >{lang.dictionary["read_more"]}</button>
                             </div>
 
                         </div>

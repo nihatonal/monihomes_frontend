@@ -63,4 +63,12 @@
     padding: 10px;
     font-size: 12px;
   }
+  #price_btn {
+    color: var(--white-color);
+    font-size: 12px;
+    padding: 2px 15px;
+  }
+  .footer_wrapper .price_modal {
+    justify-content: flex-start;
+  }
 }
