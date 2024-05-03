@@ -24,7 +24,7 @@ function SocialBar(props) {
                     <SlSocialVkontakte />
                 </a>
                 <span></span>
-                <a href={`https://api.whatsapp.com/send?phone=+905308997709}`} rel="noreferrer" target='_blank' className="social-item">
+                <a href={`https://api.whatsapp.com/send?phone=905308997709`} rel="noreferrer" target='_blank' className="social-item">
                     <FaWhatsapp />
                 </a>
                 <span></span>
