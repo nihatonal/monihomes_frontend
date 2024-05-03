@@ -45,13 +45,30 @@
   color: var(--white-color);
   padding: 20px 34px;
 }
+.footer .socialbar-container {
+  display: none;
+}
+.footer #price_btn {
+  color: var(--white-color);
+  border: 1px solid rgba(255, 255, 255, 1);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0);
+}
+.footer #price_btn:hover {
+  box-shadow: 0 0 8px rgba(255, 255, 255, 1);
+}
 @media only screen and (max-width: 767px) {
+  .footer {
+    height: auto;
+    row-gap: 20px;
+    padding: 0 0 10px 0;
+  }
   .footer_wrapper {
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 0 10px;
+    column-gap: 50px;
   }
   .footer .navbar {
     display: grid;
@@ -63,12 +80,52 @@
     padding: 10px;
     font-size: 12px;
   }
-  #price_btn {
+  .footer #price_btn {
     color: var(--white-color);
     font-size: 12px;
     padding: 2px 15px;
+    border: 1px solid rgba(255, 255, 255, 1);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0);
+  }
+  .footer #price_btn:hover {
+    box-shadow: 0 0 8px rgba(255, 255, 255, 1);
   }
   .footer_wrapper .price_modal {
     justify-content: flex-start;
+  }
+  .footer .socialbar-container {
+    width: auto;
+    height: auto;
+    position: static;
+    justify-content: flex-start;
+    margin-top: 20px;
+    display: block;
+  }
+  .footer .socialbar-container .socialbar_wrapper {
+    flex-direction: row;
+  }
+  .footer .socialbar-container .socialbar_wrapper .social-item {
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+  }
+  .footer .socialbar-container .socialbar_wrapper .social-item svg {
+    font-size: 18px;
+    color: var(--secondary-color);
+  }
+  .footer .socialbar_wrapper span {
+    display: none;
+  }
+  .footer .socialbar_wrapper span:nth-child(3),
+  .footer .socialbar_wrapper span:nth-child(5),
+  .footer .socialbar_wrapper span:nth-child(7) {
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+    margin: 0 10px;
+  }
+  .footer .social-item:hover {
+    box-shadow: 0 0 10px #fff;
   }
 }

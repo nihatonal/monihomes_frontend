@@ -2,12 +2,14 @@ import React from 'react';
 
 import Logo from '../../assets/images/logo_footer.png';
 import { NavLink } from 'react-router-dom';
-import NavLinks from '../navigation/NavLinks'
+import NavLinks from '../navigation/NavLinks';
+import SocialBar from '../navigation/SocialBar';
 
 import './Footer.css';
 function Footer(props) {
     return (
         <div className="footer">
+            <SocialBar />
             <div className="footer_wrapper">
                 <NavLink to='/'>
                     <img src={Logo} alt='logo' />
