@@ -3,9 +3,6 @@ export const sectionsData =
 {
     monihomes: [
         {
-            'image': require('./images/concept/monihomes/monihomes_night.jpg')
-        },
-        {
             'image': require('./images/concept/monihomes/room1_4.jpg')
         },
         {

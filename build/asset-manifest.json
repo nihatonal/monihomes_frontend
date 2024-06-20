@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.f7f57a77.css",
-    "main.js": "/static/js/main.ba20a59a.js",
+    "main.js": "/static/js/main.649084d6.js",
     "static/css/213.d483865c.chunk.css": "/static/css/213.d483865c.chunk.css",
-    "static/js/213.0cf7dc77.chunk.js": "/static/js/213.0cf7dc77.chunk.js",
+    "static/js/213.affeda46.chunk.js": "/static/js/213.affeda46.chunk.js",
     "static/css/292.9d048c2b.chunk.css": "/static/css/292.9d048c2b.chunk.css",
     "static/js/292.8953d7a6.chunk.js": "/static/js/292.8953d7a6.chunk.js",
     "static/css/606.e25a62b7.chunk.css": "/static/css/606.e25a62b7.chunk.css",
@@ -18,7 +18,6 @@
     "static/js/33.84322305.chunk.js": "/static/js/33.84322305.chunk.js",
     "static/media/boattrip_video_2.mp4": "/static/media/boattrip_video_2.fef358cd75235b79a9a4.mp4",
     "static/media/boattrip_video.mp4": "/static/media/boattrip_video.9c87cf2456625c9da850.mp4",
-    "static/media/monihomes.jpg": "/static/media/monihomes.5b324bb032a5eaa28472.jpg",
     "static/media/boat_3.jpeg": "/static/media/boat_3.979cb4ca7970443ad803.jpeg",
     "static/media/boat_6.jpeg": "/static/media/boat_6.16a02213efdb18e11c40.jpeg",
     "static/media/ugur_profil.jpeg": "/static/media/ugur_profil.fb833011ad4689e0c622.jpeg",
@@ -67,7 +66,7 @@
     "static/media/villamasal_11.jpg": "/static/media/villamasal_11.79206d5c12ea93eba73b.jpg",
     "static/media/yoyo_9.jpg": "/static/media/yoyo_9.2d67f895024891e50c36.jpg",
     "static/media/washing_machine - Copy.jpeg": "/static/media/washing_machine - Copy.eae29f9b13146a339439.jpeg",
-    "static/media/monihomes_night.jpg": "/static/media/monihomes_night.38e6dc847f80a70655d1.jpg",
+    "static/media/monihomes_night.jpg": "/static/media/monihomes_night.dfc60c0fb312a73d9a51.jpg",
     "static/media/logo.png": "/static/media/logo.4f2de4e058fc49cb64d7.png",
     "static/media/olive_2.png": "/static/media/olive_2.f4f343be769f55176a9c.png",
     "static/media/airconditioner.jpeg": "/static/media/airconditioner.30a39d7cd47103b66e77.jpeg",
@@ -83,9 +82,9 @@
     "static/media/mini_slide_arrow-right.svg": "/static/media/mini_slide_arrow-right.65a2bdfe965d14d8e9ae9b7b8ccc7ae6.svg",
     "static/media/mini_slide_arrow-left.svg": "/static/media/mini_slide_arrow-left.7bd6fe0e301d6f4f9ee744527ece60cc.svg",
     "main.f7f57a77.css.map": "/static/css/main.f7f57a77.css.map",
-    "main.ba20a59a.js.map": "/static/js/main.ba20a59a.js.map",
+    "main.649084d6.js.map": "/static/js/main.649084d6.js.map",
     "213.d483865c.chunk.css.map": "/static/css/213.d483865c.chunk.css.map",
-    "213.0cf7dc77.chunk.js.map": "/static/js/213.0cf7dc77.chunk.js.map",
+    "213.affeda46.chunk.js.map": "/static/js/213.affeda46.chunk.js.map",
     "292.9d048c2b.chunk.css.map": "/static/css/292.9d048c2b.chunk.css.map",
     "292.8953d7a6.chunk.js.map": "/static/js/292.8953d7a6.chunk.js.map",
     "606.e25a62b7.chunk.css.map": "/static/css/606.e25a62b7.chunk.css.map",
@@ -101,6 +100,6 @@
   },
   "entrypoints": [
     "static/css/main.f7f57a77.css",
-    "static/js/main.ba20a59a.js"
+    "static/js/main.649084d6.js"
   ]
 }

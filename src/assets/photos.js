@@ -10,11 +10,6 @@ export const photos = [
         height: 4
     },
     {
-        src: require('./images/gallery/monihomes.jpg'),
-        width: 3,
-        height: 3
-    },
-    {
         src: require('./images/gallery/room1_1.jpg'),
         width: 4,
         height: 3
