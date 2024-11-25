@@ -19,26 +19,31 @@
   justify-content: space-around;
   position: relative;
   padding: 15px 15px 0;
-  
 }
 .main_header_concept {
   justify-content: space-between;
   padding: 15px 50px 0;
 }
+
+/*visibility added*/
 @keyframes social_in {
   from {
     opacity: 0;
+    visibility: hidden;
   }
   to {
     opacity: 1;
+    visibility: visible;
   }
 }
 @keyframes social_out {
   from {
     opacity: 1;
+    visibility: visible;
   }
   to {
     opacity: 0;
+    visibility: hidden;
   }
 }
 .social_in {
@@ -117,8 +122,8 @@
   width: 100%;
 }
 .side-drawer #price_btn {
-color: var(--secondary-color);
-font-size: 1rem;
+  color: var(--secondary-color);
+  font-size: 1rem;
 }
 .sidedrawer-navlink_wrapper {
   text-align: center;
