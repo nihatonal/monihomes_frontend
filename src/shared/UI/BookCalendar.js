@@ -24,14 +24,6 @@ function BookCalendar(props) {
         }
         return dateArray;
     }
-    //let checker = (src, target) => target.some((v) => src.includes(v));
-
-    // useEffect(() => {
-    //     if (!props.value) return
-    //     if (!props.markDates) return
-    //     let selectedRange = expandDates(moment(new Date(props.value[0])).format("YYYY/MM/DD"), moment(new Date(props.value[1])).format("YYYY/MM/DD"))
-
-    // }, [props.value, props.markDates]);
 
     useEffect(() => {
         const fetchUsers = async () => {
@@ -75,12 +67,6 @@ function BookCalendar(props) {
         return 0;
     }
 
-
-    //const check_in = [...new Set([].concat(props.guests && props.guests.map((guest) => expandDates(guest.dates[0], guest.dates[1])[0])).flat())]
-    //const check_out = [...new Set([].concat(props.guests && props.guests.map((guest) => expandDates(guest.dates[0], guest.dates[1])[expandDates(guest.dates[0], guest.dates[1]).length - 1])).flat())]
-    //const reserved = [...new Set([].concat(props.guests && props.guests.map((guest) => expandDates(guest.dates[0], guest.dates[1]).slice(1, -1))).flat())]
-    //const reserved_raw = [...new Set([].concat(props.guests && props.guests.map((guest) => expandDates(guest.dates[0], guest.dates[1]))).flat())]
-
     useEffect(() => {
         let selected_dates;
         selected_dates = expandDates(props.selectedStart, props.selectedEnd).length > 3 ? expandDates(props.selectedStart, props.selectedEnd) : expandDates(props.selectedStart, props.selectedEnd);
@@ -90,28 +76,14 @@ function BookCalendar(props) {
 
 
 
-
-    // useEffect(() => {
-    //     const dates = [...new Set([].concat(props.guests && props.guests.map((guest) => expandDates(guest.dates[0], guest.dates[1]).slice(0, -1))))].flat()
-    //     const map = dates.reduce((acc, e) => acc.set(e, (acc.get(e) || 0) + 1), new Map());
-
-    //     const reserved_ = [...map.entries()].filter((a) => a[1] > 2).sort(compare).flat().filter((a) => a !== 3)
-
-    //     setDatess(props.filter === "room" ? reserved_ : dates)
-
-    // }, [props.guests])
-
     useEffect(() => {
-        // console.log(props.events)
-        //console.log(props.events && props.events.filter((x) => x.summary.toLowerCase().includes("room")))
-
+ 
         const dates = [...new Set([].concat(props.events && props.events.map((guest) => expandDates(guest.start.date, guest.end.date).slice(0, -1))))].flat()
 
-        //console.log(dates)
         const map = dates.reduce((acc, e) => acc.set(e, (acc.get(e) || 0) + 1), new Map());
-        //console.log(map)
+
         const reserved_ = [...map.entries()].filter((a) => a[1] > 2).sort(compare).flat().filter((a) => a !== 3)
-        //console.log(reserved_)
+ 
         setDatess(props.filter === "room" ? reserved_ : dates)
 
     }, [props.events, props.filter])
@@ -139,15 +111,11 @@ function BookCalendar(props) {
     }, [datess])
 
 
-    //console.log(datess, markedDates)
 
     let check_in = markedDates.map((x) => x[0]);
     let check_out = markedDates.map((x) => x[x.length - 1]);
     let reserved = datess.filter(x => !check_in.concat(check_out).includes(x))
-    //console.log(reserved)
-    // for (let i = 0; i < result; i++) {
-    //     console.log(result[i])
-    // }
+
 
     return (
         <div className='calendar-modal' style={props.style} ref={props.ref}>

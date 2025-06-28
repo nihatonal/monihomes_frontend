@@ -43,28 +43,6 @@ const RateReview = ({ star }) => {
                 />
             </div>}
             {empty_stars}
-
-            {/* <BsStarFill className='review_star'
-                style={{ color: '#eeb524' }}
-            />
-            <BsStarFill className='review_star'
-                style={{ color: '#eeb524' }}
-            />
-            <BsStarFill className='review_star'
-                style={{ color: '#eeb524' }}
-            />
-            <BsStarFill className='review_star'
-                style={{ color: '#eeb524' }}
-            /> */}
-            { }
-            {/* {<div className='empty_star'>
-                <BsStarFill className='review_star'
-                    style={{ color: '#eeb524', clipPath: `inset(0 ${rate}% 0 0)` }}
-                />
-                <BsStar className='review_star_empty'
-                    style={{ color: '#eeb524' }}
-                />
-            </div>} */}
         </div>
     );
 };

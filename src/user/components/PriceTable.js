@@ -102,9 +102,9 @@ function PriceTable(props) {
                     <button className={filter === 0 ? `filter_btn active_filter_btn` : `filter_btn`}
                         onClick={(e) => setFilter(0)}
                     >Moni Homes</button>
-                    <button className={filter === 1 ? `filter_btn active_filter_btn` : `filter_btn`}
+                    {/* <button className={filter === 1 ? `filter_btn active_filter_btn` : `filter_btn`}
                         onClick={(e) => setFilter(1)}
-                    >Villa Masal</button>
+                    >Villa Masal</button> */}
                 </div>
                 <div className="price_list_filter_wrapper">
                     <div className="price_list_filter_options">

@@ -7,6 +7,7 @@ import BookCalendar from '../../shared/UI/BookCalendar';
 import { ShareContext } from '../../shared/context/ShareContext';
 import moment from "moment";
 import { DatePicker, Space } from 'antd';
+import axios from "axios";
 import './Availability.css';
 
 function Availability(props) {
@@ -44,7 +45,7 @@ function Availability(props) {
                     process.env.REACT_APP_BACKEND_URL + "/google",
                 );
                 setEvents(responseData.data.items)
-               
+
 
             } catch (err) { }
         };
@@ -71,6 +72,7 @@ function Availability(props) {
     const getDates = (dates) => {
         if (!dates) return
         share.setDateRange([moment(new Date(dates[0])).format("YYYY/MM/DD"), moment(new Date(dates[1])).format("YYYY/MM/DD")])
+
     }
 
     useEffect(() => {
@@ -78,9 +80,62 @@ function Availability(props) {
             .includes(filter)))
         setFiltered(result)
 
+
     }, [filter]);
 
+    const ReservationForm = () => {
+        const [formData, setFormData] = useState({
+            name: "",
+            email: "",
+            phone: "",
+            checkIn: "",
+            checkOut: ""
+        });
 
+        const handleChange = (e) => {
+            setFormData({ ...formData, [e.target.name]: e.target.value });
+        };
+
+        const handleSubmit = async (e) => {
+
+            e.preventDefault();
+            // try {
+            //     const responseData = await sendRequest(
+            //         process.env.REACT_APP_BACKEND_URL + "/reservation",
+            //         "POST", formData,
+            //         {
+            //             "Content-Type": "application/json",
+            //         }
+            //     );
+            //     console.log(responseData.data.message);
+
+            // } catch (err) {
+            //     console.log("Error sending reservation request.");
+            // }
+            try {
+                const response = await axios.post("http://localhost:5000/api/reservation", formData);
+                console.log(response.data.message);
+            } catch (error) {
+                console.log("Error sending reservation request.");
+            }
+        };
+
+        return (
+            <form onSubmit={handleSubmit}>
+                <input type="text" name="name" placeholder="Name" value={formData.name} onChange={handleChange} required />
+                <input type="email" name="email" placeholder="Email" value={formData.email} onChange={handleChange} required />
+                <input type="tel" name="phone" placeholder="Phone" value={formData.phone} onChange={handleChange} required />
+                <input type="date" name="checkIn" value={formData.checkIn} onChange={handleChange} required />
+                <input type="date" name="checkOut" value={formData.checkOut} onChange={handleChange} required />
+
+                <button type="submit">Send Reservation Request</button>
+            </form>
+        );
+    };
+
+    const handleLogin = () => {
+        window.location.href = 'http://localhost:5000/auth/google';
+    };
 
     return (
         <div className="availability_container" id='availability'>
@@ -91,14 +146,14 @@ function Availability(props) {
                         <Space direction="vertical" size={12} >
                             <RangePicker onChange={getDates} placeholder={share.dates.length < 1 ? ['Check-in', 'Check-out'] : [startDate, endDate]} placement='topLeft' />
                         </Space>
-                        <div className="filter_room">
+                        {/* <div className="filter_room">
                             <button className={filter === "room" ? `filter_btn active_filter_btn` : `filter_btn`}
                                 onClick={(e) => setFilter("room")}
                             >Moni Homes</button>
                             <button className={filter === "villamasal" ? `filter_btn active_filter_btn` : `filter_btn`}
                                 onClick={(e) => setFilter("villamasal")}
                             >Villa Masal</button>
-                        </div>
+                        </div> */}
                     </div>
 
                     <div className="availability__item_content">
@@ -121,6 +176,12 @@ function Availability(props) {
                 </animated.div>
             </div>
 
+            <ReservationForm />
+            <br></br>
+            <div>
+                <h1>Monihomes - Reservation</h1>
+                <button onClick={handleLogin}>Login with Google</button>
+            </div>
         </div >
     );
 }

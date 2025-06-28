@@ -9,7 +9,7 @@ import PrivacyPolicy from "./shared/footer/components/PrivacyPolicy";
 import { AuthContext } from "./shared/context/auth-context";
 import { useAuth } from "./shared/hooks/auth-hook";
 import ShareProvider from './shared/context/ShareContext';
-
+import GoogleLoginComp from './shared/components/GoogleLoginComp';
 const Main = React.lazy(() => import("./main/Main.js"));
 // const Concept = React.lazy(() => import("./concept/Concept.js"));
 const User = React.lazy(() => import("./user/User.js"));
@@ -29,6 +29,7 @@ function App() {
         <Route exact path="/" element={<Main />} />
         {/* <Route exact path="/concept/:cid" element={<Concept />} /> */}
         {userId === "65df0caa5e113d035559181d" && <Route exact path="/adminnihat" element={<Admin />} />}
+        <Route exact path='/google' element={<GoogleLoginComp />}/>
         <Route exact path="/admin" element={<User />} />
         <Route path="*" element={<Main />} />
       </React.Fragment>

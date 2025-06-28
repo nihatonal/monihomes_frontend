@@ -44,6 +44,7 @@ function Reviews(props) {
             setLang('tr')
         }
     }, [langs]);
+    
     moment.locale(lang, [localeTr])
     /*
      * Create form to request access token from Google's OAuth 2.0 server.
